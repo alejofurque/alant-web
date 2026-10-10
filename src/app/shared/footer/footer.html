@@ -1,0 +1,26 @@
+<footer class="dark">
+  <div class="container footer-top">
+    <a
+      routerLink="/"
+      class="footer-brand"
+      aria-label="ALANT, volver al inicio"
+      i18n-aria-label="@@footer.home"
+      >ALANT<span aria-hidden="true">.</span></a
+    >
+    <p class="eyebrow">Software<br />Engineering Studio</p>
+    <nav aria-label="Navegación del pie" i18n-aria-label="@@footer.nav">
+      <a routerLink="/servicios" i18n="@@nav.services">Servicios</a
+      ><a routerLink="/" fragment="soluciones" i18n="@@nav.solutions">Soluciones</a
+      ><a routerLink="/estudio" i18n="@@nav.studio">Estudio</a
+      ><a routerLink="/contacto" i18n="@@nav.contact">Contacto</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p i18n="@@footer.copyright">© ALANT. Ingeniería con propósito.</p>
+    <span class="eyebrow" i18n="@@footer.signature"
+      >Pensado en sistemas. Construido en detalle.</span
+    ><a [href]="router.url.split('#')[0] + '#contenido'" class="back-top" i18n="@@footer.back"
+      >Volver arriba ↑</a
+    >
+  </div>
+</footer>

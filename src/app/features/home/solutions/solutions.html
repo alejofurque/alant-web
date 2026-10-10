@@ -1,0 +1,68 @@
+<section id="soluciones" class="section dark" aria-labelledby="solutions-title">
+  <div class="container">
+    <div class="solutions-heading">
+      <div>
+        <p class="eyebrow section-label" i18n="@@solutions.label">02 / Sistemas en contexto</p>
+        <h2 id="solutions-title" class="section-title" i18n="@@solutions.title">
+          Cuando las piezas<br />trabajan juntas.
+        </h2>
+      </div>
+      <div class="story-intro">
+        <p class="solutions-disclaimer" i18n="@@transformation.disclaimer">
+          De sistemas aislados a una operación conectada.<br />Un ejemplo ilustrativo, no un caso de
+          cliente.
+        </p>
+        <app-motion-toggle />
+      </div>
+    </div>
+    <nav
+      class="story-navigation"
+      aria-label="Etapas del sistema"
+      i18n-aria-label="@@story.navigation"
+    >
+      @for (stage of stages; track stage.id) {
+        <a
+          [href]="'#' + stage.id"
+          [attr.aria-current]="active() === $index ? 'step' : null"
+          (click)="active.set($index)"
+        >
+          <span class="eyebrow" aria-hidden="true">0{{ $index + 1 }}</span
+          >{{ stage.label }}<span class="stage-arrow" aria-hidden="true">↘</span>
+        </a>
+      }
+    </nav>
+    <div class="story-meter" aria-hidden="true"><span class="story-progress"></span></div>
+    <div class="story-track">
+      <div class="story-sticky-track" aria-hidden="true">
+        <div class="story-sticky">
+          <app-story-visual class="living-system" [stage]="stages[active() ?? 0]" [index]="2" />
+        </div>
+      </div>
+      @for (stage of stages; track stage.id) {
+        <article
+          class="story-step"
+          [id]="stage.id"
+          [attr.aria-labelledby]="stage.id + '-title'"
+          tabindex="-1"
+          [class.is-current]="active() === $index"
+        >
+          <div class="scenario-copy">
+            <p class="step-label eyebrow">
+              <span class="stage-dot" aria-hidden="true"></span>0{{ $index + 1 }} /
+              {{ stage.label }}
+            </p>
+            <h3 [id]="stage.id + '-title'">{{ stage.title }}</h3>
+            <span class="scenario-label eyebrow" i18n="@@solutions.situation">La situación</span>
+            <p>{{ stage.description }}</p>
+            <span class="scenario-label eyebrow" i18n="@@solutions.approach">Cómo abordarla</span>
+            <p>{{ stage.approach }}</p>
+            <a class="text-link scenario-cta" routerLink="/contacto"
+              ><span i18n="@@solutions.cta">Hablemos de tu operación</span><app-arrow
+            /></a>
+          </div>
+          <app-story-visual class="inline-visual" [stage]="stage" [index]="$index" />
+        </article>
+      }
+    </div>
+  </div>
+</section>

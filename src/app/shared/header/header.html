@@ -1,0 +1,81 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a
+      class="wordmark"
+      routerLink="/"
+      (click)="closeMenu()"
+      aria-label="ALANT, inicio"
+      i18n-aria-label="@@nav.home"
+      >ALANT<span class="wordmark-dot" aria-hidden="true">.</span></a
+    >
+    <nav class="desktop-nav" aria-label="Navegación principal" i18n-aria-label="@@nav.main">
+      <a
+        routerLink="/servicios"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        i18n="@@nav.services"
+        >Servicios</a
+      ><a routerLink="/" fragment="soluciones" i18n="@@nav.solutions">Soluciones</a
+      ><a
+        routerLink="/estudio"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        i18n="@@nav.studio"
+        >Estudio</a
+      ><a
+        routerLink="/contacto"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        i18n="@@nav.contact"
+        >Contacto</a
+      >
+    </nav>
+    <a class="button button-primary header-cta" routerLink="/contacto"
+      ><span i18n="@@nav.talk">Hablemos</span><app-arrow
+    /></a>
+    <button
+      #menuButton
+      class="menu-button"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="mobile-navigation"
+      [attr.aria-label]="menuLabel()"
+      [class.is-open]="menuOpen()"
+    >
+      <span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+  </div>
+  <nav
+    id="mobile-navigation"
+    class="mobile-nav"
+    [hidden]="!menuOpen()"
+    aria-label="Navegación móvil"
+    i18n-aria-label="@@nav.mobile"
+  >
+    <a
+      routerLink="/servicios"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      (click)="closeMenu()"
+      i18n="@@nav.services"
+      >Servicios</a
+    ><a routerLink="/" fragment="soluciones" (click)="closeMenu()" i18n="@@nav.solutions"
+      >Soluciones</a
+    ><a
+      routerLink="/estudio"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      (click)="closeMenu()"
+      i18n="@@nav.studio"
+      >Estudio</a
+    ><a
+      routerLink="/contacto"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      (click)="closeMenu()"
+      i18n="@@nav.contact"
+      >Contacto</a
+    >
+  </nav>
+</header>

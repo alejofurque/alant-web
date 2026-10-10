@@ -1,0 +1,60 @@
+.connection-draw,
+.connection-pulse {
+  stroke: var(--color-mint);
+  stroke-width: 1.5;
+  opacity: 0;
+  stroke-dasharray: 1;
+}
+.connection-pulse {
+  stroke-width: 5;
+  stroke-dasharray: 0.12 1;
+}
+.core-activation {
+  position: absolute;
+  inset: -1px;
+  border: 2px solid var(--color-mint);
+  border-radius: inherit;
+  opacity: 0;
+}
+[data-wired] .connections {
+  display: block;
+}
+[data-wired] .node::before,
+[data-wired] .node::after {
+  opacity: 0;
+}
+
+.output-symbol > span,
+.output-status > span {
+  grid-area: 1 / 1;
+}
+.node .output-symbol > span {
+  font-size: inherit;
+  line-height: 1;
+  color: inherit;
+  margin: 0;
+}
+.node .output-status {
+  display: grid;
+}
+.node .output-status > span {
+  margin: 0;
+}
+.output-waiting,
+.output-check {
+  opacity: 0;
+}
+.replay-flow {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  margin-left: auto;
+  color: var(--color-mint);
+  font-size: 11px;
+}
+.replay-flow:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

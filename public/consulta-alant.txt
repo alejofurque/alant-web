@@ -1,0 +1,16 @@
+ALANT — Borrador de consulta
+
+Esta guía te ayuda a ordenar tu necesidad. Descargarla no envía información a ALANT.
+El canal oficial de contacto todavía está por confirmar.
+
+1. ¿Qué proceso o problema querés resolver?
+
+2. ¿Qué herramientas o sistemas usan hoy?
+
+3. ¿Dónde aparecen tareas manuales, errores o datos desconectados?
+
+4. ¿Qué debería cambiar con la nueva solución?
+
+5. ¿Hay plazos, restricciones o requisitos que debamos considerar?
+
+Guardá este borrador para compartirlo cuando esté disponible el canal de contacto.

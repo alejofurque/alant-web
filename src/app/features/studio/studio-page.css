@@ -1,0 +1,202 @@
+:host {
+  display: block;
+}
+.philosophy {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 10%;
+  align-items: center;
+}
+.philosophy .eyebrow {
+  margin-bottom: 25px;
+}
+.philosophy h2 {
+  margin-bottom: 28px;
+}
+.philosophy .body-copy {
+  color: #465957;
+  margin-top: 18px;
+}
+.principle-board {
+  border-radius: 4px;
+  border: 1px solid var(--color-line);
+  padding: 30px;
+}
+.board-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: var(--color-muted);
+}
+.board-context {
+  text-align: center;
+  border: 1px solid #53645d;
+  padding: 18px;
+  font-size: 14px;
+}
+.board-connector {
+  height: 35px;
+  width: 1px;
+  background: #7aab8b;
+  margin: auto;
+}
+.board-core {
+  background: #20392e;
+  border: 1px solid #72b58a;
+  text-align: center;
+  padding: 28px 15px;
+}
+.board-core .eyebrow {
+  display: block;
+  color: var(--color-mint);
+  margin-bottom: 15px;
+}
+.board-core strong {
+  font-size: 32px;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 500;
+}
+.board-branches {
+  height: 28px;
+  border-inline: 1px solid #7aab8b;
+  border-top: 1px solid #7aab8b;
+  margin: 25px 14% 0;
+  position: relative;
+}
+.board-branches:before {
+  content: '';
+  width: 1px;
+  height: 53px;
+  background: #7aab8b;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+.board-foundations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.board-foundations span {
+  border: 1px solid #53645d;
+  padding: 14px 5px;
+  text-align: center;
+  font: 11px var(--font-mono);
+}
+figcaption {
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 1.75;
+  border-top: 1px solid var(--color-line);
+  margin-top: 28px;
+  padding-top: 18px;
+}
+.principles-heading {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 8%;
+  align-items: start;
+  margin-bottom: 60px;
+}
+.principles-heading .eyebrow {
+  color: var(--color-mint);
+}
+.principles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 9%;
+}
+.principles article {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  column-gap: 20px;
+  border-top: 1px solid var(--color-line);
+  padding-block: 32px 42px;
+}
+.principles article > .eyebrow {
+  color: var(--color-mint);
+  padding-top: 5px;
+}
+.principles h3 {
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+.principles p {
+  grid-column: 2;
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+.working-note {
+  padding-bottom: 90px;
+}
+.working-note .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8%;
+  border-top: 1px solid #bac6be;
+  padding-top: 38px;
+}
+.working-note .eyebrow {
+  grid-column: 1/-1;
+  margin-bottom: 25px;
+}
+.working-note h2 {
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+.working-note p:last-child {
+  color: #465957;
+  line-height: 1.8;
+}
+@media (max-width: 900px) {
+  .philosophy {
+    gap: 5%;
+  }
+  .principle-board {
+    padding: 22px;
+  }
+  .board-core strong {
+    font-size: 27px;
+  }
+}
+@media (max-width: 700px) {
+  .philosophy,
+  .principles,
+  .principles-heading,
+  .working-note .container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .principle-board {
+    margin-top: 10px;
+  }
+  .principles-heading {
+    margin-bottom: 30px;
+  }
+  .principles {
+    gap: 0;
+  }
+  .principles article {
+    grid-template-columns: 30px 1fr;
+    gap: 14px;
+  }
+  .principles h3 {
+    font-size: 25px;
+  }
+  .working-note .eyebrow {
+    margin-bottom: 0;
+  }
+  .working-note {
+    padding-bottom: 65px;
+  }
+  .board-top {
+    font-size: 10px;
+  }
+}

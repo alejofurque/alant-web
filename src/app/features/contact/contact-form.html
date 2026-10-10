@@ -1,0 +1,207 @@
+<div class="form-heading" id="consulta" tabindex="-1">
+  <h2 i18n="@@contactForm.title">Tu consulta</h2>
+  <span class="eyebrow" aria-hidden="true">01 / Brief</span>
+</div>
+@if (!gateway.available) {
+  <div class="availability" id="form-availability">
+    <span class="availability-mark" aria-hidden="true">—</span>
+    <div>
+      <strong i18n="@@contactForm.unavailableTitle">Envío por formulario aún no disponible</strong>
+      <p i18n="@@contactForm.unavailableCopyV2">
+        Estamos preparando este canal. Podés descargar la guía para ordenar tu consulta. Este
+        formulario está deshabilitado y no envía información.
+      </p>
+    </div>
+  </div>
+}
+<form
+  [formGroup]="form"
+  (ngSubmit)="submit()"
+  novalidate
+  [attr.aria-busy]="state() === 'sending'"
+  [attr.aria-describedby]="!gateway.available ? 'form-availability' : null"
+>
+  <p class="form-hint" i18n="@@contactForm.required">
+    Todos los campos son obligatorios salvo Empresa.
+  </p>
+  <fieldset [disabled]="!ready() || !gateway.available || state() === 'sending'">
+    <legend class="sr-only" i18n="@@contactForm.legend">Datos de la consulta</legend>
+    <div class="field-grid">
+      <div class="field">
+        <label for="inquiry-name" i18n="@@contactForm.name">Nombre</label
+        ><input
+          id="inquiry-name"
+          name="name"
+          formControlName="name"
+          autocomplete="name"
+          required
+          maxlength="100"
+          [attr.aria-invalid]="invalid('name')"
+          [attr.aria-describedby]="invalid('name') ? 'name-error' : null"
+        />
+        @if (invalid('name')) {
+          <p class="error" id="name-error" i18n="@@contactForm.nameError">
+            Ingresá tu nombre, entre 2 y 100 caracteres.
+          </p>
+        }
+      </div>
+      <div class="field">
+        <label for="inquiry-email" i18n="@@contactForm.email">Email</label
+        ><input
+          id="inquiry-email"
+          name="email"
+          formControlName="email"
+          type="email"
+          autocomplete="email"
+          required
+          maxlength="254"
+          [attr.aria-invalid]="invalid('email')"
+          [attr.aria-describedby]="invalid('email') ? 'email-error' : null"
+        />
+        @if (invalid('email')) {
+          <p class="error" id="email-error" i18n="@@contactForm.emailError">
+            Ingresá un email válido para poder responderte.
+          </p>
+        }
+      </div>
+      <div class="field">
+        <label for="inquiry-company" i18n="@@contactForm.company"
+          >Empresa <span>(opcional)</span></label
+        ><input
+          id="inquiry-company"
+          name="company"
+          formControlName="company"
+          autocomplete="organization"
+          maxlength="160"
+          [attr.aria-invalid]="invalid('company')"
+          [attr.aria-describedby]="invalid('company') ? 'company-error' : null"
+        />
+        @if (invalid('company')) {
+          <p class="error" id="company-error" i18n="@@contactForm.companyError">
+            Usá hasta 160 caracteres para el nombre de la empresa.
+          </p>
+        }
+      </div>
+      <div class="field">
+        <label for="inquiry-type" i18n="@@contactForm.type">Tipo de proyecto</label
+        ><select
+          id="inquiry-type"
+          name="projectType"
+          formControlName="projectType"
+          required
+          [attr.aria-invalid]="invalid('projectType')"
+          [attr.aria-describedby]="invalid('projectType') ? 'type-error' : null"
+        >
+          @for (type of types; track type.value) {
+            <option [value]="type.value">{{ type.label }}</option>
+          }
+        </select>
+        @if (invalid('projectType')) {
+          <p class="error" id="type-error" i18n="@@contactForm.typeError">
+            Elegí una de las opciones disponibles.
+          </p>
+        }
+      </div>
+    </div>
+    <div class="field message-field">
+      <label for="inquiry-message" i18n="@@contactForm.message">¿Qué necesitás resolver?</label>
+      <p class="field-help" id="message-help" i18n="@@contactForm.messageHelp">
+        Contanos qué sucede hoy, qué sistemas usás y qué te gustaría cambiar. Entre 20 y 4000
+        caracteres.
+      </p>
+      <textarea
+        id="inquiry-message"
+        name="message"
+        formControlName="message"
+        rows="6"
+        required
+        minlength="20"
+        maxlength="4000"
+        [attr.aria-invalid]="invalid('message')"
+        [attr.aria-describedby]="invalid('message') ? 'message-help message-error' : 'message-help'"
+      ></textarea>
+      @if (invalid('message')) {
+        <p class="error" id="message-error" i18n="@@contactForm.messageError">
+          Describí tu necesidad en entre 20 y 4000 caracteres.
+        </p>
+      }
+    </div>
+    <div class="honeypot" aria-hidden="true">
+      <label for="inquiry-website" i18n="@@contactForm.honeypot">Dejar este campo vacío</label
+      ><input
+        id="inquiry-website"
+        name="website"
+        formControlName="website"
+        tabindex="-1"
+        autocomplete="off"
+      />
+    </div>
+    <p class="form-hint" i18n="@@contactForm.sensitive">
+      No incluyas contraseñas ni información confidencial.
+    </p>
+    @if (gateway.available) {
+      <details class="privacy-notice">
+        <summary i18n="@@contactForm.privacySummary">Cómo usamos tus datos</summary>
+        <p id="privacy-notice">{{ gateway.privacyNotice }}</p>
+      </details>
+      <div class="consent-field">
+        <input
+          id="inquiry-consent"
+          type="checkbox"
+          formControlName="consent"
+          required
+          [attr.aria-invalid]="invalid('consent')"
+          [attr.aria-describedby]="invalid('consent') ? 'consent-error' : null"
+        />
+        <label for="inquiry-consent" i18n="@@contactForm.consent">
+          Leí el aviso de privacidad y autorizo el uso de mis datos para gestionar y responder esta
+          consulta.
+        </label>
+      </div>
+      @if (invalid('consent')) {
+        <p class="error" id="consent-error" i18n="@@contactForm.consentError">
+          Necesitamos tu autorización para gestionar esta consulta.
+        </p>
+      }
+    }
+    <button
+      class="button button-primary"
+      type="submit"
+      [disabled]="!ready() || !gateway.available || state() === 'sending'"
+    >
+      @if (!gateway.available) {
+        <span i18n="@@contactForm.disabled">Envío no disponible</span>
+      } @else if (state() === 'sending') {
+        <span i18n="@@contactForm.sending">Enviando consulta…</span>
+      } @else {
+        <span i18n="@@contactForm.submit">Enviar consulta</span><app-arrow />
+      }
+    </button>
+  </fieldset>
+  <div class="submission-status" role="status" aria-live="polite">
+    @if (state() === 'success') {
+      <p class="success" i18n="@@contactForm.success">
+        Tu consulta fue recibida. Gracias por compartir el contexto de tu proyecto.
+      </p>
+    } @else if (state() === 'sending') {
+      <p i18n="@@contactForm.sendingStatus">
+        Estamos enviando tu consulta. Esperá la confirmación.
+      </p>
+    }
+  </div>
+  @if (state() === 'error') {
+    <div class="error submit-error" role="alert">
+      @if (rateLimited()) {
+        <p i18n="@@contactForm.rateLimit">
+          Se alcanzó el límite de intentos. Tus datos siguen en el formulario; esperá unos minutos
+          antes de volver a intentarlo.
+        </p>
+      } @else {
+        <p i18n="@@contactForm.failureV2">
+          No pudimos confirmar el envío. Tus datos siguen en el formulario; podés volver a
+          intentarlo.
+        </p>
+      }
+    </div>
+  }
+</form>

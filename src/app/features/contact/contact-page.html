@@ -1,0 +1,56 @@
+<app-page-intro
+  code="03"
+  label="Contacto"
+  i18n-label="@@nav.contact"
+  title="Contanos el contexto."
+  i18n-title="@@contactPage.title"
+  accent="Pensemos el siguiente paso."
+  i18n-accent="@@contactPage.accent"
+  description="Una herramienta que falta, sistemas que necesitan conectarse o un proceso que podría funcionar mejor. Empecemos por lo que sucede en tu empresa."
+  i18n-description="@@contactPage.intro"
+/>
+<section class="section">
+  <div class="container contact-layout">
+    <aside
+      class="contact-context"
+      aria-label="Contacto y preparación"
+      i18n-aria-label="@@contactPage.asideV2"
+    >
+      <div class="direct-contact dark">
+        <p class="eyebrow" i18n="@@contactPage.commercial">Contacto comercial</p>
+        <h2 i18n="@@contactPage.emailTitle">Escribinos.</h2>
+        <a routerLink="/contacto" fragment="consulta" class="email-link"
+          ><span i18n="@@contactPage.formLink">Ir al formulario</span><app-arrow
+        /></a>
+        <p i18n="@@contactPage.formNote">
+          Compartí el contexto de tu proyecto. Cuando el canal esté disponible, podrás enviar tu
+          consulta desde esta página.
+        </p>
+      </div>
+      <div class="preparation">
+        <h2 i18n="@@contactPage.prepareTitle">Un buen punto de partida.</h2>
+        <ol>
+          <li>
+            <span class="eyebrow">01</span>
+            <p i18n="@@contactPage.question1">¿Cómo funciona hoy tu operación?</p>
+          </li>
+          <li>
+            <span class="eyebrow">02</span>
+            <p i18n="@@contactPage.question2">¿Qué herramientas y sistemas usás?</p>
+          </li>
+          <li>
+            <span class="eyebrow">03</span>
+            <p i18n="@@contactPage.question3">¿Qué necesitás resolver o construir?</p>
+          </li>
+        </ol>
+        <a class="text-link" href="/consulta-alant.txt" download="consulta-alant.txt"
+          ><span i18n="@@contact.prepare">Descargar guía del proyecto</span><app-arrow
+        /></a>
+        <p class="guide-note" i18n="@@contactPage.guideNote">
+          Una guía de texto para ordenar tu consulta antes de escribirnos.
+        </p>
+      </div>
+    </aside>
+    <app-contact-form />
+  </div>
+</section>

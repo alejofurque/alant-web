@@ -1,0 +1,121 @@
+:host {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+.site-header {
+  color: var(--color-offwhite);
+  background: #11191bf5;
+  border-bottom: 1px solid #ffffff12;
+  backdrop-filter: blur(16px);
+}
+.header-inner {
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.wordmark {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.075em;
+  text-decoration: none;
+}
+.wordmark-dot {
+  color: var(--color-mint);
+}
+.desktop-nav {
+  display: flex;
+  gap: 26px;
+  padding-left: 40px;
+}
+.desktop-nav a {
+  font-size: 13px;
+  color: #d2dad5;
+  transition: color 0.2s;
+  padding-block: 13px;
+}
+.desktop-nav a:hover,
+.desktop-nav a.active,
+.mobile-nav a.active,
+.desktop-nav a:focus-visible {
+  color: var(--color-mint);
+}
+.active {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+.header-cta {
+  min-height: 44px;
+  padding: 11px 17px;
+  gap: 26px;
+  font-size: 13px;
+}
+.menu-button {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #526264;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+}
+.menu-button span {
+  width: 18px;
+  height: 1px;
+  background: var(--color-offwhite);
+  transition: transform 0.2s;
+}
+.menu-button.is-open span:first-child {
+  transform: translateY(3.5px) rotate(45deg);
+}
+.menu-button.is-open span:last-child {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+.mobile-nav {
+  padding: 8px var(--page-gutter) 24px;
+  border-top: 1px solid var(--color-line);
+  max-height: calc(100dvh - 76px);
+  overflow-y: auto;
+}
+.mobile-nav a {
+  display: block;
+  padding: 16px 0;
+  border-bottom: 1px solid #ffffff15;
+  font-size: 18px;
+}
+.mobile-nav[hidden] {
+  display: none;
+}
+@media (min-width: 1001px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .header-inner {
+    height: 76px;
+    gap: 12px;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .menu-button {
+    display: flex;
+  }
+  .header-cta {
+    margin-left: auto;
+  }
+  .wordmark {
+    font-size: 26px;
+  }
+}
+@media (max-width: 380px) {
+  .header-cta {
+    gap: 10px;
+    padding-inline: 12px;
+  }
+}

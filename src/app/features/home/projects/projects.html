@@ -1,0 +1,39 @@
+<section id="proyectos" class="section projects-section" aria-labelledby="projects-title">
+  <div class="container">
+    <div class="projects-heading">
+      <div>
+        <p class="eyebrow section-label" i18n="@@projects.sectionLabel">
+          03 / Proyectos y demostraciones
+        </p>
+        <h2 id="projects-title" class="section-title" i18n="@@projects.title">
+          El contexto.<br />La solución. El software.
+        </h2>
+      </div>
+      <p class="body-copy" i18n="@@projects.intro">
+        Acá mostraremos proyectos documentados y demostraciones técnicas: qué problema resuelven,
+        cómo se construyeron y qué decisiones hay detrás.
+      </p>
+    </div>
+    <div class="portfolio-notice">
+      <span class="notice-marker" aria-hidden="true"></span>
+      <p i18n="@@projects.notice">
+        Portfolio en preparación. Estos espacios están reservados y todavía no incluyen trabajos ni
+        demos publicados.
+      </p>
+    </div>
+    <div class="projects-grid">
+      @for (project of projects; track project.id) {
+        <app-project-card [project]="project" />
+      }
+    </div>
+    <div class="projects-bottom">
+      <p i18n="@@projects.publicationNote">
+        Los proyectos se incorporarán con material autorizado. Las demostraciones se identificarán
+        como tales.
+      </p>
+      <a class="text-link" routerLink="/contacto"
+        ><span i18n="@@projects.cta">Conversemos sobre tu necesidad</span><app-arrow
+      /></a>
+    </div>
+  </div>
+</section>

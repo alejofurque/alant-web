@@ -1,0 +1,227 @@
+:host {
+  display: block;
+  min-width: 0;
+  height: 100%;
+}
+.project-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #c2cfc5;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #f8f9f6;
+}
+.project-media {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  background: var(--color-graphite);
+  color: var(--color-offwhite);
+  overflow: hidden;
+}
+.project-media img,
+.project-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.placeholder-top {
+  position: absolute;
+  top: 22px;
+  inset-inline: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--color-muted);
+  font-size: var(--text-technical);
+}
+.placeholder-top > span:last-child {
+  color: var(--color-mint);
+}
+.placeholder-canvas {
+  position: absolute;
+  inset: 64px 28px 52px;
+  border: 1px solid #334a3c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: #17231d;
+}
+.placeholder-canvas::before,
+.placeholder-canvas::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: var(--color-mint);
+  opacity: 0.65;
+}
+.placeholder-canvas::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+.placeholder-canvas::after {
+  right: -1px;
+  bottom: -1px;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+.capture-outline {
+  width: 52px;
+  height: 39px;
+  stroke: #8ab59a;
+  stroke-width: 1;
+}
+.placeholder-canvas p {
+  text-align: center;
+  font-size: clamp(16px, 1.7vw, 22px);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #d0dfd3;
+}
+.placeholder-caption {
+  position: absolute;
+  bottom: 17px;
+  inset-inline: 24px;
+  font-size: var(--text-technical);
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+.video-description {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.project-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.project-overline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.project-overline .eyebrow {
+  color: #435b4a;
+  font-size: var(--text-technical);
+  letter-spacing: 0.05em;
+}
+.status-label {
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 4px 8px;
+  border: 1px solid #bbccbe;
+  background: #eaf0e8;
+  color: #375c42;
+  border-radius: 2px;
+}
+h3 {
+  font-size: clamp(25px, 2.4vw, 32px);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  font-weight: 500;
+  margin-block: 22px 27px;
+}
+.project-context {
+  display: grid;
+  gap: 21px;
+}
+.project-context dt,
+.project-technologies > .eyebrow {
+  font-size: var(--text-technical);
+  letter-spacing: 0.06em;
+  color: #465b52;
+  margin-bottom: 7px;
+}
+.project-context dd {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #4b5c59;
+}
+.project-technologies {
+  margin-top: 25px;
+  padding-top: 22px;
+  border-top: 1px solid #d5ddd6;
+}
+.project-technologies ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.project-technologies li {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 5px 8px;
+  border: 1px solid #cbd7cd;
+  border-radius: 2px;
+  color: #375c42;
+}
+.technology-pending {
+  color: #4b5c59;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.project-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid #d5ddd6;
+  padding-top: 21px;
+  margin-top: 24px;
+  color: #4b5c59;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.project-bottom .text-link {
+  color: var(--color-graphite);
+}
+@media (max-width: 900px) {
+  .project-media {
+    aspect-ratio: 16 / 11;
+  }
+  .project-content {
+    padding: 24px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1000px) {
+  .project-overline {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+@media (max-width: 600px) {
+  .project-media {
+    aspect-ratio: 16 / 12;
+  }
+  .placeholder-top {
+    top: 18px;
+    inset-inline: 20px;
+  }
+  .placeholder-canvas {
+    inset: 52px 20px 60px;
+    gap: 10px;
+  }
+  .placeholder-caption {
+    inset-inline: 20px;
+    bottom: 15px;
+  }
+  .capture-outline {
+    width: 40px;
+    height: 30px;
+  }
+}

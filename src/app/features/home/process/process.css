@@ -1,0 +1,82 @@
+.process-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 110px;
+}
+.section-label {
+  color: #465b52;
+  margin-bottom: 28px;
+  font-size: var(--text-technical);
+}
+.process-intro p.body-copy {
+  color: #4b5c59;
+  max-width: 360px;
+  margin-top: 28px;
+  font-size: 15px;
+}
+.process-signature {
+  margin-top: 40px;
+}
+.process-signature svg {
+  width: 180px;
+  height: 69px;
+  stroke: #688575;
+  stroke-width: 1;
+}
+.process-signature span {
+  display: block;
+  margin-top: 16px;
+  font-size: var(--text-technical);
+  color: #465b52;
+}
+.process-steps {
+  border-top: 1px solid #cbd3cd;
+}
+.process-steps li {
+  display: flex;
+  gap: 30px;
+  padding: 30px 0;
+  border-bottom: 1px solid #cbd3cd;
+}
+.step-number {
+  color: #3d7050;
+  font-size: var(--text-technical);
+  margin-top: 6px;
+}
+h3 {
+  font-size: 27px;
+  font-weight: 450;
+  letter-spacing: -0.035em;
+}
+.process-steps p {
+  font-size: 14px;
+  color: #4b5c59;
+  line-height: 1.7;
+  max-width: 355px;
+  margin-top: 10px;
+}
+.step-mark {
+  font-size: 21px;
+  margin-left: auto;
+  color: #55725f;
+}
+@media (max-width: 1050px) {
+  .process-layout {
+    gap: 50px;
+  }
+  .process-steps li {
+    gap: 20px;
+  }
+}
+@media (max-width: 760px) {
+  .process-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .process-signature {
+    display: none;
+  }
+  .process-steps li {
+    padding-block: 26px;
+  }
+}

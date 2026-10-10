@@ -1,0 +1,172 @@
+:host {
+  display: block;
+  min-width: 0;
+}
+.architecture-panel {
+  margin: 0;
+  border: 1px solid #4a5e57;
+  border-radius: 5px;
+  background: #182325;
+  overflow: hidden;
+}
+.panel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 19px 23px;
+  border-bottom: 1px solid var(--color-line);
+  color: #d4ded8;
+  font-size: 12px;
+}
+.panel-top .eyebrow {
+  color: var(--color-mint);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.panel-state {
+  display: grid;
+}
+.phase-label {
+  grid-area: 1 / 1;
+  opacity: 0;
+}
+.phase-label.current {
+  opacity: 1;
+}
+.scene-canvas {
+  position: relative;
+  aspect-ratio: 1.28;
+  min-height: 420px;
+  background-image:
+    linear-gradient(#d7ffe005 1px, transparent 1px),
+    linear-gradient(90deg, #d7ffe005 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.scene-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  stroke: var(--color-mint);
+  stroke-width: 1.5px;
+}
+.scene-lines > * {
+  vector-effect: non-scaling-stroke;
+}
+.line-base {
+  opacity: 0.4;
+}
+.line-draw {
+  opacity: 0;
+  stroke-dasharray: 1;
+  stroke-width: 2;
+}
+.line-signal {
+  opacity: 0;
+  stroke-dasharray: 0.075 1;
+  stroke-width: 6;
+  stroke-linecap: square;
+}
+.platform-outline {
+  stroke-dasharray: 1;
+  opacity: 0.55;
+}
+.platform-shell {
+  position: absolute;
+  inset: 3.75% 4.5%;
+  border-radius: 5px;
+  background: #97e5b307;
+}
+.platform-shell span {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: solid var(--color-mint);
+}
+.platform-shell span:nth-child(1) {
+  inset: 0 auto auto 0;
+  border-width: 2px 0 0 2px;
+}
+.platform-shell span:nth-child(2) {
+  inset: 0 0 auto auto;
+  border-width: 2px 2px 0 0;
+}
+.platform-shell span:nth-child(3) {
+  inset: auto 0 0 auto;
+  border-width: 0 2px 2px 0;
+}
+.platform-shell span:nth-child(4) {
+  inset: auto auto 0 0;
+  border-width: 0 0 2px 2px;
+}
+.system-result {
+  display: grid;
+  min-height: 49px;
+  margin-inline: 4.5%;
+  border-top: 1px solid var(--color-line);
+  align-items: center;
+  text-align: center;
+  font-size: 11px;
+  color: #bbc9c8;
+}
+.system-result > span {
+  grid-area: 1 / 1;
+  padding-block: 12px;
+}
+.result-complete {
+  color: var(--color-mint);
+}
+.result-complete b {
+  margin-right: 8px;
+  font-weight: 400;
+}
+figcaption {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 84px;
+  padding: 17px 23px;
+  border-top: 1px solid var(--color-line);
+  color: var(--color-muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.caption-marker {
+  flex: none;
+  width: 4px;
+  height: 4px;
+  margin-top: 7px;
+  background: var(--color-mint);
+}
+[data-state='0'] .line-base,
+[data-state='0'] [data-module='core'],
+[data-state='0'] .platform-shell,
+[data-state='0'] .platform-outline,
+[data-state='1'] .platform-shell,
+[data-state='1'] .platform-outline,
+[data-state='0'] .result-complete,
+[data-state='1'] .result-complete,
+[data-state='2'] .result-placeholder {
+  opacity: 0;
+}
+[data-state='2'] .module-depth {
+  transform: none;
+  opacity: 0;
+}
+@media (max-width: 1000px) {
+  .scene-canvas {
+    aspect-ratio: 0.8;
+    min-height: 360px;
+  }
+  .panel-top {
+    padding: 16px;
+    font-size: 11px;
+  }
+  .panel-top .eyebrow {
+    font-size: 11px;
+  }
+  figcaption {
+    padding: 16px;
+  }
+}

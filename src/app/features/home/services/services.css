@@ -1,0 +1,137 @@
+.section-label {
+  color: #465b52;
+  margin-bottom: 29px;
+}
+.services-intro {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 72px;
+  align-items: end;
+  margin-bottom: 55px;
+}
+.services-intro p {
+  max-width: 370px;
+  color: #4b5c59;
+  padding-bottom: 5px;
+}
+.service-grid {
+  border: 1px solid #cbd3cd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.service-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 27px 31px 30px;
+  background: #f8f9f6;
+  transition: background 0.25s;
+}
+.service-card + .service-card {
+  border-left: 1px solid #cbd3cd;
+}
+.service-card:hover {
+  background: #eaf1e9;
+}
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  color: #4b5d56;
+  font-size: var(--text-technical);
+}
+.service-visual {
+  height: 125px;
+  margin-block: 12px 26px;
+  display: grid;
+  place-items: center;
+}
+.service-visual svg {
+  width: 90%;
+  max-width: 260px;
+  stroke: #83968d;
+  stroke-width: 1;
+}
+.service-visual .accent {
+  stroke: #397b51;
+  stroke-width: 1.5;
+}
+h3 {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+.service-card p {
+  font-size: 14px;
+  color: #4b5c59;
+  line-height: 1.7;
+  flex: 1;
+}
+.service-tags {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid #d5ddd6;
+  font-size: var(--text-technical);
+  letter-spacing: 0.025em;
+  color: #43564d;
+}
+.services-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  padding-top: 26px;
+  font-size: 12px;
+}
+.services-bottom p {
+  color: #4b5c59;
+}
+@media (max-width: 1000px) {
+  .services-intro {
+    gap: 35px;
+  }
+  .service-card {
+    padding: 24px 21px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .service-tags {
+    min-height: calc(22px + 3.2em + 1px);
+  }
+}
+@media (max-width: 767px) {
+  .services-intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 35px;
+  }
+  .service-card {
+    padding: 26px;
+  }
+  .service-card + .service-card {
+    border-left: 0;
+    border-top: 1px solid #cbd3cd;
+  }
+  .service-visual {
+    height: 105px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  .service-card p {
+    min-height: 0;
+    max-width: 480px;
+  }
+  .service-tags {
+    font-size: var(--text-technical);
+    margin-top: 25px;
+  }
+  .services-bottom {
+    flex-direction: column;
+    gap: 18px;
+  }
+}

@@ -1,0 +1,106 @@
+<figure class="system-frame" aria-labelledby="diagram-title" aria-describedby="diagram-description">
+  <div class="frame-header">
+    <span class="frame-mark" aria-hidden="true">⌘</span
+    ><span id="diagram-title" i18n="@@diagram.title">Arquitectura de integración</span
+    ><span class="frame-code" aria-hidden="true">SYS / 01</span>
+  </div>
+  <div class="diagram-canvas" aria-hidden="true">
+    <div class="layer-labels eyebrow">
+      <span i18n="@@diagram.input">01 / Entrada</span><span i18n="@@diagram.logic">02 / Lógica</span
+      ><span i18n="@@diagram.output">03 / Operación</span>
+    </div>
+    <svg class="connections" viewBox="0 0 600 340" preserveAspectRatio="none" fill="none">
+      @for (connection of connections; track connection.id) {
+        <path
+          class="connection-base"
+          [attr.d]="connection.path"
+          [attr.data-connection]="connection.id"
+          stroke="#97E5B3"
+          stroke-opacity=".3"
+        />
+        <path
+          class="connection-draw"
+          [attr.d]="connection.path"
+          [attr.data-connection]="connection.id"
+          pathLength="1"
+        />
+        <path
+          class="connection-pulse"
+          [attr.d]="connection.path"
+          [attr.data-connection]="connection.id"
+          pathLength="1"
+        />
+      }
+    </svg>
+    <div class="node-slot source-crm">
+      <div class="node node-source">
+        <div class="node-symbol">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="3" />
+            <path d="M6 20v-3a6 6 0 0 1 12 0v3M3 20h18" />
+          </svg>
+        </div>
+        <div><strong>CRM</strong><span i18n="@@diagram.customers">Clientes</span></div>
+      </div>
+    </div>
+    <div class="node-slot source-erp">
+      <div class="node node-source">
+        <div class="node-symbol">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="4" width="16" height="16" rx="1" />
+            <path d="M4 10h16M10 10v10" />
+          </svg>
+        </div>
+        <div><strong>ERP</strong><span i18n="@@diagram.resources">Recursos</span></div>
+      </div>
+    </div>
+    <div class="node-slot core-slot">
+      <div class="node node-core">
+        <i class="core-activation" aria-hidden="true"></i>
+        <span class="core-label eyebrow">API / Core</span
+        ><svg width="29" height="29" viewBox="0 0 32 32" fill="none">
+          <rect x="2" y="2" width="10" height="10" rx="1" />
+          <rect x="20" y="20" width="10" height="10" rx="1" />
+          <rect x="2" y="20" width="10" height="10" rx="1" />
+          <path d="M12 7h13v13M7 12v8M12 25h8" /></svg
+        ><strong i18n="@@diagram.business">Tu negocio</strong
+        ><span i18n="@@diagram.rules">Reglas + validación</span>
+      </div>
+    </div>
+    <div class="node-slot output-slot">
+      <div class="node node-output">
+        <span class="output-symbol" aria-hidden="true"
+          ><span class="output-arrow">↗</span><span class="output-check">✓</span></span
+        ><strong i18n="@@diagram.operation">Operación</strong
+        ><span class="output-status"
+          ><span class="output-waiting" i18n="@@living.waiting">En espera</span
+          ><span class="output-ready" i18n="@@diagram.connected">Datos conectados</span></span
+        >
+      </div>
+    </div>
+    <div class="diagram-axis eyebrow">
+      <span i18n="@@diagram.flow">Flujo de datos</span><span aria-hidden="true">→</span
+      ><span i18n="@@diagram.direction">Una dirección clara</span>
+    </div>
+  </div>
+  <figcaption id="diagram-description" class="sr-only" i18n="@@diagram.description">
+    Esquema ilustrativo: el CRM y el ERP envían datos a una API central. Las reglas de negocio
+    validan esos datos antes de incorporarlos a la operación. No representa un sistema de un
+    cliente.
+  </figcaption>
+  <div class="frame-footer">
+    <span class="footer-indicator" aria-hidden="true"></span
+    ><span i18n="@@diagram.footer">Conectar. Validar. Hacer que funcione.</span
+    ><button
+      class="replay-flow"
+      type="button"
+      [disabled]="!canReplay()"
+      [style.visibility]="canReplay() ? 'visible' : 'hidden'"
+      (click)="replay()"
+      aria-label="Repetir la animación del sistema"
+      i18n-aria-label="@@living.replayLabel"
+    >
+      <span aria-hidden="true">↻</span><span i18n="@@living.replay">Repetir</span>
+    </button>
+  </div>
+</figure>

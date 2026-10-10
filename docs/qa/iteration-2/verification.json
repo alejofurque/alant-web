@@ -1,0 +1,50 @@
+{
+  "responsive": [
+    {
+      "docWidth": 375,
+      "fontStatus": "loaded",
+      "linksWithoutDestination": 0,
+      "orientation": "vertical",
+      "overflowElements": [],
+      "projectCards": 2,
+      "width": 390
+    },
+    {
+      "docWidth": 753,
+      "fontStatus": "loaded",
+      "linksWithoutDestination": 0,
+      "orientation": "horizontal",
+      "overflowElements": [],
+      "projectCards": 2,
+      "width": 768
+    },
+    {
+      "docWidth": 1425,
+      "fontStatus": "loaded",
+      "linksWithoutDestination": 0,
+      "orientation": "horizontal",
+      "overflowElements": [],
+      "projectCards": 2,
+      "width": 1440
+    }
+  ],
+  "contrast": {
+    "mobile": {
+      "count": 124,
+      "min": 4.79,
+      "failures": []
+    },
+    "desktop": {
+      "count": 138,
+      "min": 4.79,
+      "failures": []
+    }
+  },
+  "minimumTextSizePx": 11,
+  "bundle": {
+    "initialRawKb": 285.63,
+    "homeRawKb": 66.41,
+    "estimatedTransferJsCssKb": 97.2
+  },
+  "scope": "Chromium integrado; contraste calculado sobre colores CSS de textos renderizados; sin Lighthouse/axe ni dispositivos físicos."
+}

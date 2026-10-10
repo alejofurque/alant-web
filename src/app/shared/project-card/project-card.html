@@ -1,0 +1,116 @@
+@let item = project();
+@let media = item.media;
+<article
+  class="project-card"
+  [attr.aria-labelledby]="'project-title-' + item.id"
+  [class.is-placeholder]="item.status === 'placeholder'"
+>
+  <figure class="project-media">
+    @switch (media.kind) {
+      @case ('placeholder') {
+        <div class="placeholder-top eyebrow">
+          <span i18n="@@projects.visualLabel">Vista del sistema</span
+          ><span aria-hidden="true">[ — ]</span>
+        </div>
+        <div class="placeholder-canvas">
+          <svg class="capture-outline" viewBox="0 0 80 60" fill="none" aria-hidden="true">
+            <path d="M1 16V1h15M64 1h15v15M79 44v15H64M16 59H1V44" />
+            <rect x="13" y="12" width="54" height="36" rx="2" />
+            <path d="M13 22h54M25 35h30M40 28v14" />
+          </svg>
+          <p i18n="@@projects.mediaPending">Captura o video<br />por incorporar</p>
+        </div>
+        <figcaption class="placeholder-caption" i18n="@@projects.mediaDisclaimer">
+          Material visual pendiente. No es una captura de un proyecto.
+        </figcaption>
+      }
+      @case ('image') {
+        <img
+          [src]="media.src"
+          [alt]="media.alt"
+          [width]="media.width"
+          [height]="media.height"
+          loading="lazy"
+          decoding="async"
+        />
+      }
+      @case ('video') {
+        <video
+          [src]="media.src"
+          [poster]="media.poster"
+          [width]="media.width"
+          [height]="media.height"
+          [attr.aria-label]="media.description"
+          controls
+          playsinline
+          preload="none"
+        >
+          @if (media.captions; as captions) {
+            <track
+              kind="captions"
+              [src]="captions.src"
+              [srclang]="captions.language"
+              [label]="captions.label"
+              default
+            />
+          }
+          <p i18n="@@projects.videoFallback">Tu navegador no puede reproducir este video.</p>
+        </video>
+        <figcaption class="video-description">{{ media.description }}</figcaption>
+      }
+    }
+  </figure>
+  <div class="project-content">
+    <div class="project-overline">
+      <span class="eyebrow">{{ item.category }}</span
+      ><span class="status-label">{{ statusLabel() }}</span>
+    </div>
+    <h3 [id]="'project-title-' + item.id">{{ item.title }}</h3>
+    <dl class="project-context">
+      <div>
+        <dt class="eyebrow" i18n="@@projects.problem">Problema</dt>
+        <dd>
+          @if (item.problem) {
+            {{ item.problem }}
+          } @else {
+            <span i18n="@@projects.problemPending">Contexto y necesidad por documentar.</span>
+          }
+        </dd>
+      </div>
+      <div>
+        <dt class="eyebrow" i18n="@@projects.solution">Solución</dt>
+        <dd>
+          @if (item.solution) {
+            {{ item.solution }}
+          } @else {
+            <span i18n="@@projects.solutionPending"
+              >Alcance y decisiones de ingeniería por incorporar.</span
+            >
+          }
+        </dd>
+      </div>
+    </dl>
+    <div class="project-technologies">
+      <p class="eyebrow" i18n="@@projects.technologies">Tecnologías</p>
+      @if (item.technologies.length) {
+        <ul aria-label="Tecnologías utilizadas" i18n-aria-label="@@projects.technologyList">
+          @for (technology of item.technologies; track technology) {
+            <li>{{ technology }}</li>
+          }
+        </ul>
+      } @else {
+        <p class="technology-pending" i18n="@@projects.technologiesPending">
+          Por confirmar con el material real.
+        </p>
+      }
+    </div>
+    <div class="project-bottom">
+      @if (item.link; as link) {
+        <a class="text-link" [href]="link.href">{{ link.label }}<app-arrow /></a>
+      } @else {
+        <p i18n="@@projects.linkPending">Sin caso ni demo publicados todavía.</p>
+        <span aria-hidden="true">—</span>
+      }
+    </div>
+  </div>
+</article>

@@ -1,0 +1,6 @@
+<a class="skip-link" [href]="router.url.split('#')[0] + '#contenido'" i18n="@@accessibility.skip"
+  >Saltar al contenido</a
+>
+<app-header />
+<main id="contenido" tabindex="-1"><router-outlet /></main>
+<app-footer />

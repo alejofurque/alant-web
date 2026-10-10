@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-10",
+  "environment": "Codex in-app browser, local production preview",
+  "measurements": [
+    {
+      "name": "contacto-768",
+      "formColumns": "291.094px 291.094px",
+      "headings": [" Contanos el contexto. Pensemos el siguiente paso."],
+      "overflows": [],
+      "path": "/contacto",
+      "scrollWidth": 753,
+      "viewport": [768, 1024],
+      "width": 753
+    },
+    {
+      "name": "contacto-390",
+      "formColumns": "277px",
+      "headings": [" Contanos el contexto. Pensemos el siguiente paso."],
+      "overflows": [],
+      "path": "/contacto",
+      "scrollWidth": 375,
+      "viewport": [390, 844],
+      "width": 375
+    },
+    {
+      "name": "servicios-390",
+      "formColumns": null,
+      "headings": [" De una necesidad real a un sistema que funciona."],
+      "overflows": [],
+      "path": "/servicios",
+      "scrollWidth": 375,
+      "viewport": [390, 844],
+      "width": 375
+    },
+    {
+      "name": "estudio-390",
+      "formColumns": null,
+      "headings": [" Criterio de ingeniería. Cercanía para construir."],
+      "overflows": [],
+      "path": "/estudio",
+      "scrollWidth": 375,
+      "viewport": [390, 844],
+      "width": 375
+    },
+    {
+      "name": "estudio-768",
+      "formColumns": null,
+      "headings": [" Criterio de ingeniería. Cercanía para construir."],
+      "overflows": [],
+      "path": "/estudio",
+      "scrollWidth": 753,
+      "viewport": [768, 1024],
+      "width": 753
+    },
+    {
+      "name": "servicios-768",
+      "formColumns": null,
+      "headings": [" De una necesidad real a un sistema que funciona."],
+      "overflows": [],
+      "path": "/servicios",
+      "scrollWidth": 753,
+      "viewport": [768, 1024],
+      "width": 753
+    },
+    {
+      "contrast": {
+        "count": 117,
+        "failures": [],
+        "min": 4.672422977585791,
+        "path": "/servicios"
+      }
+    },
+    {
+      "contrast": {
+        "count": 41,
+        "failures": [],
+        "min": 4.722633727090561,
+        "path": "/contacto"
+      }
+    },
+    {
+      "contrast": {
+        "count": 81,
+        "failures": [],
+        "min": 4.796321122392072,
+        "path": "/estudio"
+      }
+    },
+    {
+      "name": "404-1440",
+      "formColumns": null,
+      "headings": ["Esta pieza no estáen el sistema."],
+      "overflows": [],
+      "path": "/ruta-inexistente",
+      "scrollWidth": 1425,
+      "viewport": [1440, 900],
+      "width": 1425
+    }
+  ],
+  "manualChecks": {
+    "keyboard": [
+      "Mobile menu Enter opens; Escape closes and returns focus",
+      "Enter on Services navigates and closes menu",
+      "Skip link focuses main#contenido on current route"
+    ],
+    "routing": [
+      "Service CTA selects software contact type",
+      "404 recovery to Services",
+      "No project navigation without published projects"
+    ],
+    "homeRegression": [
+      "Hero reached complete after returning from Studio",
+      "Spatial transformation states A, B and C captured",
+      "Final system result visibly completed"
+    ]
+  },
+  "console": [],
+  "limitations": [
+    "No real form submission: endpoint not configured",
+    "No Lighthouse or screen reader audit",
+    "Viewport emulation, not physical devices"
+  ]
+}

@@ -1,0 +1,102 @@
+<app-page-intro
+  code="01"
+  label="Servicios"
+  i18n-label="@@nav.services"
+  title="De una necesidad real"
+  i18n-title="@@servicesPage.title"
+  accent="a un sistema que funciona."
+  i18n-accent="@@servicesPage.accent"
+  description="Construir una herramienta propia. Conectar lo que ya existe. Automatizar lo que se repite. Tres capacidades que pueden trabajar juntas, según lo que tu empresa necesita."
+  i18n-description="@@servicesPage.intro"
+>
+</app-page-intro>
+<nav
+  class="service-index container"
+  aria-label="Capacidades de ingeniería"
+  i18n-aria-label="@@servicesPage.index"
+>
+  @for (service of services; track service.id) {
+    <a routerLink="/servicios" [fragment]="service.id"
+      ><span class="eyebrow">{{ service.number }}</span
+      ><strong>{{ service.name }}</strong
+      ><app-arrow
+    /></a>
+  }
+</nav>
+@for (service of services; track service.id) {
+  <section
+    class="service-detail section"
+    [class.dark]="service.id === 'integraciones'"
+    [id]="service.id"
+    [attr.aria-labelledby]="service.id + '-title'"
+  >
+    <div class="container">
+      <div class="service-heading">
+        <span class="service-number" aria-hidden="true">{{ service.number }}</span>
+        <div>
+          <p class="eyebrow">{{ service.name }}</p>
+          <h2 [id]="service.id + '-title'">{{ service.title }}</h2>
+        </div>
+      </div>
+      <div class="service-body">
+        <div class="service-context">
+          <p class="problem">{{ service.problem }}</p>
+          <p class="body-copy">{{ service.offer }}</p>
+          <div class="service-flow" aria-hidden="true">
+            @for (step of service.steps; track step; let last = $last) {
+              <span>{{ step }}</span>
+              @if (!last) {
+                <b>→</b>
+              }
+            }
+          </div>
+          <p class="benefit">{{ service.benefit }}</p>
+        </div>
+        <div class="scope">
+          <h3 class="eyebrow" i18n="@@servicesPage.scope">Qué podemos construir</h3>
+          <ul>
+            @for (capability of service.capabilities; track capability) {
+              <li>{{ capability }}</li>
+            }
+          </ul>
+          <a routerLink="/contacto" [queryParams]="{ tipo: service.id }" class="text-link"
+            ><span i18n="@@servicesPage.consult">Consultar sobre esta capacidad</span><app-arrow
+          /></a>
+        </div>
+      </div>
+      <div class="examples-heading">
+        <h3 class="eyebrow" i18n="@@servicesPage.examples">Aplicaciones posibles</h3>
+        <p i18n="@@servicesPage.illustrative">Ejemplos ilustrativos, no casos de clientes.</p>
+      </div>
+      <div class="examples">
+        @for (example of service.examples; track example.title) {
+          <article>
+            <h4>{{ example.title }}</h4>
+            <p>{{ example.text }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+}
+<section class="section engagement">
+  <div class="container engagement-grid">
+    <div>
+      <p class="eyebrow" i18n="@@servicesPage.startLabel">Un alcance claro desde el comienzo</p>
+      <h2 class="section-title" i18n="@@servicesPage.startTitle">
+        Elegimos el punto<br />de partida con vos.
+      </h2>
+    </div>
+    <div>
+      <p class="body-copy" i18n="@@servicesPage.startCopy">
+        Revisamos el contexto, los sistemas existentes y las restricciones. A partir de ahí
+        acordamos un alcance, las prioridades y qué hace falta validar. La solución puede combinar
+        desarrollo, integración y automatización.
+      </p>
+      <a routerLink="/estudio" class="text-link"
+        ><span i18n="@@servicesPage.method">Conocer nuestra forma de trabajar</span><app-arrow
+      /></a>
+    </div>
+  </div>
+</section>
+<app-consultation-cta />
