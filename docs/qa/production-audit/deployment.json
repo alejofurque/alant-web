@@ -1,0 +1,148 @@
+{
+  "auditedAt": "2026-10-10T23:57:23.326Z",
+  "localOnly": {
+    "present": {
+      "RESEND_API_KEY": true,
+      "UPSTASH_REDIS_REST_URL": true,
+      "UPSTASH_REDIS_REST_TOKEN": true,
+      "CONTACT_HASH_SECRET": false,
+      "CONTACT_FROM_EMAIL": true,
+      "CONTACT_TO_EMAIL": true,
+      "CONTACT_ALLOWED_ORIGIN": false,
+      "CONTACT_PRIVACY_NOTICE": false,
+      "CONTACT_PRIVACY_VERSION": false
+    },
+    "flags": {
+      "CONTACT_ENABLED": "false",
+      "CONTACT_DELIVERY_VERIFIED": "false",
+      "CONTACT_PRIVACY_APPROVED": "false"
+    },
+    "originMatchesProduction": false,
+    "recipientMatchesRequested": true,
+    "privacyNotice": "",
+    "productionGate": {
+      "enabled": false
+    }
+  },
+  "public": [
+    {
+      "url": "http://alantapp.com/",
+      "status": 308,
+      "location": "https://alantapp.com/",
+      "server": "Vercel",
+      "cache": null,
+      "hsts": null
+    },
+    {
+      "url": "http://www.alantapp.com/",
+      "status": 308,
+      "location": "https://www.alantapp.com/",
+      "server": "Vercel",
+      "cache": null,
+      "hsts": null
+    },
+    {
+      "url": "https://www.alantapp.com/",
+      "status": 307,
+      "location": "https://alantapp.com/",
+      "server": "Vercel",
+      "cache": "public, max-age=0, must-revalidate",
+      "hsts": "max-age=63072000"
+    },
+    {
+      "url": "https://alantapp.com/",
+      "status": 200,
+      "location": null,
+      "server": "Vercel",
+      "cache": "public, max-age=0, must-revalidate",
+      "hsts": "max-age=63072000",
+      "title": "ALANT — Software a medida e integración de sistemas",
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "projectsVisible": true,
+      "h1Count": 1
+    },
+    {
+      "url": "https://alantapp.com/servicios",
+      "status": 200,
+      "location": null,
+      "server": "Vercel",
+      "cache": "public, max-age=0, must-revalidate",
+      "hsts": "max-age=63072000",
+      "title": "Servicios de ingeniería, integración e IA — ALANT",
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "projectsVisible": false,
+      "h1Count": 1
+    },
+    {
+      "url": "https://alantapp.com/estudio",
+      "status": 200,
+      "location": null,
+      "server": "Vercel",
+      "cache": "public, max-age=0, must-revalidate",
+      "hsts": "max-age=63072000",
+      "title": "El estudio — Ingeniería de software con criterio | ALANT",
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "projectsVisible": false,
+      "h1Count": 1
+    },
+    {
+      "url": "https://alantapp.com/contacto",
+      "status": 200,
+      "location": null,
+      "server": "Vercel",
+      "cache": "public, max-age=0, must-revalidate",
+      "hsts": "max-age=63072000",
+      "title": "Contacto — Contanos sobre tu proyecto | ALANT",
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "projectsVisible": false,
+      "h1Count": 1
+    },
+    {
+      "url": "https://alantapp.com/ruta-inexistente-auditoria",
+      "status": 200,
+      "location": null,
+      "server": "Vercel",
+      "cache": "public, max-age=0, must-revalidate",
+      "hsts": "max-age=63072000",
+      "title": "ALANT — Software a medida e integración de sistemas",
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "projectsVisible": true,
+      "h1Count": 1
+    },
+    {
+      "url": "https://alantapp.com/robots.txt",
+      "status": 200,
+      "location": null,
+      "server": "Vercel",
+      "cache": "public, max-age=0, must-revalidate",
+      "hsts": "max-age=63072000",
+      "body": "User-agent: *\nDisallow: /\n"
+    },
+    {
+      "url": "https://alantapp.com/sitemap.xml",
+      "status": 200,
+      "location": null,
+      "server": "Vercel",
+      "cache": "public, max-age=0, must-revalidate",
+      "hsts": "max-age=63072000",
+      "title": "ALANT — Software a medida e integración de sistemas",
+      "canonical": null,
+      "robots": "noindex, nofollow",
+      "projectsVisible": true,
+      "h1Count": 1
+    },
+    {
+      "url": "https://alantapp.com/api/contact",
+      "status": 500,
+      "location": null,
+      "server": "Vercel",
+      "cache": "no-store",
+      "hsts": "max-age=63072000"
+    }
+  ]
+}

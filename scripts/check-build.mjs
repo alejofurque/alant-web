@@ -81,9 +81,22 @@ for (const [path, document] of pages) {
   }
 }
 const home = pages.get('/');
-assert.equal(home.querySelectorAll('#proyectos app-project-card').length, 2);
-assert.match(home.querySelector('#proyectos').textContent, /Portfolio en preparación/);
-assert.equal(home.querySelector('#proyectos img, #proyectos video, .project-card a'), null);
+for (const path of ['/', '/servicios']) {
+  const previews = [...pages.get(path).querySelectorAll('app-solution-preview')];
+  assert.equal(previews.length, 3, `${path}: three conceptual solution previews`);
+  for (const preview of previews) {
+    assert.match(preview.textContent, /Interfaz conceptual/);
+    assert.ok(preview.querySelector('figcaption')?.textContent.trim());
+    assert.equal(
+      preview.querySelector('button, input, a'),
+      null,
+      'Conceptual UI must not imply working controls',
+    );
+  }
+}
+assert.equal(home.querySelectorAll('.scenario-flow li').length, 9);
+assert.equal(home.querySelector('app-projects, #proyectos, app-project-card'), null);
+assert.ok(!home.body.textContent.includes('Portfolio en preparación'));
 assert.equal(home.querySelectorAll('.story-step').length, 3);
 assert.equal(home.querySelectorAll('.story-step .inline-visual figure').length, 3);
 assert.equal(home.querySelectorAll('.story-step .scenario-cta[href="/contacto"]').length, 3);

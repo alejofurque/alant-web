@@ -475,7 +475,7 @@
         <note category="location">src/app/features/home/contact/contact.html:4,5</note>
       </notes>
       <segment>
-        <source>05 / El próximo paso</source>
+        <source>04 / El próximo paso</source>
       </segment>
     </unit>
     <unit id="contact.topNote">
@@ -539,12 +539,15 @@
         <note category="location">src/app/features/home/hero/hero.html:15,18</note>
       </notes>
       <segment>
-        <source> Diseñamos, construimos e integramos sistemas a medida para resolver desafíos reales de tu empresa. </source>
+        <source> Desarrollamos software a medida, conectamos sistemas y automatizamos procesos para que tu empresa trabaje mejor. </source>
       </segment>
     </unit>
     <unit id="hero.primaryCta">
       <notes>
         <note category="location">src/app/features/home/hero/hero.html:20,21</note>
+        <note category="location">src/app/features/home/services/services.html:64,65</note>
+        <note category="location">src/app/features/home/solutions/solutions.html:73,74</note>
+        <note category="location">src/app/features/services/services-page.html:56,57</note>
         <note category="location">src/app/shared/consultation-cta/consultation-cta.ts:21,22</note>
       </notes>
       <segment>
@@ -612,7 +615,7 @@
         <note category="location">src/app/features/home/process/process.html:4,5</note>
       </notes>
       <segment>
-        <source>04 / El estudio · Cómo trabajamos</source>
+        <source>03 / El estudio · Cómo trabajamos</source>
       </segment>
     </unit>
     <unit id="process.title">
@@ -628,7 +631,7 @@
         <note category="location">src/app/features/home/process/process.html:9,12</note>
       </notes>
       <segment>
-        <source> Somos un estudio de ingeniería de software. Trabajamos sobre necesidades concretas, con decisiones técnicas claras y atención a cada detalle. </source>
+        <source> Del problema a una primera entrega útil. Acordamos el alcance y revisamos los avances con vos. </source>
       </segment>
     </unit>
     <unit id="process.signature">
@@ -652,12 +655,12 @@
         <note category="location">src/app/features/home/process/process.html:26,29</note>
       </notes>
       <segment>
-        <source> Escuchamos el problema y exploramos la operación. Qué pasa hoy, qué hace falta y qué vale la pena resolver. </source>
+        <source> Revisamos cómo trabajás hoy, qué sistemas usás y dónde se frena el proceso. </source>
       </segment>
     </unit>
     <unit id="process.design">
       <notes>
-        <note category="location">src/app/features/home/process/process.html:35,36</note>
+        <note category="location">src/app/features/home/process/process.html:34,35</note>
       </notes>
       <segment>
         <source>Diseñar</source>
@@ -665,15 +668,15 @@
     </unit>
     <unit id="process.designDescription">
       <notes>
-        <note category="location">src/app/features/home/process/process.html:37,40</note>
+        <note category="location">src/app/features/home/process/process.html:36,38</note>
       </notes>
       <segment>
-        <source> Definimos el alcance y la arquitectura. Acordamos prioridades y cómo vamos a construir la solución. </source>
+        <source> Acordamos prioridades, alcance y cómo vamos a validar la solución. </source>
       </segment>
     </unit>
     <unit id="process.build">
       <notes>
-        <note category="location">src/app/features/home/process/process.html:46,47</note>
+        <note category="location">src/app/features/home/process/process.html:44,45</note>
       </notes>
       <segment>
         <source>Construir</source>
@@ -681,15 +684,15 @@
     </unit>
     <unit id="process.buildDescription">
       <notes>
-        <note category="location">src/app/features/home/process/process.html:48,51</note>
+        <note category="location">src/app/features/home/process/process.html:46,48</note>
       </notes>
       <segment>
-        <source> Desarrollamos por etapas, validamos con vos y probamos. Código mantenible, entregas claras y decisiones documentadas. </source>
+        <source> Desarrollamos por etapas, probamos con vos y documentamos lo entregado. </source>
       </segment>
     </unit>
     <unit id="process.evolve">
       <notes>
-        <note category="location">src/app/features/home/process/process.html:57,58</note>
+        <note category="location">src/app/features/home/process/process.html:54,55</note>
       </notes>
       <segment>
         <source>Evolucionar</source>
@@ -697,90 +700,10 @@
     </unit>
     <unit id="process.evolveDescription">
       <notes>
-        <note category="location">src/app/features/home/process/process.html:59,62</note>
+        <note category="location">src/app/features/home/process/process.html:56,58</note>
       </notes>
       <segment>
-        <source> Acompañamos el uso real del sistema. Ajustamos, damos soporte y planificamos lo que sigue. </source>
-      </segment>
-    </unit>
-    <unit id="projects.sectionLabel">
-      <notes>
-        <note category="location">src/app/features/home/projects/projects.html:6,8</note>
-      </notes>
-      <segment>
-        <source> 03 / Proyectos y demostraciones </source>
-      </segment>
-    </unit>
-    <unit id="projects.title">
-      <notes>
-        <note category="location">src/app/features/home/projects/projects.html:9,11</note>
-      </notes>
-      <segment>
-        <source> El contexto.<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>La solución. El software. </source>
-      </segment>
-    </unit>
-    <unit id="projects.intro">
-      <notes>
-        <note category="location">src/app/features/home/projects/projects.html:13,16</note>
-      </notes>
-      <segment>
-        <source> Acá mostraremos proyectos documentados y demostraciones técnicas: qué problema resuelven, cómo se construyeron y qué decisiones hay detrás. </source>
-      </segment>
-    </unit>
-    <unit id="projects.notice">
-      <notes>
-        <note category="location">src/app/features/home/projects/projects.html:20,23</note>
-      </notes>
-      <segment>
-        <source> Portfolio en preparación. Estos espacios están reservados y todavía no incluyen trabajos ni demos publicados. </source>
-      </segment>
-    </unit>
-    <unit id="projects.publicationNote">
-      <notes>
-        <note category="location">src/app/features/home/projects/projects.html:31,34</note>
-      </notes>
-      <segment>
-        <source> Los proyectos se incorporarán con material autorizado. Las demostraciones se identificarán como tales. </source>
-      </segment>
-    </unit>
-    <unit id="projects.cta">
-      <notes>
-        <note category="location">src/app/features/home/projects/projects.html:35,36</note>
-      </notes>
-      <segment>
-        <source>Conversemos sobre tu necesidad</source>
-      </segment>
-    </unit>
-    <unit id="projects.softwareCategory">
-      <notes>
-        <note category="location">src/app/features/home/projects/projects.ts:17</note>
-      </notes>
-      <segment>
-        <source>Software a medida</source>
-      </segment>
-    </unit>
-    <unit id="projects.projectPendingTitle">
-      <notes>
-        <note category="location">src/app/features/home/projects/projects.ts:18</note>
-      </notes>
-      <segment>
-        <source>Proyecto por documentar</source>
-      </segment>
-    </unit>
-    <unit id="projects.demoCategory">
-      <notes>
-        <note category="location">src/app/features/home/projects/projects.ts:27</note>
-      </notes>
-      <segment>
-        <source>Demostraciones técnicas</source>
-      </segment>
-    </unit>
-    <unit id="projects.demoPendingTitle">
-      <notes>
-        <note category="location">src/app/features/home/projects/projects.ts:28</note>
-      </notes>
-      <segment>
-        <source>Demostración por incorporar</source>
+        <source> Acordamos soporte, mantenimiento y mejoras según el uso real. </source>
       </segment>
     </unit>
     <unit id="services.label">
@@ -796,7 +719,7 @@
         <note category="location">src/app/features/home/services/services.html:6,8</note>
       </notes>
       <segment>
-        <source> Ingeniería para lo que<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>tu empresa necesita. </source>
+        <source> Software para resolver<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>el trabajo de todos los días. </source>
       </segment>
     </unit>
     <unit id="services.intro">
@@ -804,92 +727,124 @@
         <note category="location">src/app/features/home/services/services.html:9,12</note>
       </notes>
       <segment>
-        <source> Una herramienta propia. Sistemas que se entienden. Procesos más simples. Partimos del problema y construimos la solución adecuada. </source>
+        <source> Una herramienta propia, sistemas conectados o menos tareas manuales. Empezamos por lo que tu empresa necesita cambiar. </source>
+      </segment>
+    </unit>
+    <unit id="services.visualNote">
+      <notes>
+        <note category="location">src/app/features/home/services/services.html:14,16</note>
+      </notes>
+      <segment>
+        <source> Representaciones conceptuales de soluciones posibles. No son proyectos de clientes. </source>
+      </segment>
+    </unit>
+    <unit id="services.softwareHeading">
+      <notes>
+        <note category="location">src/app/features/home/services/services.html:19,20</note>
+      </notes>
+      <segment>
+        <source>Una herramienta<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>a tu medida.</source>
       </segment>
     </unit>
     <unit id="services.software">
       <notes>
-        <note category="location">src/app/features/home/services/services.html:27,29</note>
+        <note category="location">src/app/features/home/services/services.html:22,24</note>
       </notes>
       <segment>
-        <source> Software a medida que acompaña tu forma de trabajar. Plataformas web, herramientas internas y productos digitales mantenibles. </source>
+        <source> Sistemas internos, portales y paneles de gestión para coordinar pedidos, tareas y equipos. </source>
       </segment>
     </unit>
-    <unit id="services.softwareTags">
+    <unit id="services.softwareFit">
       <notes>
-        <note category="location">src/app/features/home/services/services.html:31,33</note>
+        <note category="location">src/app/features/home/services/services.html:25,27</note>
       </notes>
       <segment>
-        <source> Plataformas / Herramientas / MVPs </source>
+        <source> Cuando las planillas ya no alcanzan o tu software no se adapta a la operación. </source>
       </segment>
     </unit>
-    <unit id="services.integrationLabel">
+    <unit id="services.softwareLink">
       <notes>
-        <note category="location">src/app/features/home/services/services.html:36,38</note>
+        <note category="location">src/app/features/home/services/services.html:28,30</note>
       </notes>
       <segment>
-        <source>02 / Integración</source>
+        <source>Ver software a medida</source>
+      </segment>
+    </unit>
+    <unit id="services.integrationHeading">
+      <notes>
+        <note category="location">src/app/features/home/services/services.html:33,34</note>
+      </notes>
+      <segment>
+        <source>Tus sistemas,<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>trabajando juntos.</source>
       </segment>
     </unit>
     <unit id="services.integration">
       <notes>
-        <note category="location">src/app/features/home/services/services.html:50,53</note>
+        <note category="location">src/app/features/home/services/services.html:36,39</note>
       </notes>
       <segment>
-        <source> Conectamos tus sistemas para que los datos fluyan. APIs, ERP, CRM y plataformas que necesitan operar en conjunto. </source>
+        <source> Conectamos tu tienda online, gestión de clientes, stock y pagos para compartir información. </source>
       </segment>
     </unit>
-    <unit id="services.integrationTags">
+    <unit id="services.integrationFit">
       <notes>
-        <note category="location">src/app/features/home/services/services.html:54,56</note>
+        <note category="location">src/app/features/home/services/services.html:40,42</note>
       </notes>
       <segment>
-        <source> APIs / Datos / Conexiones </source>
+        <source> Cuando tu equipo carga el mismo dato en más de un sistema. </source>
       </segment>
     </unit>
-    <unit id="services.automationLabel">
+    <unit id="services.integrationLink">
       <notes>
-        <note category="location">src/app/features/home/services/services.html:59,61</note>
+        <note category="location">src/app/features/home/services/services.html:43,45</note>
       </notes>
       <segment>
-        <source>03 / Automatización</source>
+        <source>Ver integraciones</source>
+      </segment>
+    </unit>
+    <unit id="services.automationHeading">
+      <notes>
+        <note category="location">src/app/features/home/services/services.html:48,49</note>
+      </notes>
+      <segment>
+        <source>Menos tareas manuales.<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>Más control.</source>
       </segment>
     </unit>
     <unit id="services.automation">
       <notes>
-        <note category="location">src/app/features/home/services/services.html:73,76</note>
+        <note category="location">src/app/features/home/services/services.html:51,53</note>
       </notes>
       <segment>
-        <source> Menos tareas repetitivas, más control. Automatización e inteligencia artificial dentro de tus procesos, cuando aportan valor. </source>
+        <source> Flujos que extraen datos de documentos, organizan solicitudes y preparan su registro. </source>
       </segment>
     </unit>
-    <unit id="services.automationTags">
+    <unit id="services.automationFit">
       <notes>
-        <note category="location">src/app/features/home/services/services.html:77,79</note>
+        <note category="location">src/app/features/home/services/services.html:54,56</note>
       </notes>
       <segment>
-        <source> Flujos / IA aplicada / Supervisión </source>
+        <source> Cuando copiar, revisar y derivar información ocupa el día. IA sólo donde aporta valor. </source>
+      </segment>
+    </unit>
+    <unit id="services.automationLink">
+      <notes>
+        <note category="location">src/app/features/home/services/services.html:57,59</note>
+      </notes>
+      <segment>
+        <source>Ver automatización</source>
       </segment>
     </unit>
     <unit id="services.support">
       <notes>
-        <note category="location">src/app/features/home/services/services.html:82,83</note>
+        <note category="location">src/app/features/home/services/services.html:62,63</note>
       </notes>
       <segment>
-        <source>Y después de construir, acompañamos la evolución del sistema.</source>
-      </segment>
-    </unit>
-    <unit id="services.cta">
-      <notes>
-        <note category="location">src/app/features/home/services/services.html:84,85</note>
-      </notes>
-      <segment>
-        <source>Contanos qué necesitás</source>
+        <source>Podemos combinar estas capacidades en una misma solución.</source>
       </segment>
     </unit>
     <unit id="transformation.fragmented">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:14</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:15</note>
         <note category="location">src/app/features/home/solutions/story-visual/story-visual.html:5,7</note>
       </notes>
       <segment>
@@ -898,31 +853,55 @@
     </unit>
     <unit id="transformation.fragmentedTitle">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:15</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:16</note>
       </notes>
       <segment>
-        <source>Cada sistema tiene una parte de la historia.</source>
+        <source>Un pedido. Tres cargas de datos.</source>
       </segment>
     </unit>
     <unit id="transformation.fragmentedDescription">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:16</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:17</note>
       </notes>
       <segment>
-        <source>El pedido llega por el ecommerce, el stock está en el ERP y los clientes están en el CRM. El equipo vuelve a cargar datos para poder avanzar.</source>
+        <source>La venta llega por la tienda online, el stock está en gestión y el cliente en otra aplicación. Tu equipo copia datos entre ellas.</source>
       </segment>
     </unit>
     <unit id="transformation.fragmentedApproach">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:17</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:18</note>
       </notes>
       <segment>
-        <source>Primero entendemos dónde nace la información, quién la necesita y qué decisiones siguen dependiendo de una persona.</source>
+        <source>Podemos conectar esas plataformas para compartir pedidos y disponibilidad, sin reemplazar todo lo que usás.</source>
+      </segment>
+    </unit>
+    <unit id="solutionFlow.store">
+      <notes>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:20</note>
+      </notes>
+      <segment>
+        <source>Tienda online</source>
+      </segment>
+    </unit>
+    <unit id="solutionFlow.connect">
+      <notes>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:21</note>
+      </notes>
+      <segment>
+        <source>Conexión</source>
+      </segment>
+    </unit>
+    <unit id="solutionFlow.stock">
+      <notes>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:22</note>
+      </notes>
+      <segment>
+        <source>Stock actualizado</source>
       </segment>
     </unit>
     <unit id="transformation.fragmentedNote">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:18</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:24</note>
       </notes>
       <segment>
         <source>Información repartida. Tareas que dependen de pasar datos de un sistema a otro.</source>
@@ -930,7 +909,7 @@
     </unit>
     <unit id="transformation.fragmentedDiagram">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:19</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:25</note>
       </notes>
       <segment>
         <source>Cuatro módulos separados: ecommerce, ERP, CRM y operación. Cada uno conserva sus datos, sin conexiones entre ellos.</source>
@@ -938,7 +917,7 @@
     </unit>
     <unit id="transformation.integration">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:23</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:29</note>
         <note category="location">src/app/features/home/solutions/story-visual/story-visual.html:8,10</note>
       </notes>
       <segment>
@@ -947,31 +926,55 @@
     </unit>
     <unit id="transformation.integrationTitle">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:24</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:30</note>
       </notes>
       <segment>
-        <source>Una arquitectura conecta las piezas.</source>
+        <source>Del mensaje al sistema, sin transcribir todo.</source>
       </segment>
     </unit>
     <unit id="transformation.integrationDescription">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:25</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:31</note>
       </notes>
       <segment>
-        <source>Los sistemas existentes pueden trabajar juntos. Una capa de integración recibe los datos, aplica reglas y los entrega a la operación.</source>
+        <source>Las solicitudes llegan por email, WhatsApp o documentos. Alguien revisa y carga cada una a mano.</source>
       </segment>
     </unit>
     <unit id="transformation.integrationApproach">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:26</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:32</note>
       </notes>
       <segment>
-        <source>Definimos contratos entre sistemas, validaciones y manejo de errores. El flujo gana continuidad sin perder el control sobre cada paso.</source>
+        <source>Podemos capturar los datos, validar lo necesario y enviarlos a gestión, con revisión humana para las excepciones.</source>
+      </segment>
+    </unit>
+    <unit id="solutionFlow.document">
+      <notes>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:34</note>
+      </notes>
+      <segment>
+        <source>Documento</source>
+      </segment>
+    </unit>
+    <unit id="solutionFlow.validate">
+      <notes>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:35</note>
+      </notes>
+      <segment>
+        <source>Extraer y validar</source>
+      </segment>
+    </unit>
+    <unit id="solutionFlow.record">
+      <notes>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:36</note>
+      </notes>
+      <segment>
+        <source>Registro</source>
       </segment>
     </unit>
     <unit id="transformation.integrationNote">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:27</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:38</note>
       </notes>
       <segment>
         <source>Los datos llegan al núcleo, se validan y continúan hacia la operación.</source>
@@ -979,7 +982,7 @@
     </unit>
     <unit id="transformation.integrationDiagram">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:28</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:39</note>
       </notes>
       <segment>
         <source>Ecommerce, ERP y CRM se alinean como entradas. Sus conexiones convergen en un núcleo de integración y salen hacia operación.</source>
@@ -987,7 +990,7 @@
     </unit>
     <unit id="transformation.unified">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:32</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:43</note>
         <note category="location">src/app/features/home/solutions/story-visual/story-visual.html:11,14</note>
       </notes>
       <segment>
@@ -996,31 +999,55 @@
     </unit>
     <unit id="transformation.unifiedTitle">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:33</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:44</note>
       </notes>
       <segment>
-        <source>Una operación compartida. Un sistema propio.</source>
+        <source>Sabé qué falta, quién lo hace y cómo sigue.</source>
       </segment>
     </unit>
     <unit id="transformation.unifiedDescription">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:34</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:45</note>
       </notes>
       <segment>
-        <source>Una herramienta interna puede reunir pedidos, responsables y estados. Los procesos conectados dejan un registro que el equipo puede consultar.</source>
+        <source>Las tareas y los estados viven en planillas y conversaciones. Para saber cómo va un pedido, hay que preguntar.</source>
       </segment>
     </unit>
     <unit id="transformation.unifiedApproach">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:35</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:46</note>
       </notes>
       <segment>
-        <source>Construimos la plataforma alrededor de la operación. Automatizamos tareas repetitivas y mantenemos la revisión humana donde hace falta decidir.</source>
+        <source>Podemos construir una aplicación interna con responsables, permisos y seguimiento, adaptada a tu forma de trabajar.</source>
+      </segment>
+    </unit>
+    <unit id="solutionFlow.sheets">
+      <notes>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:48</note>
+      </notes>
+      <segment>
+        <source>Planillas</source>
+      </segment>
+    </unit>
+    <unit id="solutionFlow.app">
+      <notes>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:49</note>
+      </notes>
+      <segment>
+        <source>Sistema propio</source>
+      </segment>
+    </unit>
+    <unit id="solutionFlow.followup">
+      <notes>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:50</note>
+      </notes>
+      <segment>
+        <source>Seguimiento</source>
       </segment>
     </unit>
     <unit id="transformation.unifiedNote">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:36</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:52</note>
       </notes>
       <segment>
         <source>Datos compartidos, revisión humana y registro del proceso dentro de una misma plataforma.</source>
@@ -1028,7 +1055,7 @@
     </unit>
     <unit id="transformation.unifiedDiagram">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.data.ts:37</note>
+        <note category="location">src/app/features/home/solutions/solutions.data.ts:53</note>
       </notes>
       <segment>
         <source>Los mismos módulos se reorganizan dentro de una plataforma integrada, alrededor del núcleo. El flujo termina con datos compartidos, revisión humana y un registro consultable.</source>
@@ -1055,12 +1082,12 @@
         <note category="location">src/app/features/home/solutions/solutions.html:12,14</note>
       </notes>
       <segment>
-        <source> De sistemas aislados a una operación conectada.<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>Un ejemplo ilustrativo, no un caso de cliente. </source>
+        <source> Tres situaciones que podemos resolver.<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>Ejemplos ilustrativos, no casos de clientes. </source>
       </segment>
     </unit>
     <unit id="story.navigation">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.html:20,21</note>
+        <note category="location">src/app/features/home/solutions/solutions.html:19,20</note>
       </notes>
       <segment>
         <source>Etapas del sistema</source>
@@ -1068,7 +1095,7 @@
     </unit>
     <unit id="solutions.situation">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.html:55,56</note>
+        <note category="location">src/app/features/home/solutions/solutions.html:54,55</note>
       </notes>
       <segment>
         <source>La situación</source>
@@ -1076,18 +1103,18 @@
     </unit>
     <unit id="solutions.approach">
       <notes>
-        <note category="location">src/app/features/home/solutions/solutions.html:57,58</note>
+        <note category="location">src/app/features/home/solutions/solutions.html:56,57</note>
       </notes>
       <segment>
         <source>Cómo abordarla</source>
       </segment>
     </unit>
-    <unit id="solutions.cta">
+    <unit id="solutionFlow.label">
       <notes>
         <note category="location">src/app/features/home/solutions/solutions.html:60,61</note>
       </notes>
       <segment>
-        <source>Hablemos de tu operación</source>
+        <source>Recorrido de la información</source>
       </segment>
     </unit>
     <unit id="living.sharedProcess">
@@ -1364,7 +1391,7 @@
         <note category="location">src/app/features/services/services-page.html:9,10</note>
       </notes>
       <segment>
-        <source>Construir una herramienta propia. Conectar lo que ya existe. Automatizar lo que se repite. Tres capacidades que pueden trabajar juntas, según lo que tu empresa necesita.</source>
+        <source>Software a medida, integración de sistemas y automatización. Elegí el punto de partida según el problema de tu empresa.</source>
       </segment>
     </unit>
     <unit id="servicesPage.index">
@@ -1375,41 +1402,33 @@
         <source>Capacidades de ingeniería</source>
       </segment>
     </unit>
+    <unit id="servicesPage.offerLabel">
+      <notes>
+        <note category="location">src/app/features/services/services-page.html:45,47</note>
+      </notes>
+      <segment>
+        <source> Qué contratás y cómo lo construimos </source>
+      </segment>
+    </unit>
     <unit id="servicesPage.scope">
       <notes>
-        <note category="location">src/app/features/services/services-page.html:56,58</note>
+        <note category="location">src/app/features/services/services-page.html:49,51</note>
       </notes>
       <segment>
         <source>Qué podemos construir</source>
       </segment>
     </unit>
-    <unit id="servicesPage.consult">
-      <notes>
-        <note category="location">src/app/features/services/services-page.html:63,65</note>
-      </notes>
-      <segment>
-        <source>Consultar sobre esta capacidad</source>
-      </segment>
-    </unit>
-    <unit id="servicesPage.examples">
-      <notes>
-        <note category="location">src/app/features/services/services-page.html:68,69</note>
-      </notes>
-      <segment>
-        <source>Aplicaciones posibles</source>
-      </segment>
-    </unit>
     <unit id="servicesPage.illustrative">
       <notes>
-        <note category="location">src/app/features/services/services-page.html:69,71</note>
+        <note category="location">src/app/features/services/services-page.html:66,69</note>
       </notes>
       <segment>
-        <source>Ejemplos ilustrativos, no casos de clientes.</source>
+        <source> Ejemplos ilustrativos, no casos de clientes. </source>
       </segment>
     </unit>
     <unit id="servicesPage.startLabel">
       <notes>
-        <note category="location">src/app/features/services/services-page.html:85,86</note>
+        <note category="location">src/app/features/services/services-page.html:74,75</note>
       </notes>
       <segment>
         <source>Un alcance claro desde el comienzo</source>
@@ -1417,7 +1436,7 @@
     </unit>
     <unit id="servicesPage.startTitle">
       <notes>
-        <note category="location">src/app/features/services/services-page.html:87,89</note>
+        <note category="location">src/app/features/services/services-page.html:76,78</note>
       </notes>
       <segment>
         <source> Elegimos el punto<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>de partida con vos. </source>
@@ -1425,15 +1444,15 @@
     </unit>
     <unit id="servicesPage.startCopy">
       <notes>
-        <note category="location">src/app/features/services/services-page.html:92,96</note>
+        <note category="location">src/app/features/services/services-page.html:81,84</note>
       </notes>
       <segment>
-        <source> Revisamos el contexto, los sistemas existentes y las restricciones. A partir de ahí acordamos un alcance, las prioridades y qué hace falta validar. La solución puede combinar desarrollo, integración y automatización. </source>
+        <source> Contanos qué necesitás cambiar. Revisamos los sistemas actuales y acordamos prioridades, alcance y una primera entrega que puedas validar. </source>
       </segment>
     </unit>
     <unit id="servicesPage.method">
       <notes>
-        <note category="location">src/app/features/services/services-page.html:97,99</note>
+        <note category="location">src/app/features/services/services-page.html:85,87</note>
       </notes>
       <segment>
         <source>Conocer nuestra forma de trabajar</source>
@@ -1452,7 +1471,7 @@
         <note category="location">src/app/features/services/services.data.ts:7</note>
       </notes>
       <segment>
-        <source>Cuando las planillas, las tareas manuales o una herramienta rígida ya no acompañan la forma de trabajar, hace falta un sistema propio.</source>
+        <source>¿Coordinás pedidos y tareas entre planillas que ya no alcanzan?</source>
       </segment>
     </unit>
     <unit id="services.software.offer">
@@ -1460,7 +1479,7 @@
         <note category="location">src/app/features/services/services.data.ts:8</note>
       </notes>
       <segment>
-        <source>Diseñamos y desarrollamos software empresarial a medida. Partimos de los procesos, los usuarios y las reglas del negocio para definir una herramienta que tenga sentido en el uso diario.</source>
+        <source>Construimos una aplicación a medida, con los permisos, estados y reglas que necesita tu equipo. Definimos el alcance y validamos cada entrega con quienes la van a usar.</source>
       </segment>
     </unit>
     <unit id="services.software.cap1">
@@ -1468,7 +1487,7 @@
         <note category="location">src/app/features/services/services.data.ts:10</note>
       </notes>
       <segment>
-        <source>Software empresarial a medida</source>
+        <source>Gestión de pedidos y tareas</source>
       </segment>
     </unit>
     <unit id="services.software.cap2">
@@ -1476,7 +1495,7 @@
         <note category="location">src/app/features/services/services.data.ts:11</note>
       </notes>
       <segment>
-        <source>Aplicaciones y plataformas web</source>
+        <source>Portales para clientes y proveedores</source>
       </segment>
     </unit>
     <unit id="services.software.cap3">
@@ -1484,7 +1503,7 @@
         <note category="location">src/app/features/services/services.data.ts:12</note>
       </notes>
       <segment>
-        <source>Sistemas internos</source>
+        <source>Herramientas internas con permisos por rol</source>
       </segment>
     </unit>
     <unit id="services.software.cap4">
@@ -1492,7 +1511,7 @@
         <note category="location">src/app/features/services/services.data.ts:13</note>
       </notes>
       <segment>
-        <source>Dashboards y paneles administrativos</source>
+        <source>Paneles de seguimiento</source>
       </segment>
     </unit>
     <unit id="services.software.cap5">
@@ -1511,89 +1530,17 @@
         <source>Modernización de sistemas</source>
       </segment>
     </unit>
-    <unit id="services.software.ex1.title">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:19</note>
-      </notes>
-      <segment>
-        <source>Una operación, una herramienta</source>
-      </segment>
-    </unit>
-    <unit id="services.software.ex1.text">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:20</note>
-      </notes>
-      <segment>
-        <source>Un sistema interno para gestionar solicitudes, responsables y aprobaciones, con permisos acordes a cada rol.</source>
-      </segment>
-    </unit>
-    <unit id="services.software.ex2.title">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:23</note>
-      </notes>
-      <segment>
-        <source>Información para decidir</source>
-      </segment>
-    </unit>
-    <unit id="services.software.ex2.text">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:24</note>
-      </notes>
-      <segment>
-        <source>Un panel que reúne estados de pedidos y tareas pendientes para que el equipo pueda identificar qué requiere atención.</source>
-      </segment>
-    </unit>
-    <unit id="services.software.ex3.title">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:27</note>
-      </notes>
-      <segment>
-        <source>Una base para el producto</source>
-      </segment>
-    </unit>
-    <unit id="services.software.ex3.text">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:28</note>
-      </notes>
-      <segment>
-        <source>Un MVP con un alcance definido para validar el uso, aprender y decidir las siguientes etapas de desarrollo.</source>
-      </segment>
-    </unit>
     <unit id="services.software.benefit">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:31</note>
+        <note category="location">src/app/features/services/services.data.ts:17</note>
       </notes>
       <segment>
-        <source>El objetivo: procesos visibles, menos dependencias de archivos dispersos y una base mantenible para evolucionar.</source>
-      </segment>
-    </unit>
-    <unit id="services.software.flow1">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:33</note>
-      </notes>
-      <segment>
-        <source>Proceso</source>
-      </segment>
-    </unit>
-    <unit id="services.software.flow2">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:34</note>
-      </notes>
-      <segment>
-        <source>Sistema propio</source>
-      </segment>
-    </unit>
-    <unit id="services.software.flow3">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:35</note>
-      </notes>
-      <segment>
-        <source>Operación</source>
+        <source>Para trabajar con estados claros y una herramienta que pueda evolucionar.</source>
       </segment>
     </unit>
     <unit id="services.integration.title">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:42</note>
+        <note category="location">src/app/features/services/services.data.ts:23</note>
       </notes>
       <segment>
         <source>Tus sistemas, trabajando en conjunto.</source>
@@ -1601,39 +1548,39 @@
     </unit>
     <unit id="services.integration.problem">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:43</note>
+        <note category="location">src/app/features/services/services.data.ts:24</note>
       </notes>
       <segment>
-        <source>Un pedido no debería obligar a volver a cargar los mismos datos en cada aplicación. Cuando los sistemas están separados, también lo está la información.</source>
+        <source>¿Tu equipo vuelve a cargar los mismos pedidos en distintas aplicaciones?</source>
       </segment>
     </unit>
     <unit id="services.integration.offer">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:44</note>
+        <note category="location">src/app/features/services/services.data.ts:25</note>
       </notes>
       <segment>
-        <source>Conectamos plataformas existentes mediante APIs y procesos de integración. Definimos qué información circula, cuál es su fuente y cómo se detectan y resuelven los errores.</source>
+        <source>Conectamos tus plataformas para compartir pedidos, clientes, stock y pagos. Revisamos sus interfaces de conexión (APIs), definimos reglas y probamos cómo recuperar intercambios fallidos.</source>
       </segment>
     </unit>
     <unit id="services.integration.cap1">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:46</note>
+        <note category="location">src/app/features/services/services.data.ts:27</note>
       </notes>
       <segment>
-        <source>Integraciones de APIs</source>
+        <source>Conexiones entre aplicaciones (APIs)</source>
       </segment>
     </unit>
     <unit id="services.integration.cap2">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:47</note>
+        <note category="location">src/app/features/services/services.data.ts:28</note>
       </notes>
       <segment>
-        <source>ERP y CRM</source>
+        <source>Gestión empresarial y clientes (ERP / CRM)</source>
       </segment>
     </unit>
     <unit id="services.integration.cap3">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:48</note>
+        <note category="location">src/app/features/services/services.data.ts:29</note>
       </notes>
       <segment>
         <source>Ecommerce y sistemas empresariales</source>
@@ -1641,7 +1588,7 @@
     </unit>
     <unit id="services.integration.cap4">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:49</note>
+        <note category="location">src/app/features/services/services.data.ts:30</note>
       </notes>
       <segment>
         <source>Pasarelas de pago</source>
@@ -1649,7 +1596,7 @@
     </unit>
     <unit id="services.integration.cap5">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:50</note>
+        <note category="location">src/app/features/services/services.data.ts:31</note>
       </notes>
       <segment>
         <source>Sincronización de información</source>
@@ -1657,119 +1604,47 @@
     </unit>
     <unit id="services.integration.cap6">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:51</note>
+        <note category="location">src/app/features/services/services.data.ts:32</note>
       </notes>
       <segment>
-        <source>Webhooks y procesos entre aplicaciones</source>
-      </segment>
-    </unit>
-    <unit id="services.integration.ex1.title">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:55</note>
-      </notes>
-      <segment>
-        <source>Del pedido a la operación</source>
-      </segment>
-    </unit>
-    <unit id="services.integration.ex1.text">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:56</note>
-      </notes>
-      <segment>
-        <source>Conectar ecommerce y ERP para intercambiar pedidos y disponibilidad de productos, según las reglas del negocio.</source>
-      </segment>
-    </unit>
-    <unit id="services.integration.ex2.title">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:59</note>
-      </notes>
-      <segment>
-        <source>Un estado de pago confiable</source>
-      </segment>
-    </unit>
-    <unit id="services.integration.ex2.text">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:60</note>
-      </notes>
-      <segment>
-        <source>Recibir eventos de una pasarela, validar su origen y actualizar el pedido sin procesar dos veces una notificación.</source>
-      </segment>
-    </unit>
-    <unit id="services.integration.ex3.title">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:63</note>
-      </notes>
-      <segment>
-        <source>Continuidad comercial</source>
-      </segment>
-    </unit>
-    <unit id="services.integration.ex3.text">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:64</note>
-      </notes>
-      <segment>
-        <source>Relacionar el CRM con un sistema interno para acompañar una oportunidad desde su registro hasta la entrega.</source>
+        <source>Actualización de estados entre aplicaciones</source>
       </segment>
     </unit>
     <unit id="services.integration.benefit">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:67</note>
+        <note category="location">src/app/features/services/services.data.ts:34</note>
       </notes>
       <segment>
-        <source>El objetivo: información consistente, menos carga duplicada y trazabilidad cuando un intercambio necesita revisión.</source>
-      </segment>
-    </unit>
-    <unit id="services.integration.flow1">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:69</note>
-      </notes>
-      <segment>
-        <source>Sistemas</source>
-      </segment>
-    </unit>
-    <unit id="services.integration.flow2">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:70</note>
-      </notes>
-      <segment>
-        <source>API + reglas</source>
-      </segment>
-    </unit>
-    <unit id="services.integration.flow3">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:71</note>
-      </notes>
-      <segment>
-        <source>Datos conectados</source>
+        <source>Para evitar cargas duplicadas y saber cuándo un intercambio necesita revisión.</source>
       </segment>
     </unit>
     <unit id="services.automation.title">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:78</note>
+        <note category="location">src/app/features/services/services.data.ts:40</note>
       </notes>
       <segment>
-        <source>Automatizar con contexto y control.</source>
+        <source>De la tarea repetitiva al flujo automatizado.</source>
       </segment>
     </unit>
     <unit id="services.automation.problem">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:79</note>
+        <note category="location">src/app/features/services/services.data.ts:41</note>
       </notes>
       <segment>
-        <source>Clasificar documentos, copiar información o coordinar tareas repetitivas consume atención. Algunas decisiones, en cambio, necesitan seguir en manos del equipo.</source>
+        <source>¿Las solicitudes llegan por email, WhatsApp o documentos y se transcriben a mano?</source>
       </segment>
     </unit>
     <unit id="services.automation.offer">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:80</note>
+        <note category="location">src/app/features/services/services.data.ts:42</note>
       </notes>
       <segment>
-        <source>Diseñamos automatizaciones e integramos IA cuando aporta valor al proceso. Definimos sus límites, los datos que puede utilizar y los puntos de revisión humana antes de incorporarla a la operación.</source>
+        <source>Construimos flujos para capturar, validar y registrar información. Probamos con documentos representativos y definimos qué puede automatizarse y qué necesita aprobación humana.</source>
       </segment>
     </unit>
     <unit id="services.automation.cap1">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:82</note>
+        <note category="location">src/app/features/services/services.data.ts:44</note>
       </notes>
       <segment>
         <source>Automatización de procesos</source>
@@ -1777,23 +1652,23 @@
     </unit>
     <unit id="services.automation.cap2">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:83</note>
+        <note category="location">src/app/features/services/services.data.ts:45</note>
       </notes>
       <segment>
-        <source>Agentes de IA empresariales</source>
+        <source>Asistentes con acceso a datos autorizados</source>
       </segment>
     </unit>
     <unit id="services.automation.cap3">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:84</note>
+        <note category="location">src/app/features/services/services.data.ts:46</note>
       </notes>
       <segment>
-        <source>Procesamiento inteligente de documentos</source>
+        <source>Extracción y validación de documentos</source>
       </segment>
     </unit>
     <unit id="services.automation.cap4">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:85</note>
+        <note category="location">src/app/features/services/services.data.ts:47</note>
       </notes>
       <segment>
         <source>Automatización comercial y administrativa</source>
@@ -1801,7 +1676,7 @@
     </unit>
     <unit id="services.automation.cap5">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:86</note>
+        <note category="location">src/app/features/services/services.data.ts:48</note>
       </notes>
       <segment>
         <source>IA en software existente</source>
@@ -1809,90 +1684,18 @@
     </unit>
     <unit id="services.automation.cap6">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:87</note>
+        <note category="location">src/app/features/services/services.data.ts:49</note>
       </notes>
       <segment>
-        <source>Workflows inteligentes</source>
-      </segment>
-    </unit>
-    <unit id="services.automation.ex1.title">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:91</note>
-      </notes>
-      <segment>
-        <source>Documentos listos para revisar</source>
-      </segment>
-    </unit>
-    <unit id="services.automation.ex1.text">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:92</note>
-      </notes>
-      <segment>
-        <source>Extraer datos de documentos, contrastarlos con reglas y derivar las inconsistencias a una persona antes de registrarlos.</source>
-      </segment>
-    </unit>
-    <unit id="services.automation.ex2.title">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:95</note>
-      </notes>
-      <segment>
-        <source>Tareas que encuentran su destino</source>
-      </segment>
-    </unit>
-    <unit id="services.automation.ex2.text">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:96</note>
-      </notes>
-      <segment>
-        <source>Clasificar solicitudes, proponer una prioridad y asignarlas al circuito administrativo correspondiente.</source>
-      </segment>
-    </unit>
-    <unit id="services.automation.ex3.title">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:99</note>
-      </notes>
-      <segment>
-        <source>Asistencia dentro del sistema</source>
-      </segment>
-    </unit>
-    <unit id="services.automation.ex3.text">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:100</note>
-      </notes>
-      <segment>
-        <source>Un agente que consulta información autorizada y prepara acciones, con aprobación humana para las operaciones sensibles.</source>
+        <source>Derivación de solicitudes</source>
       </segment>
     </unit>
     <unit id="services.automation.benefit">
       <notes>
-        <note category="location">src/app/features/services/services.data.ts:103</note>
+        <note category="location">src/app/features/services/services.data.ts:51</note>
       </notes>
       <segment>
-        <source>El objetivo: reducir trabajo repetitivo, hacer visibles las excepciones y conservar control sobre las decisiones.</source>
-      </segment>
-    </unit>
-    <unit id="services.automation.flow1">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:105</note>
-      </notes>
-      <segment>
-        <source>Información</source>
-      </segment>
-    </unit>
-    <unit id="services.automation.flow2">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:106</note>
-      </notes>
-      <segment>
-        <source>IA + revisión</source>
-      </segment>
-    </unit>
-    <unit id="services.automation.flow3">
-      <notes>
-        <note category="location">src/app/features/services/services.data.ts:107</note>
-      </notes>
-      <segment>
-        <source>Acción</source>
+        <source>Para reducir transcripciones y revisar excepciones antes de actuar.</source>
       </segment>
     </unit>
     <unit id="nav.studio">
@@ -1927,7 +1730,7 @@
         <note category="location">src/app/features/studio/studio-page.html:9,10</note>
       </notes>
       <segment>
-        <source>ALANT es un estudio boutique de ingeniería de software. Construimos sistemas confiables, integrables y preparados para evolucionar con cada empresa.</source>
+        <source>Un estudio boutique de ingeniería de software. Atención directa, decisiones claras y sistemas preparados para mantenerse y evolucionar.</source>
       </segment>
     </unit>
     <unit id="studioPage.position">
@@ -1948,23 +1751,23 @@
     </unit>
     <unit id="studioPage.philosophyCopy">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:20,23</note>
+        <note category="location">src/app/features/studio/studio-page.html:20,22</note>
       </notes>
       <segment>
-        <source> Una solución empieza mucho antes del código. Empieza por comprender cómo trabaja una empresa, dónde se pierde información y qué necesita cambiar. </source>
+        <source> Antes de desarrollar, entendemos cómo trabaja tu empresa y dónde se traba la operación. </source>
       </segment>
     </unit>
     <unit id="studioPage.philosophyCopy2">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:24,28</note>
+        <note category="location">src/app/features/studio/studio-page.html:23,27</note>
       </notes>
       <segment>
-        <source> Trabajamos sobre ese contexto: decisiones técnicas explícitas, comunicación directa y un alcance que se pueda construir y validar. La tecnología se elige por lo que necesita resolver. </source>
+        <source> Trabajás en contacto directo con quien construye la solución. Acordamos el alcance y explicamos las decisiones técnicas. </source>
       </segment>
     </unit>
     <unit id="studioPage.boardLabel">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:31,32</note>
+        <note category="location">src/app/features/studio/studio-page.html:29,30</note>
       </notes>
       <segment>
         <source>Criterio de construcción</source>
@@ -1972,7 +1775,7 @@
     </unit>
     <unit id="studioPage.boardContext">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:34,35</note>
+        <note category="location">src/app/features/studio/studio-page.html:32,33</note>
       </notes>
       <segment>
         <source>Contexto de tu empresa</source>
@@ -1980,7 +1783,7 @@
     </unit>
     <unit id="studioPage.boardCoreLabel">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:37,38</note>
+        <note category="location">src/app/features/studio/studio-page.html:35,36</note>
       </notes>
       <segment>
         <source>Decisiones que conectan</source>
@@ -1988,7 +1791,7 @@
     </unit>
     <unit id="studioPage.boardCore">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:38,39</note>
+        <note category="location">src/app/features/studio/studio-page.html:36,37</note>
       </notes>
       <segment>
         <source>Arquitectura<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>con propósito.</source>
@@ -1996,7 +1799,7 @@
     </unit>
     <unit id="studioPage.boardClarity">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:42,43</note>
+        <note category="location">src/app/features/studio/studio-page.html:40,41</note>
       </notes>
       <segment>
         <source>Claridad</source>
@@ -2004,7 +1807,7 @@
     </unit>
     <unit id="studioPage.boardQuality">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:43,44</note>
+        <note category="location">src/app/features/studio/studio-page.html:41,42</note>
       </notes>
       <segment>
         <source>Calidad</source>
@@ -2012,7 +1815,7 @@
     </unit>
     <unit id="studioPage.boardEvolution">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:44,46</note>
+        <note category="location">src/app/features/studio/studio-page.html:42,44</note>
       </notes>
       <segment>
         <source>Evolución</source>
@@ -2020,7 +1823,7 @@
     </unit>
     <unit id="studioPage.boardCaption">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:47,49</note>
+        <note category="location">src/app/features/studio/studio-page.html:45,47</note>
       </notes>
       <segment>
         <source> Cada decisión técnica debe poder explicarse en el contexto de la operación. </source>
@@ -2028,7 +1831,7 @@
     </unit>
     <unit id="studioPage.principlesLabel">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:55,56</note>
+        <note category="location">src/app/features/studio/studio-page.html:53,54</note>
       </notes>
       <segment>
         <source>Cómo tomamos decisiones</source>
@@ -2036,7 +1839,7 @@
     </unit>
     <unit id="studioPage.principlesTitle">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:57,59</note>
+        <note category="location">src/app/features/studio/studio-page.html:55,57</note>
       </notes>
       <segment>
         <source> Lo que sostiene<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>cada sistema. </source>
@@ -2044,7 +1847,7 @@
     </unit>
     <unit id="studioPage.principle1">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:63,64</note>
+        <note category="location">src/app/features/studio/studio-page.html:61,62</note>
       </notes>
       <segment>
         <source>Una solución propia,<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>no una receta.</source>
@@ -2052,15 +1855,15 @@
     </unit>
     <unit id="studioPage.principle1Copy">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:65,68</note>
+        <note category="location">src/app/features/studio/studio-page.html:63,66</note>
       </notes>
       <segment>
-        <source> Ajustamos el diseño a los procesos, los sistemas existentes y las restricciones de la empresa. El alcance se acuerda; las decisiones se explican. </source>
+        <source> Diseñamos según tus procesos y sistemas actuales. Acordamos qué construir primero y qué dejar para después. </source>
       </segment>
     </unit>
     <unit id="studioPage.principle2">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:71,72</note>
+        <note category="location">src/app/features/studio/studio-page.html:69,70</note>
       </notes>
       <segment>
         <source>Código que se pueda<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>entender y mantener.</source>
@@ -2068,15 +1871,15 @@
     </unit>
     <unit id="studioPage.principle2Copy">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:73,76</note>
+        <note category="location">src/app/features/studio/studio-page.html:71,74</note>
       </notes>
       <segment>
-        <source> Arquitectura clara, pruebas relevantes y documentación útil. Pensamos en la integración, la seguridad y la evolución desde el diseño. </source>
+        <source> Arquitectura clara, pruebas y documentación para mantener, integrar y hacer evolucionar el software. </source>
       </segment>
     </unit>
     <unit id="studioPage.principle3">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:79,80</note>
+        <note category="location">src/app/features/studio/studio-page.html:77,78</note>
       </notes>
       <segment>
         <source>Comunicación directa.<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>Decisiones compartidas.</source>
@@ -2084,15 +1887,15 @@
     </unit>
     <unit id="studioPage.principle3Copy">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:81,84</note>
+        <note category="location">src/app/features/studio/studio-page.html:79,82</note>
       </notes>
       <segment>
-        <source> Conversamos sobre avances, dependencias y alternativas. Validamos por etapas para que el contexto del negocio siga presente durante la construcción. </source>
+        <source> Revisamos avances con vos. Cada entrega permite probar el uso y ajustar prioridades. </source>
       </segment>
     </unit>
     <unit id="studioPage.principle4">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:87,88</note>
+        <note category="location">src/app/features/studio/studio-page.html:84,85</note>
       </notes>
       <segment>
         <source>IA cuando aporta valor.<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>Control donde importa.</source>
@@ -2100,15 +1903,15 @@
     </unit>
     <unit id="studioPage.principle4Copy">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:89,92</note>
+        <note category="location">src/app/features/studio/studio-page.html:86,89</note>
       </notes>
       <segment>
-        <source> Evaluamos su utilidad, sus límites y el manejo de la información. Incorporamos supervisión humana en los puntos que requieren criterio o aprobación. </source>
+        <source> Definimos qué datos puede usar la IA y qué acciones necesitan aprobación humana. </source>
       </segment>
     </unit>
     <unit id="studioPage.evolutionLabel">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:99,100</note>
+        <note category="location">src/app/features/studio/studio-page.html:95,96</note>
       </notes>
       <segment>
         <source>Después de la primera entrega</source>
@@ -2116,7 +1919,7 @@
     </unit>
     <unit id="studioPage.evolutionTitle">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:100,101</note>
+        <note category="location">src/app/features/studio/studio-page.html:96,97</note>
       </notes>
       <segment>
         <source>El sistema sigue.<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>La ingeniería también.</source>
@@ -2124,10 +1927,10 @@
     </unit>
     <unit id="studioPage.evolutionCopy">
       <notes>
-        <note category="location">src/app/features/studio/studio-page.html:102,106</note>
+        <note category="location">src/app/features/studio/studio-page.html:98,102</note>
       </notes>
       <segment>
-        <source> El uso real trae nuevas necesidades. Acordamos cómo acompañar el mantenimiento, el soporte y las siguientes etapas, con responsabilidades y prioridades claras. </source>
+        <source> Acordamos mantenimiento, soporte y siguientes mejoras, con responsabilidades y prioridades claras. </source>
       </segment>
     </unit>
     <unit id="consultation.label">
@@ -2292,124 +2095,204 @@
         <source>Inicio</source>
       </segment>
     </unit>
-    <unit id="projects.visualLabel">
+    <unit id="preview.concept">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.html:12,13</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:4,6</note>
       </notes>
       <segment>
-        <source>Vista del sistema</source>
+        <source>Interfaz conceptual</source>
       </segment>
     </unit>
-    <unit id="projects.mediaPending">
+    <unit id="preview.orders">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.html:21,22</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:11,13</note>
       </notes>
       <segment>
-        <source>Captura o video<ph id="0" equiv="LINE_BREAK" type="fmt" disp="&lt;br /&gt;"/>por incorporar</source>
+        <source>Gestión de pedidos</source>
       </segment>
     </unit>
-    <unit id="projects.mediaDisclaimer">
+    <unit id="preview.operation">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.html:24,26</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:14,15</note>
       </notes>
       <segment>
-        <source> Material visual pendiente. No es una captura de un proyecto. </source>
+        <source>Operación</source>
       </segment>
     </unit>
-    <unit id="projects.videoFallback">
+    <unit id="preview.followup">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.html:57,59</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:15,17</note>
       </notes>
       <segment>
-        <source>Tu navegador no puede reproducir este video.</source>
+        <source>Seguimiento</source>
       </segment>
     </unit>
-    <unit id="projects.problem">
+    <unit id="preview.request">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.html:71,73</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:19,20</note>
       </notes>
       <segment>
-        <source>Problema</source>
+        <source>Solicitud</source>
       </segment>
     </unit>
-    <unit id="projects.problemPending">
+    <unit id="preview.purchase">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.html:76,79</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:20,22</note>
       </notes>
       <segment>
-        <source>Contexto y necesidad por documentar.</source>
+        <source>Pedido de compra</source>
       </segment>
     </unit>
-    <unit id="projects.solution">
+    <unit id="preview.review">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.html:81,83</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:22,24</note>
       </notes>
       <segment>
-        <source>Solución</source>
+        <source>En revisión</source>
       </segment>
     </unit>
-    <unit id="projects.solutionPending">
+    <unit id="preview.owner">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.html:87,90</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:26,27</note>
       </notes>
       <segment>
-        <source>Alcance y decisiones de ingeniería por incorporar.</source>
+        <source>Responsable</source>
       </segment>
     </unit>
-    <unit id="projects.technologies">
+    <unit id="preview.operationsTeam">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.html:94,95</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:27,29</note>
       </notes>
       <segment>
-        <source>Tecnologías</source>
+        <source>Operaciones</source>
       </segment>
     </unit>
-    <unit id="projects.technologyList">
+    <unit id="preview.nextStep">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.html:96</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:33,35</note>
       </notes>
       <segment>
-        <source>Tecnologías utilizadas</source>
+        <source>Validar disponibilidad → Preparar entrega</source>
       </segment>
     </unit>
-    <unit id="projects.technologiesPending">
+    <unit id="preview.softwareCaption">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.html:103,107</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:37,40</note>
       </notes>
       <segment>
-        <source> Por confirmar con el material real. </source>
+        <source> Pedidos, responsables y próximos pasos en una misma vista. </source>
       </segment>
     </unit>
-    <unit id="projects.linkPending">
+    <unit id="preview.integration">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.html:111,112</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:44,46</note>
       </notes>
       <segment>
-        <source>Sin caso ni demo publicados todavía.</source>
+        <source>Conexión de sistemas</source>
       </segment>
     </unit>
-    <unit id="projects.reserved">
+    <unit id="preview.store">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.ts:16</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:47,48</note>
       </notes>
       <segment>
-        <source>Espacio reservado</source>
+        <source>Tienda online<pc id="0" equivStart="START_SMALL_TEXT" equivEnd="CLOSE_SMALL_TEXT" type="other" dispStart="&lt;small&gt;" dispEnd="&lt;/small&gt;">Pedidos</pc></source>
       </segment>
     </unit>
-    <unit id="projects.demoStatus">
+    <unit id="preview.management">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.ts:18</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:48,49</note>
       </notes>
       <segment>
-        <source>Demostración técnica</source>
+        <source>Gestión / ERP<pc id="0" equivStart="START_SMALL_TEXT" equivEnd="CLOSE_SMALL_TEXT" type="other" dispStart="&lt;small&gt;" dispEnd="&lt;/small&gt;">Stock</pc></source>
       </segment>
     </unit>
-    <unit id="projects.caseStatus">
+    <unit id="preview.rules">
       <notes>
-        <note category="location">src/app/shared/project-card/project-card.ts:20</note>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:54,55</note>
       </notes>
       <segment>
-        <source>Proyecto documentado</source>
+        <source>Reglas de integración</source>
+      </segment>
+    </unit>
+    <unit id="preview.data">
+      <notes>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:55,57</note>
+      </notes>
+      <segment>
+        <source>Validar · Sincronizar · Registrar</source>
+      </segment>
+    </unit>
+    <unit id="preview.shared">
+      <notes>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:61,63</note>
+      </notes>
+      <segment>
+        <source>Un pedido. La misma información.</source>
+      </segment>
+    </unit>
+    <unit id="preview.integrationCaption">
+      <notes>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:65,68</note>
+      </notes>
+      <segment>
+        <source> Del pedido online al sistema de gestión, sin volver a cargarlo. </source>
+      </segment>
+    </unit>
+    <unit id="preview.documents">
+      <notes>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:72,74</note>
+      </notes>
+      <segment>
+        <source>Procesamiento de solicitudes</source>
+      </segment>
+    </unit>
+    <unit id="preview.document">
+      <notes>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:76,77</note>
+      </notes>
+      <segment>
+        <source>Documento</source>
+      </segment>
+    </unit>
+    <unit id="preview.extract">
+      <notes>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:80,81</note>
+      </notes>
+      <segment>
+        <source>Datos extraídos</source>
+      </segment>
+    </unit>
+    <unit id="preview.product">
+      <notes>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:81,82</note>
+      </notes>
+      <segment>
+        <source>Producto <pc id="0" equivStart="START_BOLD_TEXT" equivEnd="CLOSE_BOLD_TEXT" type="fmt" dispStart="&lt;b&gt;" dispEnd="&lt;/b&gt;">✓</pc></source>
+      </segment>
+    </unit>
+    <unit id="preview.quantity">
+      <notes>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:82,83</note>
+      </notes>
+      <segment>
+        <source>Cantidad <pc id="0" equivStart="START_BOLD_TEXT" equivEnd="CLOSE_BOLD_TEXT" type="fmt" dispStart="&lt;b&gt;" dispEnd="&lt;/b&gt;">✓</pc></source>
+      </segment>
+    </unit>
+    <unit id="preview.human">
+      <notes>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:87,89</note>
+      </notes>
+      <segment>
+        <source>Revisión humana antes de registrar</source>
+      </segment>
+    </unit>
+    <unit id="preview.automationCaption">
+      <notes>
+        <note category="location">src/app/shared/solution-preview/solution-preview.html:91,95</note>
+      </notes>
+      <segment>
+        <source> Del documento a datos utilizables, con validación y control. </source>
       </segment>
     </unit>
   </file>

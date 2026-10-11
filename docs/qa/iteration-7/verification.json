@@ -1,0 +1,130 @@
+[
+  {
+    "headings": 1,
+    "height": 6773,
+    "overflow": false,
+    "page": "home",
+    "previewHeights": [
+      375,
+      375,
+      375
+    ],
+    "width": 1440
+  },
+  {
+    "overflow": false,
+    "page": "home",
+    "previewOverflow": false,
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "page": "servicios",
+    "previews": [
+      327,
+      327,
+      327
+    ],
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "page": "estudio",
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "page": "home",
+    "previewOverflow": false,
+    "width": 768
+  },
+  {
+    "overflow": false,
+    "page": "servicios",
+    "previewOverflow": false,
+    "width": 768
+  },
+  {
+    "overflow": false,
+    "page": "estudio",
+    "width": 768
+  },
+  {
+    "motion": {
+      "A": [
+        "matrix(0.992677, 0.120799, -0.120799, 0.992677, 263.911, -18.7112)",
+        "matrix(0.992677, -0.120799, 0.120799, 0.992677, -303.267, 62.1164)",
+        "matrix(0.994618, 0.103608, -0.103608, 0.994618, 299.951, -56.3007)",
+        "matrix(0.996261, -0.086389, 0.086389, 0.996261, -281.771, 26.9602)",
+        "matrix(0.25, 0, 0, 0.25, 12.1735, 0)"
+      ],
+      "B": [
+        "matrix(1, 0, 0, 1, -40.4587, 4.5113)",
+        "matrix(1, 0, 0, 1, -317.89, 126.317)",
+        "matrix(1, 0, 0, 1, -40.4587, -4.5113)",
+        "matrix(1, 0, 0, 1, 57.7982, -126.317)",
+        "matrix(1, 0, 0, 1, 17.3394, 0)"
+      ],
+      "C": [
+        "matrix(1, 0, 0, 1, 0, 0)",
+        "matrix(1, 0, 0, 1, 0, 0)",
+        "matrix(1, 0, 0, 1, 0, 0)",
+        "matrix(1, 0, 0, 1, 0, 0)",
+        "matrix(1, 0, 0, 1, 0, 0)"
+      ],
+      "spatialChange": true
+    }
+  },
+  {
+    "motionOff": {
+      "enhanced": false,
+      "staticFigures": [
+        "1",
+        "1",
+        "1"
+      ],
+      "toggle": "false"
+    }
+  },
+  {
+    "overflow": false,
+    "page": "servicios",
+    "width": 1440
+  },
+  {
+    "contrastStudio": {
+      "count": 40,
+      "fail": [],
+      "min": 6.383351889380155
+    }
+  },
+  {
+    "overflow": false,
+    "page": "estudio",
+    "width": 1440
+  },
+  {
+    "keyboard": {
+      "expanded": "false",
+      "focusReturned": true,
+      "outline": "solid"
+    }
+  },
+  {
+    "contrastHome": {
+      "count": 113,
+      "fail": [],
+      "min": 6.383351889380155
+    }
+  },
+  {
+    "contrastServices": {
+      "count": 101,
+      "fail": [],
+      "min": 6.715932143537114
+    }
+  },
+  {
+    "console": []
+  }
+]

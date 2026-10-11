@@ -1,0 +1,17 @@
+{
+  "home": {
+    "beforeWords": 723,
+    "afterWords": 789,
+    "changePercent": 9
+  },
+  "servicios": {
+    "beforeWords": 574,
+    "afterWords": 435,
+    "changePercent": -24
+  },
+  "estudio": {
+    "beforeWords": 389,
+    "afterWords": 304,
+    "changePercent": -22
+  }
+}

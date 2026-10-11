@@ -6,7 +6,7 @@
   i18n-title="@@servicesPage.title"
   accent="a un sistema que funciona."
   i18n-accent="@@servicesPage.accent"
-  description="Construir una herramienta propia. Conectar lo que ya existe. Automatizar lo que se repite. Tres capacidades que pueden trabajar juntas, según lo que tu empresa necesita."
+  description="Software a medida, integración de sistemas y automatización. Elegí el punto de partida según el problema de tu empresa."
   i18n-description="@@servicesPage.intro"
 >
 </app-page-intro>
@@ -41,41 +41,30 @@
       <div class="service-body">
         <div class="service-context">
           <p class="problem">{{ service.problem }}</p>
+          <p class="eyebrow scope-label" i18n="@@servicesPage.offerLabel">
+            Qué contratás y cómo lo construimos
+          </p>
           <p class="body-copy">{{ service.offer }}</p>
-          <div class="service-flow" aria-hidden="true">
-            @for (step of service.steps; track step; let last = $last) {
-              <span>{{ step }}</span>
-              @if (!last) {
-                <b>→</b>
+          <div class="scope">
+            <h3 class="eyebrow" i18n="@@servicesPage.scope">Qué podemos construir</h3>
+            <ul>
+              @for (capability of service.capabilities; track capability) {
+                <li>{{ capability }}</li>
               }
-            }
+            </ul>
+            <a routerLink="/contacto" [queryParams]="{ tipo: service.id }" class="text-link"
+              ><span i18n="@@hero.primaryCta">Hablemos de tu proyecto</span><app-arrow
+            /></a>
           </div>
+        </div>
+        <div class="service-preview">
+          <app-solution-preview [kind]="service.id" />
           <p class="benefit">{{ service.benefit }}</p>
         </div>
-        <div class="scope">
-          <h3 class="eyebrow" i18n="@@servicesPage.scope">Qué podemos construir</h3>
-          <ul>
-            @for (capability of service.capabilities; track capability) {
-              <li>{{ capability }}</li>
-            }
-          </ul>
-          <a routerLink="/contacto" [queryParams]="{ tipo: service.id }" class="text-link"
-            ><span i18n="@@servicesPage.consult">Consultar sobre esta capacidad</span><app-arrow
-          /></a>
-        </div>
       </div>
-      <div class="examples-heading">
-        <h3 class="eyebrow" i18n="@@servicesPage.examples">Aplicaciones posibles</h3>
-        <p i18n="@@servicesPage.illustrative">Ejemplos ilustrativos, no casos de clientes.</p>
-      </div>
-      <div class="examples">
-        @for (example of service.examples; track example.title) {
-          <article>
-            <h4>{{ example.title }}</h4>
-            <p>{{ example.text }}</p>
-          </article>
-        }
-      </div>
+      <p class="concept-note" i18n="@@servicesPage.illustrative">
+        Ejemplos ilustrativos, no casos de clientes.
+      </p>
     </div>
   </section>
 }
@@ -89,9 +78,8 @@
     </div>
     <div>
       <p class="body-copy" i18n="@@servicesPage.startCopy">
-        Revisamos el contexto, los sistemas existentes y las restricciones. A partir de ahí
-        acordamos un alcance, las prioridades y qué hace falta validar. La solución puede combinar
-        desarrollo, integración y automatización.
+        Contanos qué necesitás cambiar. Revisamos los sistemas actuales y acordamos prioridades,
+        alcance y una primera entrega que puedas validar.
       </p>
       <a routerLink="/estudio" class="text-link"
         ><span i18n="@@servicesPage.method">Conocer nuestra forma de trabajar</span><app-arrow

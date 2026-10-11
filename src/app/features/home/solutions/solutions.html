@@ -9,8 +9,7 @@
       </div>
       <div class="story-intro">
         <p class="solutions-disclaimer" i18n="@@transformation.disclaimer">
-          De sistemas aislados a una operación conectada.<br />Un ejemplo ilustrativo, no un caso de
-          cliente.
+          Tres situaciones que podemos resolver.<br />Ejemplos ilustrativos, no casos de clientes.
         </p>
         <app-motion-toggle />
       </div>
@@ -56,8 +55,22 @@
             <p>{{ stage.description }}</p>
             <span class="scenario-label eyebrow" i18n="@@solutions.approach">Cómo abordarla</span>
             <p>{{ stage.approach }}</p>
+            <ol
+              class="scenario-flow"
+              aria-label="Recorrido de la información"
+              i18n-aria-label="@@solutionFlow.label"
+            >
+              @for (step of stage.flow; track step; let last = $last) {
+                <li>
+                  <span>{{ step }}</span>
+                  @if (!last) {
+                    <b aria-hidden="true">→</b>
+                  }
+                </li>
+              }
+            </ol>
             <a class="text-link scenario-cta" routerLink="/contacto"
-              ><span i18n="@@solutions.cta">Hablemos de tu operación</span><app-arrow
+              ><span i18n="@@hero.primaryCta">Hablemos de tu proyecto</span><app-arrow
             /></a>
           </div>
           <app-story-visual class="inline-visual" [stage]="stage" [index]="$index" />

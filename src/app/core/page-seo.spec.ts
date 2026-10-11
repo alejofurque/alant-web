@@ -22,7 +22,9 @@ describe('Corporate route metadata', () => {
       expect(document.querySelector('meta[property="og:title"]')?.getAttribute('content')).toBe(
         document.title,
       );
-      expect(document.querySelector('link[rel="canonical"]')).toBeNull();
+      expect(document.querySelector('link[rel="canonical"]')?.getAttribute('href')).toBe(
+        new URL(path, 'https://alantapp.com').href,
+      );
       titles.add(document.title);
       descriptions.add(
         document.querySelector('meta[name="description"]')!.getAttribute('content')!,

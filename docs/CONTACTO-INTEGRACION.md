@@ -1,5 +1,7 @@
 # Contacto — Vercel Function y Resend
 
+**Actualización 11/10/2026:** el sitio ya está desplegado. Consultar [AUDITORIA-PRODUCCION.md](AUDITORIA-PRODUCCION.md) para los resultados observados, el error 500 pendiente y el ensayo en Preview protegido. El estado histórico indicado debajo corresponde a la implementación inicial; no describe la disponibilidad actual de credenciales locales ni acredita la configuración remota.
+
 Estado al 10/10/2026: implementación local preparada; **sin credenciales, sin envío real comprobado y sin despliegue**. Este documento reemplaza la configuración de la iteración 5.
 
 El destinatario comercial confirmado es **alejofurque15@gmail.com**, configurado exclusivamente mediante `CONTACT_TO_EMAIL` en el servidor. El Gmail anterior ya no se utiliza en la aplicación. No hay direcciones personales ni `mailto:` en el HTML o JavaScript públicos. Los informes históricos conservan el estado de sus respectivas iteraciones.

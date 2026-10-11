@@ -1,5 +1,9 @@
 # ALANT — Software Engineering Studio
 
+**Iteración 7 en revisión local:** mejoras comerciales de Inicio, Servicios y Estudio, con interfaces conceptuales reutilizables. Informe, archivos y capturas en [docs/ITERACION-7.md](docs/ITERACION-7.md). Rama `review/iteration-7-commercial-ux`, sin despliegue automático.
+
+**Estado actualizado al 11/10/2026:** sitio publicado en `https://alantapp.com`. Auditoría y pendientes de producción en [docs/AUDITORIA-PRODUCCION.md](docs/AUDITORIA-PRODUCCION.md). La API publicada devolvió 500 y el contacto no está verificado para habilitarse. El cambio local oculta la galería vacía y configura canonical con el dominio confirmado, conservando `indexable: false`; requiere despliegue. Las referencias a ausencia de despliegue y origen sin confirmar del texto original siguiente describen el estado de la iteración 6, no el estado actual.
+
 Web corporativa en revisión. La **iteración 6** añade el contacto comercial mediante Vercel Function y Resend, pendiente de credenciales y prueba real. Inicio, Servicios, Estudio y Contacto conservan la identidad **Precision Mint / Engineered Systems** y el movimiento aprobado. `ALANT_WEB_STARTER/` contiene el paquete original; las instrucciones actuales están en `AGENTS.md` y `docs/`.
 
 Angular **21.2.25**, CLI/build/SSG **21.2.26**, TypeScript **5.9**, Tailwind CSS **4.3.3**, Node **24.13.0**, npm **11.6.2**. Angular 21 es una rama soportada compatible con el Node instalado; Angular 22 requiere un Node más reciente. Versiones efectivas fijadas en `package-lock.json`.

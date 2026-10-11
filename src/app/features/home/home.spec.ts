@@ -15,8 +15,7 @@ describe('Homepage navigation and contact', () => {
     expect(page.querySelector('a[href^="mailto:"]')).toBeNull();
     expect(page.querySelector('.contact-action a')?.getAttribute('href')).toBe('/contacto');
     expect(page.querySelector('.hero-actions a')?.getAttribute('href')).toBe('/contacto');
-    expect(page.querySelectorAll('#proyectos app-project-card').length).toBe(2);
-    expect(page.querySelector('#proyectos')?.textContent).toContain('Portfolio en preparación');
-    expect(page.querySelector('#proyectos a[href="#"]')).toBeNull();
+    expect(page.querySelector('app-projects, #proyectos, app-project-card')).toBeNull();
+    expect(page.textContent).not.toContain('Portfolio en preparación');
   });
 });

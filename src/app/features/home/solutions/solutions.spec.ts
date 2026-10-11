@@ -33,7 +33,7 @@ describe('Solution storytelling fallback', () => {
     links[2].click();
     await fixture.whenStable();
     expect(links[2].getAttribute('aria-current')).toBe('step');
-    expect(articles[0].textContent).toContain('El pedido llega por el ecommerce');
+    expect(articles[0].textContent).toContain('La venta llega por la tienda online');
     expect(articles[2].textContent).toContain('revisión humana');
     expect(page.querySelectorAll('.living-system [data-module]').length).toBe(5);
     expect(page.querySelectorAll('.living-system').length).toBe(1);

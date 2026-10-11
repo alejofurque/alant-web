@@ -1,0 +1,26 @@
+{
+  "auditedAt": "2026-10-11T00:00:15.474Z",
+  "credentialSource": "local .env; not proof of deployed Production variables",
+  "redis": {
+    "status": 200,
+    "pong": true,
+    "error": false,
+    "limiter": {
+      "values": [
+        0,
+        0,
+        30
+      ],
+      "ttl": 30,
+      "passed": true
+    }
+  },
+  "domains": {
+    "status": 401,
+    "errorType": "restricted_api_key"
+  },
+  "emails": {
+    "status": 401,
+    "errorType": "restricted_api_key"
+  }
+}

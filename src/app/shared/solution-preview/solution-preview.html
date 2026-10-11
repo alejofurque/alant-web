@@ -1,0 +1,95 @@
+<figure class="preview" [attr.data-kind]="kind()">
+  <div class="preview-bar">
+    <span class="window-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span i18n="@@preview.concept">Interfaz conceptual</span>
+  </div>
+  @switch (kind()) {
+    @case ('software') {
+      <div class="preview-body">
+        <div class="workspace-title">
+          <span class="app-symbol" aria-hidden="true">▦</span
+          ><strong i18n="@@preview.orders">Gestión de pedidos</strong>
+        </div>
+        <div class="workspace-tabs" aria-hidden="true">
+          <span i18n="@@preview.operation">Operación</span
+          ><span i18n="@@preview.followup">Seguimiento</span>
+        </div>
+        <div class="order-row">
+          <div>
+            <span class="row-label" i18n="@@preview.request">Solicitud</span
+            ><strong i18n="@@preview.purchase">Pedido de compra</strong>
+          </div>
+          <span class="status" i18n="@@preview.review">En revisión</span>
+        </div>
+        <div class="order-row">
+          <div>
+            <span class="row-label" i18n="@@preview.owner">Responsable</span
+            ><strong i18n="@@preview.operationsTeam">Operaciones</strong>
+          </div>
+          <span class="assignment" aria-hidden="true">↗</span>
+        </div>
+        <div class="next-step">
+          <span aria-hidden="true">↳</span
+          ><span i18n="@@preview.nextStep">Validar disponibilidad → Preparar entrega</span>
+        </div>
+      </div>
+      <figcaption i18n="@@preview.softwareCaption">
+        Pedidos, responsables y próximos pasos en una misma vista.
+      </figcaption>
+    }
+    @case ('integraciones') {
+      <div class="preview-body">
+        <div class="workspace-title">
+          <span class="app-symbol" aria-hidden="true">⇄</span
+          ><strong i18n="@@preview.integration">Conexión de sistemas</strong>
+        </div>
+        <div class="integration-inputs">
+          <span i18n="@@preview.store">Tienda online<small>Pedidos</small></span
+          ><span i18n="@@preview.management">Gestión / ERP<small>Stock</small></span>
+        </div>
+        <div class="join-lines" aria-hidden="true"></div>
+        <div class="integration-core">
+          <span aria-hidden="true">⇄</span>
+          <div>
+            <strong i18n="@@preview.rules">Reglas de integración</strong
+            ><small i18n="@@preview.data">Validar · Sincronizar · Registrar</small>
+          </div>
+        </div>
+        <div class="output-line" aria-hidden="true"></div>
+        <div class="integration-output">
+          <span aria-hidden="true">✓</span
+          ><span i18n="@@preview.shared">Un pedido. La misma información.</span>
+        </div>
+      </div>
+      <figcaption i18n="@@preview.integrationCaption">
+        Del pedido online al sistema de gestión, sin volver a cargarlo.
+      </figcaption>
+    }
+    @case ('automatizacion') {
+      <div class="preview-body">
+        <div class="workspace-title">
+          <span class="app-symbol" aria-hidden="true">↳</span
+          ><strong i18n="@@preview.documents">Procesamiento de solicitudes</strong>
+        </div>
+        <div class="document-flow">
+          <div class="document-sheet">
+            <span i18n="@@preview.document">Documento</span><i></i><i></i><i></i>
+          </div>
+          <span class="extract-arrow" aria-hidden="true">→</span>
+          <div class="extracted-fields">
+            <span i18n="@@preview.extract">Datos extraídos</span
+            ><strong i18n="@@preview.product">Producto <b>✓</b></strong
+            ><strong i18n="@@preview.quantity">Cantidad <b>✓</b></strong>
+          </div>
+        </div>
+        <div class="review-gate">
+          <span class="review-dot" aria-hidden="true"></span
+          ><span i18n="@@preview.human">Revisión humana antes de registrar</span>
+        </div>
+      </div>
+      <figcaption i18n="@@preview.automationCaption">
+        Del documento a datos utilizables, con validación y control.
+      </figcaption>
+    }
+  }
+</figure>
