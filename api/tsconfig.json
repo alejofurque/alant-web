@@ -1,0 +1,11 @@
+{
+  "extends": "../server/tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "noEmitOnError": true,
+    "rewriteRelativeImportExtensions": true,
+    "rootDir": "..",
+    "outDir": "../out-tsc/contact"
+  },
+  "include": ["./contact.ts"]
+}

@@ -1,5 +1,7 @@
 # Contacto — Vercel Function y Resend
 
+**Corrección preparada el 13/10/2026:** ver [FIX-VERCEL-FUNCTION.md](FIX-VERCEL-FUNCTION.md). Se reprodujo y corrigió localmente el import `.ts` conservado en el artefacto JavaScript de Vercel. Pendiente desplegar y comprobar en Production; no acredita entrega real.
+
 **Actualización 11/10/2026:** el sitio ya está desplegado. Consultar [AUDITORIA-PRODUCCION.md](AUDITORIA-PRODUCCION.md) para los resultados observados, el error 500 pendiente y el ensayo en Preview protegido. El estado histórico indicado debajo corresponde a la implementación inicial; no describe la disponibilidad actual de credenciales locales ni acredita la configuración remota.
 
 Estado al 10/10/2026: implementación local preparada; **sin credenciales, sin envío real comprobado y sin despliegue**. Este documento reemplaza la configuración de la iteración 5.
