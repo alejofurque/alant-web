@@ -5,6 +5,10 @@ function systemParts(visual: Element) {
   const canvas = visual.querySelector<HTMLElement>('.scene-canvas')!;
   return {
     canvas,
+    world: visual.querySelector('.scene-world')!,
+    foundation: visual.querySelector('.platform-foundation')!,
+    records: visual.querySelectorAll('.module-record'),
+    linked: visual.querySelectorAll('.module-linked'),
     modules: [...visual.querySelectorAll<HTMLElement>('.module-motion')],
     core: visual.querySelector('[data-module="core"]')!,
     paths: [...visual.querySelectorAll<SVGPathElement>('[data-edge]')],
@@ -75,9 +79,27 @@ function integrate(
 ) {
   timeline
     .fromTo(
+      parts.world,
+      { rotationX: 22, rotationZ: -8, scale: 0.86 },
+      { rotationX: 0, rotationZ: 0, scale: 1, duration: 1.05, ease: 'power2.inOut' },
+      at,
+    )
+    .fromTo(
       parts.modules,
       pose(parts, baseline, 0),
       { ...pose(parts, baseline, 1), duration: 0.82, ease: 'power2.inOut' },
+      at,
+    )
+    .fromTo(
+      parts.records,
+      { x: 18, y: 26, rotation: 7, opacity: 1 },
+      { x: 0, y: 0, rotation: 0, opacity: 0, duration: 0.65, stagger: 0.07 },
+      at + 0.12,
+    )
+    .fromTo(
+      parts.paths,
+      { attr: pathShape(0) },
+      { attr: pathShape(1), duration: 0.82, ease: 'power2.inOut' },
       at,
     )
     .fromTo(
@@ -105,6 +127,11 @@ function unify(
   at: number,
 ) {
   timeline
+    .to(
+      parts.world,
+      { rotationX: 12, rotationZ: -3, scale: 0.94, duration: 0.85, ease: 'power2.inOut' },
+      at,
+    )
     .to(parts.modules, { ...pose(parts, baseline, 2), duration: 0.8, ease: 'power2.inOut' }, at)
     .to(parts.paths, { attr: pathShape(2), duration: 0.8, ease: 'power2.inOut' }, at)
     .fromTo(
@@ -115,9 +142,21 @@ function unify(
     )
     .fromTo(
       parts.shell,
-      { scale: 0.78, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 0.7, ease: 'power2.out' },
+      { scale: 0.55, y: 65, opacity: 0 },
+      { scale: 1, y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' },
       at + 0.1,
+    )
+    .fromTo(
+      parts.foundation,
+      { x: 30, y: 90, scale: 0.6, opacity: 0 },
+      { x: 10, y: 14, scale: 1, opacity: 1, duration: 0.8, ease: 'power2.out' },
+      at,
+    )
+    .fromTo(
+      parts.linked,
+      { scale: 0.4, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 0.25, stagger: 0.06, ease: 'power2.out' },
+      at + 1.04,
     )
     .fromTo(
       parts.outline,
@@ -144,7 +183,10 @@ function prepare(gsap: MotionEngine['gsap'], parts: SystemParts, initial: 0 | 1)
   gsap.set(parts.labels[initial], { opacity: 1 });
   gsap.set(parts.placeholder, { opacity: 1 });
   gsap.set(parts.result, { opacity: 0 });
-  gsap.set([parts.shell, parts.outline], { opacity: 0 });
+  gsap.set([parts.shell, parts.foundation, parts.outline, parts.linked], { opacity: 0 });
+  // Set every staggered item now: deferred children otherwise inherit the static
+  // final state's opacity until their own start time, leaving only one record visible.
+  gsap.set(parts.records, { x: 18, y: 26, rotation: 7, opacity: initial === 0 ? 1 : 0 });
 }
 
 export function buildSystemTransformation(
@@ -182,8 +224,8 @@ export function createStoryMotion(
   try {
     media.add(
       {
-        desktop: '(min-width: 1001px) and (min-height: 800px)',
-        compact: '(max-width: 1000px), (max-height: 799px)',
+        desktop: '(min-width: 1001px) and (min-height: 600px)',
+        compact: '(max-width: 1000px), (max-height: 599px)',
       },
       (context) => {
         previous = -1;

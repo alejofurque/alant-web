@@ -38,10 +38,24 @@
   position: relative;
   aspect-ratio: 1.28;
   min-height: 420px;
+  perspective: 1000px;
   background-image:
     linear-gradient(#d7ffe005 1px, transparent 1px),
     linear-gradient(90deg, #d7ffe005 1px, transparent 1px);
   background-size: 28px 28px;
+}
+.scene-world {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+.platform-foundation {
+  position: absolute;
+  inset: 3.75% 4.5%;
+  border: 1px solid #4b685a;
+  border-radius: 5px;
+  background: #182923;
+  transform: translate(10px, 14px) translateZ(-12px);
 }
 .scene-lines {
   position: absolute;
@@ -76,7 +90,8 @@
   position: absolute;
   inset: 3.75% 4.5%;
   border-radius: 5px;
-  background: #97e5b307;
+  border: 1px solid #567363;
+  background: #20362c;
 }
 .platform-shell span {
   position: absolute;
@@ -142,8 +157,10 @@ figcaption {
 [data-state='0'] .line-base,
 [data-state='0'] [data-module='core'],
 [data-state='0'] .platform-shell,
+[data-state='0'] .platform-foundation,
 [data-state='0'] .platform-outline,
 [data-state='1'] .platform-shell,
+[data-state='1'] .platform-foundation,
 [data-state='1'] .platform-outline,
 [data-state='0'] .result-complete,
 [data-state='1'] .result-complete,
@@ -153,6 +170,21 @@ figcaption {
 [data-state='2'] .module-depth {
   transform: none;
   opacity: 0;
+}
+/* Bound the entire sticky panel, including its captions, to a notebook viewport.
+   The same sizing is used by inline placeholders, so enhancement adds no height. */
+@media (min-width: 1001px) {
+  .scene-canvas {
+    height: clamp(300px, calc(100svh - 320px), 480px);
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+  .panel-top {
+    padding-block: 15px;
+  }
+  figcaption {
+    min-height: 84px;
+  }
 }
 @media (max-width: 1000px) {
   .scene-canvas {

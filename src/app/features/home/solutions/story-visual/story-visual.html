@@ -14,37 +14,55 @@
     <span class="eyebrow" aria-hidden="true">SYS / A–C</span>
   </div>
   <div class="scene-canvas" aria-hidden="true">
-    <div class="platform-shell"><span></span><span></span><span></span><span></span></div>
-    <svg class="scene-lines" viewBox="0 0 1000 800" preserveAspectRatio="none" fill="none">
-      <rect class="platform-outline" x="45" y="30" width="910" height="740" rx="8" pathLength="1" />
-      @for (path of paths(); track $index) {
-        <path class="line-base" [attr.data-edge]="$index" [attr.d]="path" />
-        <path class="line-draw" [attr.data-edge]="$index" [attr.d]="path" pathLength="1" />
-        <path class="line-signal" [attr.data-edge]="$index" [attr.d]="path" pathLength="1" />
-      }
-    </svg>
-    @for (module of modules; track module.id) {
-      <div
-        class="module-position"
-        [style.left.%]="poses()[$index].x"
-        [style.top.%]="poses()[$index].y"
-      >
+    <div class="scene-world">
+      <div class="platform-foundation"></div>
+      <div class="platform-shell"><span></span><span></span><span></span><span></span></div>
+      <svg class="scene-lines" viewBox="0 0 1000 800" preserveAspectRatio="none" fill="none">
+        <rect
+          class="platform-outline"
+          x="45"
+          y="30"
+          width="910"
+          height="740"
+          rx="8"
+          pathLength="1"
+        />
+        @for (path of paths(); track $index) {
+          <path class="line-base" [attr.data-edge]="$index" [attr.d]="path" />
+          <path class="line-draw" [attr.data-edge]="$index" [attr.d]="path" pathLength="1" />
+          <path class="line-signal" [attr.data-edge]="$index" [attr.d]="path" pathLength="1" />
+        }
+      </svg>
+      @for (module of modules; track module.id) {
         <div
-          class="module-motion"
-          [attr.data-module]="module.id"
-          [style.transform]="'rotate(' + poses()[$index].rotation + 'deg)'"
+          class="module-position"
+          [style.left.%]="poses()[$index].x"
+          [style.top.%]="poses()[$index].y"
         >
-          <div class="module-depth"></div>
-          <div class="story-node" [class.node-core]="module.id === 'core'">
-            <span class="module-code eyebrow">{{ module.code }}</span>
-            <strong>{{ module.title }}</strong>
-            <span class="node-detail">{{ module.detail }}</span>
-            <span class="module-data"><i></i><i></i><i></i></span>
-            <i class="node-activation"></i>
+          <div
+            class="module-motion"
+            [attr.data-module]="module.id"
+            [style.transform]="'rotate(' + poses()[$index].rotation + 'deg)'"
+          >
+            <div class="module-depth"></div>
+            @if (module.id !== 'core') {
+              <div class="module-record">
+                <span>{{ module.detail }}</span
+                ><i></i><i></i>
+              </div>
+            }
+            <div class="story-node" [class.node-core]="module.id === 'core'">
+              <span class="module-linked">✓</span>
+              <span class="module-code eyebrow">{{ module.code }}</span>
+              <strong>{{ module.title }}</strong>
+              <span class="node-detail">{{ module.detail }}</span>
+              <span class="module-data"><i></i><i></i><i></i></span>
+              <i class="node-activation"></i>
+            </div>
           </div>
         </div>
-      </div>
-    }
+      }
+    </div>
   </div>
   <div class="system-result" aria-hidden="true">
     <span class="result-placeholder" i18n="@@living.sharedProcess"

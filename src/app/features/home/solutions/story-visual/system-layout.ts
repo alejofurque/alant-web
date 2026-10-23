@@ -9,24 +9,24 @@ export type SystemState = 0 | 1 | 2;
 // Order: ecommerce, ERP, CRM, operation, core.
 export const SYSTEM_LAYOUTS: readonly (readonly ModulePose[])[] = [
   [
-    { x: 70, y: 18, rotation: 7 },
-    { x: 24, y: 35, rotation: -7 },
-    { x: 76, y: 66, rotation: 6 },
-    { x: 27, y: 84, rotation: -5 },
+    { x: 70, y: 20, rotation: 7 },
+    { x: 24, y: 32, rotation: -7 },
+    { x: 76, y: 64, rotation: 6 },
+    { x: 27, y: 74, rotation: -5 },
     { x: 52, y: 50, rotation: 0 },
   ],
   [
-    { x: 19, y: 23, rotation: 0 },
+    { x: 19, y: 19, rotation: 0 },
     { x: 19, y: 50, rotation: 0 },
-    { x: 19, y: 77, rotation: 0 },
+    { x: 19, y: 81, rotation: 0 },
     { x: 84, y: 50, rotation: 0 },
     { x: 53, y: 50, rotation: 0 },
   ],
   [
-    { x: 26, y: 22, rotation: 0 },
-    { x: 74, y: 22, rotation: 0 },
-    { x: 26, y: 78, rotation: 0 },
-    { x: 74, y: 78, rotation: 0 },
+    { x: 23, y: 23, rotation: 0 },
+    { x: 77, y: 23, rotation: 0 },
+    { x: 23, y: 77, rotation: 0 },
+    { x: 77, y: 77, rotation: 0 },
     { x: 50, y: 50, rotation: 0 },
   ],
 ];
