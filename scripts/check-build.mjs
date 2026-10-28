@@ -21,6 +21,10 @@ const pages = new Map();
 for (const path of paths) {
   const html = await readFile(resolve(root, `.${path}`, 'index.html'), 'utf8');
   const document = new JSDOM(html).window.document;
+  // Prevent a silent i18n fallback from discarding the prerendered root on startup.
+  const appRoot = document.querySelector('app-root');
+  assert.ok(appRoot?.hasAttribute('ngh'), `${path}: missing root hydration metadata`);
+  assert.equal(appRoot.hasAttribute('ngskiphydration'), false, `${path}: root skips hydration`);
   pages.set(path, document);
   assert.equal(document.documentElement.lang, 'es');
   for (const selector of [
@@ -81,7 +85,7 @@ for (const [path, document] of pages) {
   }
 }
 const home = pages.get('/');
-for (const path of ['/', '/servicios']) {
+for (const path of ['/servicios']) {
   const previews = [...pages.get(path).querySelectorAll('app-solution-preview')];
   assert.equal(previews.length, 3, `${path}: three conceptual solution previews`);
   for (const preview of previews) {
@@ -94,23 +98,21 @@ for (const path of ['/', '/servicios']) {
     );
   }
 }
-assert.equal(home.querySelectorAll('.scenario-flow li').length, 9);
 assert.equal(home.querySelector('app-projects, #proyectos, app-project-card'), null);
 assert.ok(!home.body.textContent.includes('Portfolio en preparación'));
-assert.equal(home.querySelectorAll('.story-step').length, 3);
-assert.equal(home.querySelectorAll('.story-step .inline-visual figure').length, 3);
-assert.equal(home.querySelectorAll('.story-step .scenario-cta[href="/contacto"]').length, 3);
-assert.equal(home.querySelectorAll('.living-system [data-module]').length, 5);
-assert.equal(home.querySelectorAll('.living-system').length, 1);
-assert.deepEqual(
-  [...home.querySelectorAll('.inline-visual figure')].map((figure) => figure.dataset.state),
-  ['0', '1', '2'],
-);
-assert.equal(home.querySelector('.replay-flow').disabled, true);
+assert.equal(home.querySelectorAll('app-pliegue .plate').length, 3);
+assert.equal(home.querySelector('app-pliegue button, app-pliegue a'), null);
+assert.equal(home.querySelector('.hero-footer button').disabled, true);
+assert.match(home.querySelector('h1').textContent, /Software.*Automatización.*Diseño digital/s);
+assert.equal(home.querySelector('.hero-copy a').getAttribute('href'), '/contacto');
+assert.equal(home.querySelectorAll('#soluciones article').length, 3);
+for (const service of ['Sistemas de gestión', 'Conectamos herramientas', 'Páginas profesionales'])
+  assert.ok(home.querySelector('#soluciones').textContent.includes(service));
+assert.equal(home.querySelector('.closing a').getAttribute('href'), '/contacto');
+for (const id of ['inicio', 'servicios', 'soluciones', 'proceso', 'contacto'])
+  assert.ok(home.getElementById(id));
 assert.equal(
-  home.querySelector(
-    '.story-enhanced, [data-boot], [data-wired], html[data-motion], .hero-line[style]',
-  ),
+  home.querySelector('app-blueprint, app-system-diagram, app-order-panel, .story-enhanced'),
   null,
 );
 const contact = pages.get('/contacto');

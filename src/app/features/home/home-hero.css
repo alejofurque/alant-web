@@ -1,0 +1,135 @@
+h1 {
+  margin: 0;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  column-gap: 0;
+  position: relative;
+  padding-top: 82px;
+}
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  padding-top: 24px;
+}
+h1 {
+  font-weight: 450;
+  letter-spacing: -0.055em;
+}
+h1 {
+  font-size: clamp(54px, 5.3vw, 82px);
+  line-height: 1.035;
+  margin: 29px -70px 29px 0;
+}
+h1 > span {
+  color: var(--mint);
+}
+.hero-description {
+  max-width: 420px;
+  color: #c2cec7;
+  line-height: 1.7;
+  font-size: 17px;
+  margin-bottom: 29px;
+}
+.explore {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 12px;
+  color: #c2cec7;
+  margin-top: 16px;
+  padding-block: 14px;
+  width: fit-content;
+}
+.hero-footer {
+  grid-column: 1/-1;
+  border-top: 1px solid #ffffff20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 42px;
+  padding: 26px 0 42px;
+  color: #b9c8be;
+  font-size: 12px;
+}
+.hero-footer button {
+  min-height: 44px;
+  min-width: 178px;
+  padding: 10px 13px;
+  font-size: 11px;
+  color: #bbcdc0;
+  background: transparent;
+  border: 1px solid #4a5c51;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hero-footer button:hover {
+  border-color: var(--mint);
+}
+.hero-footer button:disabled {
+  visibility: hidden;
+}
+@media (max-width: 1100px) {
+  .hero {
+    padding-top: 55px;
+    grid-template-columns: 1fr 1fr;
+  }
+  h1 {
+    font-size: 58px;
+  }
+  .hero-description {
+    max-width: 360px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 850px) {
+  .hero {
+    display: block;
+    padding-top: 35px;
+  }
+  h1 {
+    font-size: 72px;
+    margin-right: 0;
+  }
+  .hero-description {
+    max-width: 560px;
+  }
+  .hero-footer {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 32px;
+  }
+  .hero-copy {
+    padding-top: 0;
+  }
+  h1 {
+    font-size: clamp(38px, 12vw, 47px);
+    margin: 23px 0;
+    line-height: 1.07;
+  }
+  .hero-description {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+  .explore {
+    font-size: 11px;
+    gap: 18px;
+    margin-top: 12px;
+  }
+  .hero-footer {
+    display: block;
+    padding-block: 22px 30px;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .hero-footer button {
+    display: block;
+    margin-top: 14px;
+  }
+}

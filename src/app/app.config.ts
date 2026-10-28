@@ -3,7 +3,11 @@ import { provideRouter, TitleStrategy, withInMemoryScrolling } from '@angular/ro
 import { PageSeo } from './core/page-seo';
 
 import { routes } from './app.routes';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import {
+  provideClientHydration,
+  withEventReplay,
+  withI18nSupport,
+} from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,6 +18,7 @@ export const appConfig: ApplicationConfig = {
       withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
     ),
     { provide: TitleStrategy, useClass: PageSeo },
-    provideClientHydration(withEventReplay()),
+    // The root template contains i18n: without this Angular skips the whole SSR tree.
+    provideClientHydration(withEventReplay(), withI18nSupport()),
   ],
 };

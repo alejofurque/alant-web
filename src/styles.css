@@ -1,4 +1,5 @@
-@import 'tailwindcss';
+/* Keep QA reports and the isolated creative lab out of the corporate CSS build. */
+@import 'tailwindcss' source('./');
 @font-face {
   font-family: 'Geist';
   src: url('/fonts/geist-latin.woff2') format('woff2');

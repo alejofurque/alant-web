@@ -1,0 +1,206 @@
+.sculpture {
+  position: relative;
+  height: 650px;
+  min-width: 0;
+  margin-left: 25px;
+}
+.scene-top,
+.scene-bottom {
+  position: absolute;
+  left: 30px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: #859b8d;
+  font:
+    9px 'Geist Mono',
+    monospace;
+  letter-spacing: 0.05em;
+}
+.scene-top {
+  top: 2px;
+}
+.scene-bottom {
+  bottom: 18px;
+}
+.scene-space {
+  position: absolute;
+  inset: 0 -30px 0 -30px;
+  perspective: 1100px;
+  overflow: clip;
+}
+.assembly {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  width: 330px;
+  height: 380px;
+  margin-left: -165px;
+  margin-top: -190px;
+  transform-style: preserve-3d;
+  transform: rotateX(48deg) rotateY(-12deg) rotateZ(-32deg);
+  z-index: 1;
+}
+.plate {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+.plate-mint {
+  transform: translate3d(42px, 45px, -65px);
+}
+.plane-face {
+  position: absolute;
+  inset: 0;
+  background: #97e5b3;
+  border: 1px solid #c3f7d4;
+  overflow: hidden;
+}
+.plane-side {
+  position: absolute;
+  right: -16px;
+  top: 0;
+  width: 16px;
+  height: 100%;
+  background: #4f9166;
+  transform-origin: left center;
+  transform: rotateY(90deg);
+}
+.plane-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -16px;
+  height: 16px;
+  background: #679e77;
+  transform-origin: center top;
+  transform: rotateX(-90deg);
+}
+.engraving {
+  position: absolute;
+  top: 32px;
+  left: 30px;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  color: #274d35;
+}
+.plane-index {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  font:
+    11px 'Geist Mono',
+    monospace;
+  color: #376248;
+}
+.mint-grooves {
+  position: absolute;
+  bottom: 32px;
+  left: 28px;
+  width: 200px;
+  height: 116px;
+  background: repeating-linear-gradient(0deg, transparent 0 8px, #335e4138 8px 9px);
+  transform: rotate(-15deg);
+}
+.plate-frame {
+  transform: translate3d(0, 0, 0);
+}
+.frame-face {
+  position: absolute;
+  inset: 0;
+  border: 40px solid #2c3939;
+  border-left-color: #3a4b49;
+  border-top-color: #435450;
+  outline: 1px solid #6b807570;
+  transform: translateZ(10px);
+}
+.frame-back {
+  position: absolute;
+  inset: 0;
+  border: 40px solid #121e1a;
+  transform: translate3d(9px, 9px, -10px);
+}
+.frame-detail {
+  position: absolute;
+  inset: -30px;
+  border: 1px solid #6e917e;
+}
+.edge-light {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  right: -40px;
+  height: 2px;
+  background: #c5ffda;
+  box-shadow: 0 0 12px #97e5b370;
+}
+.plate-paper {
+  transform: translate3d(-42px, -45px, 65px);
+}
+.paper-face {
+  position: absolute;
+  inset: 0;
+  border: 38px solid #f2f4f1;
+  border-bottom-width: 70px;
+  transform: translateZ(12px);
+}
+.paper-back {
+  position: absolute;
+  inset: 0;
+  border: 38px solid #a7b9af;
+  border-bottom-width: 70px;
+  transform: translate3d(7px, 7px, -2px);
+}
+.paper-index {
+  position: absolute;
+  top: -25px;
+  left: -18px;
+  color: #526b5c;
+  font:
+    10px 'Geist Mono',
+    monospace;
+}
+.paper-note {
+  position: absolute;
+  bottom: -51px;
+  left: -18px;
+  color: #43564c;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+.paper-cutout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-top: 1px solid #dce5df;
+  border-left: 1px solid #dce5df;
+}
+.floor-shadow {
+  position: absolute;
+  width: 65%;
+  height: 60px;
+  left: 20%;
+  bottom: 65px;
+  background: radial-gradient(ellipse, #00000080, transparent 70%);
+  transform: rotate(-15deg);
+}
+.scene-rule {
+  position: absolute;
+  left: 30px;
+  right: 12px;
+  height: 1px;
+  bottom: 0;
+  background: #334a3d;
+}
+.scene-rule span {
+  display: block;
+  height: 100%;
+  background: #97e5b3;
+  transform: scaleX(0.12);
+  transform-origin: left;
+}

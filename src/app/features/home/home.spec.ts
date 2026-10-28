@@ -9,12 +9,20 @@ describe('Homepage navigation and contact', () => {
     await fixture.whenStable();
     const page = fixture.nativeElement as HTMLElement;
     expect(page.querySelectorAll('h1').length).toBe(1);
-    for (const link of page.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')) {
-      expect(page.querySelector(link.getAttribute('href')!)).not.toBeNull();
+    for (const link of page.querySelectorAll<HTMLAnchorElement>('a[href*="#"]')) {
+      expect(page.querySelector(new URL(link.href).hash)).not.toBeNull();
     }
     expect(page.querySelector('a[href^="mailto:"]')).toBeNull();
-    expect(page.querySelector('.contact-action a')?.getAttribute('href')).toBe('/contacto');
-    expect(page.querySelector('.hero-actions a')?.getAttribute('href')).toBe('/contacto');
+    expect(page.querySelector('.closing a')?.getAttribute('href')).toBe('/contacto');
+    expect(page.querySelector('.hero-copy a')?.getAttribute('href')).toBe('/contacto');
+    expect(page.querySelector('#soluciones')).not.toBeNull();
+    expect(page.querySelectorAll('app-pliegue .plate').length).toBe(3);
+    expect(page.querySelector('app-pliegue button, app-pliegue a')).toBeNull();
+    const services = page.querySelector('#soluciones')?.textContent ?? '';
+    expect(services).toContain('Sistemas de gestión');
+    expect(services).toContain('Conectamos herramientas');
+    expect(services).toContain('Páginas profesionales');
+    expect(page.querySelector('app-order-panel, app-blueprint, app-system-diagram')).toBeNull();
     expect(page.querySelector('app-projects, #proyectos, app-project-card')).toBeNull();
     expect(page.textContent).not.toContain('Portfolio en preparación');
   });

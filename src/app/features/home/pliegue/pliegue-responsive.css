@@ -1,0 +1,129 @@
+@media (min-width: 1500px) {
+  .assembly {
+    width: 360px;
+    height: 415px;
+    margin-left: -180px;
+    margin-top: -207px;
+  }
+}
+@media (max-width: 1100px) {
+  .sculpture {
+    margin-left: 0;
+    height: 610px;
+  }
+  .assembly {
+    width: 280px;
+    height: 335px;
+    margin-left: -140px;
+    margin-top: -167px;
+  }
+}
+@media (max-width: 850px) {
+  .plate-paper {
+    transform: translate3d(-28px, -30px, 45px);
+  }
+  .plate-mint {
+    transform: translate3d(28px, 30px, -45px);
+  }
+  .sculpture {
+    height: 640px;
+    width: 100%;
+    max-width: 690px;
+    margin: 20px auto 0;
+  }
+  .scene-space {
+    inset: 0;
+  }
+  .assembly {
+    width: 330px;
+    height: 380px;
+    margin-left: -165px;
+    margin-top: -190px;
+    top: 49%;
+  }
+  .scene-top,
+  .scene-bottom,
+  .scene-rule {
+    left: 0;
+    right: 0;
+  }
+}
+@media (max-width: 600px) {
+  .sculpture {
+    height: 440px;
+    margin-top: 26px;
+  }
+  .scene-space {
+    inset: 0 -20px;
+    perspective: 850px;
+  }
+  .assembly {
+    width: 210px;
+    height: 248px;
+    margin-left: -105px;
+    margin-top: -124px;
+    top: 48%;
+  }
+  .frame-face,
+  .frame-back {
+    border-width: 26px;
+  }
+  .frame-detail {
+    inset: -18px;
+  }
+  .edge-light {
+    top: -26px;
+    left: -26px;
+    right: -26px;
+    box-shadow: none;
+  }
+  .paper-face,
+  .paper-back {
+    border-width: 24px;
+    border-bottom-width: 46px;
+  }
+  .paper-index {
+    top: -17px;
+    left: -12px;
+    font-size: 7px;
+  }
+  .paper-note {
+    bottom: -34px;
+    left: -12px;
+    font-size: 9px;
+  }
+  .engraving {
+    top: 20px;
+    left: 19px;
+    font-size: 18px;
+  }
+  .plane-index {
+    bottom: 16px;
+    right: 16px;
+    font-size: 9px;
+  }
+  .mint-grooves {
+    left: 20px;
+    width: 140px;
+    height: 70px;
+    bottom: 22px;
+  }
+  .floor-shadow {
+    bottom: 40px;
+  }
+  .scene-top,
+  .scene-bottom {
+    font-size: 8px;
+  }
+  .plate-paper {
+    transform: translate3d(-28px, -30px, 45px);
+  }
+  .plate-mint {
+    transform: translate3d(28px, 30px, -45px);
+  }
+}
+@media (max-width: 850px) {
+  .assembly {
+    transform: rotateX(48deg) rotateY(-12deg) rotateZ(-32deg) scale(0.85);
+  }
+}
