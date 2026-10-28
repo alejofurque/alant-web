@@ -5,17 +5,17 @@ export const routes: Routes = [
     path: '',
     pathMatch: 'full',
     loadComponent: () => import('./features/home/home').then((m) => m.Home),
-    title: $localize`:@@home.pageTitle:ALANT — Software a medida e integración de sistemas`,
+    title: $localize`:@@home.pageTitle:ALANT — Software a medida, desarrollo web y automatización`,
     data: {
-      description: $localize`:@@home.metaDescription:Diseñamos, construimos e integramos software a medida para resolver desafíos operativos. ALANT — Software Engineering Studio.`,
+      description: $localize`:@@home.metaDescription:Software a medida, desarrollo web e integración de sistemas para empresas. ALANT — Software Engineering Studio: tecnología y automatización para tu operación.`,
     },
   },
   {
     path: 'servicios',
     loadComponent: () => import('./features/services/services-page').then((m) => m.ServicesPage),
-    title: $localize`:@@servicesPage.metaTitle:Servicios de ingeniería, integración e IA — ALANT`,
+    title: $localize`:@@servicesPage.metaTitle:Software, desarrollo web y automatización — Servicios ALANT`,
     data: {
-      description: $localize`:@@servicesPage.metaDescription:Software empresarial a medida, integración de sistemas y automatización con IA. Conocé cómo abordamos los desafíos de tu operación.`,
+      description: $localize`:@@servicesPage.metaDescription:Software empresarial a medida, desarrollo web, integración de sistemas y automatización con IA para los procesos de tu empresa.`,
     },
   },
   {
