@@ -1,0 +1,296 @@
+.rail {
+  grid-area: rail;
+  position: relative;
+  min-width: 0;
+}
+.stage {
+  position: relative;
+  container-type: size;
+  width: 100%;
+  aspect-ratio: 1 / 0.94;
+  max-height: 640px;
+}
+@media (max-width: 1099px) {
+  .space {
+    inset: 0 0 48px;
+  }
+}
+@media (min-width: 1100px) {
+  .stage {
+    position: sticky;
+    top: var(--header-h);
+    aspect-ratio: auto;
+    height: calc(100svh - var(--header-h));
+    max-height: none;
+  }
+}
+.space {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  /* 1em = 1/48 of a plane. Fits the sculpture in both stage axes. */
+  font-size: min(calc(100cqi / 72), calc(100cqb / 64));
+  perspective: 190em;
+  perspective-origin: 50% 42%;
+}
+.tilt,
+.assembly {
+  transform-style: preserve-3d;
+}
+.assembly {
+  position: relative;
+  width: 48em;
+  height: 32em;
+  transform: translate3d(2.5em, 3em, 0) rotate(-36deg) rotateY(0deg) rotateX(56deg);
+}
+.assembly app-plane {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 00 — static sculpture: also the pre-hydration and reduced-motion composition. */
+.space .plane-web {
+  transform: translate3d(-3em, -4em, 16em);
+}
+.space .plane-system {
+  transform: translate3d(0, 0, 8em);
+}
+.space .plane-flow {
+  transform: translate3d(3em, 4em, 0);
+}
+.space app-plane {
+  animation: plane-rise 1.5s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+.space .plane-flow {
+  animation-delay: 0.1s;
+}
+.space .plane-system {
+  animation-delay: 0.24s;
+}
+.space .plane-web {
+  animation-delay: 0.38s;
+}
+@keyframes plane-rise {
+  from {
+    opacity: 0;
+    translate: 0 0 -12em;
+  }
+}
+
+/* Static service poses for reduced motion; GSAP owns the transforms when scrubbing. */
+@media (min-width: 1100px) {
+  .stage:not(.is-scrubbed):not([data-state='0']) .assembly {
+    transform: translate3d(0, 0, 0) rotate(0deg) rotateY(-16deg) rotateX(8deg) scale(1.14);
+  }
+  .stage:not(.is-scrubbed):not([data-state='0']) .floor {
+    opacity: 0;
+  }
+  .stage:not(.is-scrubbed)[data-state='1'] .plane-web,
+  .stage:not(.is-scrubbed)[data-state='2'] .plane-system,
+  .stage:not(.is-scrubbed)[data-state='3'] .plane-flow {
+    transform: translate3d(-4em, 3em, 10em);
+  }
+  .stage:not(.is-scrubbed)[data-state='1'] .plane-system,
+  .stage:not(.is-scrubbed)[data-state='2'] .plane-flow {
+    --shade: 0.55;
+    transform: translate3d(4em, -6em, -14em);
+  }
+  .stage:not(.is-scrubbed)[data-state='1'] .plane-flow {
+    --shade: 0.78;
+    transform: translate3d(8em, -12em, -28em);
+  }
+  .stage:not(.is-scrubbed)[data-state='2'] .plane-web,
+  .stage:not(.is-scrubbed)[data-state='3'] .plane-web,
+  .stage:not(.is-scrubbed)[data-state='3'] .plane-system {
+    transform: translate3d(-4em, -26em, -22em);
+    opacity: 0;
+  }
+}
+
+/* Drafting floor: a measured surface under the three products. */
+.floor {
+  position: absolute;
+  top: -15em;
+  left: -17em;
+  width: 82em;
+  height: 62em;
+  transform: translateZ(-3em);
+  animation: fade 1.8s ease backwards;
+}
+.floor-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#ffffff10 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff10 1px, transparent 1px);
+  background-size: 4em 4em;
+  background-position: -1px -1px;
+  mask-image: radial-gradient(closest-side, #000 50%, transparent);
+}
+.floor::after {
+  /* Contact shadow of the stack. */
+  content: '';
+  position: absolute;
+  top: 18em;
+  left: 20em;
+  width: 48em;
+  height: 32em;
+  border-radius: 2em;
+  background: #050a0b;
+  filter: blur(2.6em);
+  opacity: 0.7;
+}
+.ruler {
+  position: absolute;
+  opacity: 0.7;
+}
+.ruler-x {
+  top: 9em;
+  left: 17em;
+  width: 48em;
+  height: 1.8em;
+  border-bottom: 1px solid #97e5b3a6;
+  background:
+    repeating-linear-gradient(90deg, #97e5b3 0 1px, transparent 1px 2em) 0 100% / 100% 0.7em
+      no-repeat,
+    repeating-linear-gradient(90deg, #97e5b3 0 1px, transparent 1px 12em) 0 100% / calc(100% + 1px)
+      1.6em no-repeat;
+}
+.ruler-y {
+  top: 15em;
+  left: 11em;
+  width: 1.8em;
+  height: 32em;
+  border-right: 1px solid #97e5b3a6;
+  background:
+    repeating-linear-gradient(#97e5b3 0 1px, transparent 1px 2em) 100% 0 / 0.7em 100% no-repeat,
+    repeating-linear-gradient(#97e5b3 0 1px, transparent 1px 8em) 100% 0 / 1.6em calc(100% + 1px)
+      no-repeat;
+}
+.floor-label {
+  position: absolute;
+  top: 6.4em;
+  left: 17em;
+  color: #97e5b3b3;
+  font-family: var(--font-mono);
+  font-size: 1.15em;
+  letter-spacing: 0.12em;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Stage furniture */
+.stage-meta,
+.stage-foot {
+  position: absolute;
+  inset-inline: 28px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--label);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.stage-meta {
+  align-items: baseline;
+  top: 22px;
+}
+.stage-caption {
+  color: #d9e2de;
+}
+.stage-foot {
+  bottom: 12px;
+}
+.stage-note {
+  letter-spacing: 0.1em;
+}
+.stage-foot app-motion-toggle {
+  font-family: var(--font-sans);
+  letter-spacing: normal;
+  text-transform: none;
+}
+.crop {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 0 solid #ffffff38;
+  pointer-events: none;
+}
+.crop-tl {
+  top: 8px;
+  left: 8px;
+  border-width: 1px 0 0 1px;
+}
+.crop-tr {
+  top: 8px;
+  right: 8px;
+  border-width: 1px 1px 0 0;
+}
+.crop-bl {
+  bottom: 8px;
+  left: 8px;
+  border-width: 0 0 1px 1px;
+}
+.crop-br {
+  right: 8px;
+  bottom: 8px;
+  border-width: 0 1px 1px 0;
+}
+/* Progress measured like a scale: four marks and a mint rule filled by scroll. */
+.gauge {
+  position: relative;
+  display: flex;
+  gap: 26px;
+  padding-bottom: 9px;
+  color: #ffffff47;
+  letter-spacing: 0.08em;
+}
+.gauge::before,
+.gauge::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: #ffffff1f;
+}
+.gauge::after {
+  background: var(--mint);
+  transform: scaleX(var(--progress));
+  transform-origin: left;
+}
+.gauge span {
+  transition: color 0.4s;
+}
+.gauge .on {
+  color: var(--mint);
+}
+@media (min-width: 1100px) {
+  .stage-meta,
+  .stage-foot {
+    inset-inline: 30px;
+  }
+}
+@media (max-width: 1099px) {
+  /* Compact layouts show the sculpture only: services carry their own planes. */
+  .stage-meta,
+  .stage-note {
+    display: none;
+  }
+  .stage-foot {
+    bottom: 0;
+    inset-inline: 0;
+    justify-content: flex-end;
+  }
+  .crop {
+    display: none;
+  }
+}

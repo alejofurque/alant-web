@@ -1,0 +1,85 @@
+{
+  "node": "v24.13.0",
+  "before": "http://127.0.0.1:4213/",
+  "after": "http://127.0.0.1:4212/",
+  "results": [
+    {
+      "variant": "before",
+      "run": 1,
+      "performance": 91,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 2304,
+      "lcpMs": 2955,
+      "tbtMs": 100,
+      "cls": 0,
+      "transferKb": 303
+    },
+    {
+      "variant": "after",
+      "run": 1,
+      "performance": 89,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 2485,
+      "lcpMs": 3225,
+      "tbtMs": 74,
+      "cls": 0,
+      "transferKb": 319
+    },
+    {
+      "variant": "before",
+      "run": 2,
+      "performance": 93,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 2146,
+      "lcpMs": 2790,
+      "tbtMs": 107,
+      "cls": 0,
+      "transferKb": 303
+    },
+    {
+      "variant": "after",
+      "run": 2,
+      "performance": 89,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 2635,
+      "lcpMs": 3230,
+      "tbtMs": 50,
+      "cls": 0,
+      "transferKb": 319
+    },
+    {
+      "variant": "before",
+      "run": 3,
+      "performance": 92,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 2288,
+      "lcpMs": 2927,
+      "tbtMs": 108,
+      "cls": 0,
+      "transferKb": 303
+    },
+    {
+      "variant": "after",
+      "run": 3,
+      "performance": 89,
+      "accessibility": 100,
+      "bestPractices": 100,
+      "seo": 100,
+      "fcpMs": 2472,
+      "lcpMs": 3214,
+      "tbtMs": 78,
+      "cls": 0,
+      "transferKb": 319
+    }
+  ]
+}

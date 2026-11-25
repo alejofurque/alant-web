@@ -1,0 +1,38 @@
+[
+  {
+    "ts": 50742772370,
+    "cumulative_score": 0,
+    "frame_max_distance": 10472.625,
+    "had_recent_input": true,
+    "impacted_nodes": [
+      {
+        "new_rect": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "node_id": 197,
+        "old_rect": [
+          0,
+          77,
+          412,
+          333
+        ]
+      }
+    ],
+    "is_main_frame": true,
+    "last_input_timestamp": 133,
+    "overall_max_distance": 10472.625,
+    "region_rects": [
+      [
+        0,
+        77,
+        412,
+        333
+      ]
+    ],
+    "score": 0.4046172539489672,
+    "weighted_score_delta": 0.4046172539489672
+  }
+]

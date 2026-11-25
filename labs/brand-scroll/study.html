@@ -1,0 +1,153 @@
+<a class="skip" href="#contenido" i18n>Ir al contenido</a>
+<div class="review-note">
+  <span i18n>Dirección visual / Pliegue</span
+  ><a href="http://127.0.0.1:4301/?concepto=a" i18n>Ver Panorama A ↗</a>
+</div>
+<header class="wrap header">
+  <a class="wordmark" href="#inicio" aria-label="ALANT, inicio" i18n-aria-label
+    >ALANT<span>.</span></a
+  >
+  <span class="studio-name">Software<br />Engineering Studio</span>
+  <nav aria-label="Navegación principal" i18n-aria-label>
+    <a href="#servicios" i18n>Qué hacemos</a><a href="#enfoque" i18n>Cómo pensamos</a
+    ><a class="nav-cta" href="https://alantapp.com/contacto" i18n
+      >Hablemos <span aria-hidden="true">↗</span></a
+    >
+  </nav>
+</header>
+<main id="contenido" tabindex="-1">
+  <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow" i18n>Ingeniería con criterio. Diseño con intención.</p>
+      <h1 id="hero-title" i18n>Software.<br />Automatización.<br /><span>Diseño digital.</span></h1>
+      <p class="hero-description" i18n>
+        Desarrollamos software a medida, automatizaciones y sitios web para empresas que quieren
+        avanzar.
+      </p>
+      <a class="button mint" href="https://alantapp.com/contacto" i18n
+        >Hablemos de tu proyecto <span aria-hidden="true">↗</span></a
+      >
+      <a class="explore" href="#servicios" i18n
+        >Explorar lo que podemos construir <span aria-hidden="true">↓</span></a
+      >
+    </div>
+    <div
+      class="sculpture"
+      role="img"
+      aria-label="Composición escultórica de tres planos arquitectónicos en blanco, graphite y mint. Se separan y reorganizan al desplazarse por la página."
+      i18n-aria-label
+    >
+      <div class="scene-top" aria-hidden="true"><span>ALANT / 01</span><span>01—03</span></div>
+      <div class="scene-space" aria-hidden="true">
+        <div class="assembly">
+          <div class="plate plate-mint">
+            <div class="plane-face">
+              <span class="engraving">IDEA.<br />FORMA.<br />IMPACTO.</span
+              ><span class="plane-index">03</span>
+              <div class="mint-grooves"></div>
+            </div>
+            <div class="plane-side"></div>
+            <div class="plane-bottom"></div>
+          </div>
+          <div class="plate plate-frame">
+            <div class="frame-face">
+              <span class="frame-detail"></span><span class="edge-light"></span>
+            </div>
+            <div class="frame-back"></div>
+          </div>
+          <div class="plate plate-paper">
+            <div class="paper-face">
+              <span class="paper-index">01 /</span>
+              <div class="paper-cutout"></div>
+              <span class="paper-note">DISEÑAR.<br />CONSTRUIR.</span>
+            </div>
+            <div class="paper-back"></div>
+          </div>
+        </div>
+        <div class="floor-shadow"></div>
+      </div>
+      <div class="scene-bottom" aria-hidden="true"><span>PRECISION / MINT</span><span>↓</span></div>
+      <div class="scene-rule" aria-hidden="true"><span></span></div>
+    </div>
+    <div class="hero-footer">
+      <span i18n>De una buena idea a una solución bien construida.</span>
+      <button
+        type="button"
+        [disabled]="!motionAvailable()"
+        [attr.aria-pressed]="reduced()"
+        (click)="toggle()"
+      >
+        @if (reduced()) {
+          <span i18n>Movimiento desactivado</span>
+        } @else {
+          <span i18n>Desactivar movimiento</span>
+        }
+      </button>
+    </div>
+  </section>
+  <section class="services" id="servicios">
+    <div class="wrap">
+      <div class="section-heading">
+        <p class="eyebrow" i18n>Qué podemos hacer por tu empresa</p>
+        <h2 i18n>Tu próximo paso.<br />Bien construido.</h2>
+        <p i18n>Desde una herramienta propia hasta una presencia digital que esté a la altura.</p>
+      </div>
+      <div class="service-grid">
+        <article>
+          <div class="service-symbol symbol-software" aria-hidden="true">
+            <span></span><span></span>
+          </div>
+          <span class="service-number">01</span>
+          <h3 i18n>Software<br />a medida.</h3>
+          <p i18n>Herramientas y plataformas que se adaptan a tu forma de trabajar.</p>
+          <a href="https://alantapp.com/contacto" i18n
+            >Construir mi idea <span aria-hidden="true">↗</span></a
+          >
+        </article>
+        <article>
+          <div class="service-symbol symbol-automation" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="service-number">02</span>
+          <h3 i18n>Automatización,<br />integraciones e IA.</h3>
+          <p i18n>Menos tareas repetitivas. Más tiempo para lo que hace crecer tu empresa.</p>
+          <a href="https://alantapp.com/contacto" i18n
+            >Mejorar mis procesos <span aria-hidden="true">↗</span></a
+          >
+        </article>
+        <article>
+          <div class="service-symbol symbol-web" aria-hidden="true"><span></span><span></span></div>
+          <span class="service-number">03</span>
+          <h3 i18n>Sitios web y<br />experiencias digitales.</h3>
+          <p i18n>Diseño y desarrollo para presentar tu negocio y conectar con tus clientes.</p>
+          <a href="https://alantapp.com/contacto" i18n
+            >Crear mi sitio <span aria-hidden="true">↗</span></a
+          >
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="approach wrap" id="enfoque">
+    <p class="eyebrow">Software Engineering Studio</p>
+    <h2 i18n>La tecnología importa.<br /><span>Lo que hace posible, más.</span></h2>
+    <div class="approach-bottom">
+      <p i18n>Escuchamos, definimos un alcance claro y construimos con atención a cada detalle.</p>
+      <span i18n>Criterio técnico.<br />Comunicación directa.<br />Diseño que tiene sentido.</span>
+    </div>
+  </section>
+  <section class="closing">
+    <div class="wrap">
+      <p class="eyebrow" i18n>Empecemos por una conversación</p>
+      <h2 i18n>¿Qué querés<br />hacer posible?</h2>
+      <a class="button dark" href="https://alantapp.com/contacto" i18n
+        >Contanos tu proyecto <span aria-hidden="true">↗</span></a
+      >
+    </div>
+  </section>
+</main>
+<footer class="wrap footer">
+  <a class="wordmark" href="#inicio">ALANT<span>.</span></a
+  ><span>Software Engineering Studio</span
+  ><a href="https://alantapp.com/contacto" i18n>Contacto ↗</a
+  ><small i18n>Propuesta local de dirección visual. No publicada.</small>
+</footer>

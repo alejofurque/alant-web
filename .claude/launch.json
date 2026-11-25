@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "alant-dev",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["ng", "serve", "--host", "127.0.0.1", "--port", "4210"],
+      "port": 4210
+    },
+    {
+      "name": "alant-preview",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "preview"],
+      "port": 4200
+    }
+  ]
+}

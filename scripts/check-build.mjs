@@ -85,29 +85,55 @@ for (const [path, document] of pages) {
   }
 }
 const home = pages.get('/');
-for (const path of ['/servicios']) {
-  const previews = [...pages.get(path).querySelectorAll('app-solution-preview')];
-  assert.equal(previews.length, 3, `${path}: three conceptual solution previews`);
-  for (const preview of previews) {
-    assert.match(preview.textContent, /Interfaz conceptual/);
-    assert.ok(preview.querySelector('figcaption')?.textContent.trim());
-    assert.equal(
-      preview.querySelector('button, input, a'),
-      null,
-      'Conceptual UI must not imply working controls',
-    );
-  }
+const services = pages.get('/servicios');
+const serviceIds = ['web', 'software', 'automatizacion'];
+assert.deepEqual(
+  [...services.querySelectorAll('section.svc')].map((section) => section.id),
+  serviceIds,
+);
+assert.deepEqual(
+  [...services.querySelectorAll('.glance-card')].map((a) => a.getAttribute('href')),
+  serviceIds.map((id) => `/servicios#${id}`),
+);
+for (const id of serviceIds) {
+  const section = services.getElementById(id);
+  assert.equal(section.querySelector('.cta-solid').getAttribute('href'), `/contacto?tipo=${id}`);
+  const plate = section.querySelector('.plate');
+  assert.equal(plate.getAttribute('aria-hidden'), 'true');
+  assert.match(plate.textContent, /Interfaz conceptual/);
+  assert.equal(
+    plate.querySelector('a, button, input'),
+    null,
+    'Conceptual UI must not imply controls',
+  );
 }
+assert.equal(services.querySelectorAll('.faq details').length, 4);
+const studio = pages.get('/estudio');
+assert.match(studio.querySelector('.blueprint figcaption').textContent, /Esquema ilustrativo/);
+assert.equal(studio.querySelectorAll('#proceso .steps li').length, 4);
+assert.deepEqual(
+  [...home.querySelectorAll('.service-more')].map((a) => a.getAttribute('href')),
+  serviceIds.map((id) => `/servicios#${id}`),
+);
 assert.equal(home.querySelector('app-projects, #proyectos, app-project-card'), null);
 assert.ok(!home.body.textContent.includes('Portfolio en preparación'));
-assert.equal(home.querySelectorAll('app-pliegue .plate').length, 3);
-assert.equal(home.querySelector('app-pliegue button, app-pliegue a'), null);
-assert.equal(home.querySelector('.hero-footer button').disabled, true);
-assert.match(home.querySelector('h1').textContent, /Software.*Automatización.*Diseño digital/s);
-assert.equal(home.querySelector('.hero-copy a').getAttribute('href'), '/contacto');
-assert.equal(home.querySelectorAll('#soluciones article').length, 3);
-for (const service of ['Sistemas de gestión', 'Conectamos herramientas', 'Páginas profesionales'])
-  assert.ok(home.querySelector('#soluciones').textContent.includes(service));
+assert.equal(home.querySelectorAll('.space app-plane').length, 3);
+for (const plane of home.querySelectorAll('app-plane')) {
+  assert.equal(plane.getAttribute('aria-hidden'), 'true');
+  assert.equal(plane.querySelector('a, button, input'), null);
+}
+assert.match(home.querySelector('.stage-note').textContent, /Interfaces conceptuales/);
+assert.equal(home.querySelector('app-motion-toggle button').style.visibility, 'hidden');
+assert.match(home.querySelector('h1').textContent, /Software hecho\s+a medida/);
+assert.equal(home.querySelector('.hero .cta').getAttribute('href'), '/contacto');
+assert.deepEqual(
+  [...home.querySelectorAll('.needs a')].map((a) => a.getAttribute('href')),
+  ['/#web', '/#sistemas', '/#automatizacion'],
+);
+assert.equal(home.querySelectorAll('#servicios .service').length, 3);
+for (const service of ['Sistemas de gestión', 'Sitios corporativos', 'Integración entre sistemas'])
+  assert.ok(home.querySelector('#servicios').textContent.includes(service));
+assert.equal(home.querySelectorAll('#soluciones .index-col').length, 3);
 assert.equal(home.querySelector('.closing a').getAttribute('href'), '/contacto');
 for (const id of ['inicio', 'servicios', 'soluciones', 'proceso', 'contacto'])
   assert.ok(home.getElementById(id));

@@ -1,23 +1,24 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Arrow } from '../arrow/arrow';
+
+/** Mint closing band for inner pages, the same last step as the home. */
 @Component({
   selector: 'app-consultation-cta',
   imports: [RouterLink, Arrow],
-  template: `<section class="consultation dark">
-    <div class="container consultation-grid">
-      <div>
-        <p class="eyebrow" i18n="@@consultation.label">El siguiente paso</p>
-        <h2 i18n="@@consultation.title">
-          Una buena solución empieza<br />por entender el problema.
-        </h2>
-      </div>
-      <div>
+  template: `<section class="consultation" aria-labelledby="consultation-title">
+    <div class="wrap consultation-grid">
+      <p class="kicker" i18n="@@consultation.label">El siguiente paso</p>
+      <h2 id="consultation-title" i18n="@@consultation.titleV2">
+        Una buena solución empieza por
+        <span class="measure">entender</span> el problema.
+      </h2>
+      <div class="consultation-side">
         <p i18n="@@consultation.description">
           No necesitás llegar con una especificación. El contexto de tu empresa es un buen punto de
           partida.
         </p>
-        <a routerLink="/contacto" class="button button-primary"
+        <a routerLink="/contacto" class="cta-solid ink"
           ><span i18n="@@hero.primaryCta">Hablemos de tu proyecto</span><app-arrow
         /></a>
       </div>
@@ -26,38 +27,44 @@ import { Arrow } from '../arrow/arrow';
   styles: `
     :host {
       display: block;
+      background: var(--color-mint);
+      color: var(--color-graphite);
+    }
+    :focus-visible {
+      outline: 2px solid var(--color-graphite);
+      outline-offset: 4px;
     }
     .consultation {
-      padding-block: 80px;
+      padding-block: clamp(88px, 11vw, 156px);
     }
     .consultation-grid {
       display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 12%;
-      align-items: center;
-    }
-    .eyebrow {
-      color: var(--color-mint);
-      margin-bottom: 20px;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 30px;
     }
     h2 {
-      font-size: clamp(30px, 3.2vw, 46px);
+      max-width: 13em;
+      margin: 0;
+      font-size: clamp(40px, 5.4vw, 86px);
       font-weight: 500;
-      line-height: 1.12;
-      letter-spacing: -0.04em;
+      line-height: 0.98;
+      letter-spacing: -0.058em;
+      text-wrap: balance;
     }
-    p:not(.eyebrow) {
-      color: var(--color-muted);
-      line-height: 1.7;
-      margin-bottom: 25px;
+    p:not(.kicker) {
+      max-width: 26em;
+      margin: 0 0 28px;
+      font-size: 18px;
+      line-height: 1.55;
     }
-    @media (max-width: 760px) {
+    @media (min-width: 1000px) {
       .consultation-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+        column-gap: clamp(40px, 5vw, 96px);
+        align-items: end;
       }
-      .consultation {
-        padding-block: 64px;
+      .kicker {
+        grid-column: 1 / -1;
       }
     }
   `,

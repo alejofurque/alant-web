@@ -1,85 +1,87 @@
-<section class="hero wrap" id="inicio" aria-labelledby="hero-title">
-  <div class="hero-copy">
-    <p class="eyebrow" i18n>Ingeniería con criterio. Diseño con intención.</p>
-    <h1 id="hero-title" i18n>Software.<br />Automatización.<br /><span>Diseño digital.</span></h1>
-    <p class="hero-description" i18n>
-      Desarrollamos software a medida, automatizaciones y sitios web para empresas que quieren
-      avanzar.
-    </p>
-    <a class="button mint" routerLink="/contacto" i18n
-      >Hablemos de tu proyecto <span aria-hidden="true">↗</span></a
-    >
-    <a class="explore" routerLink="/" fragment="servicios" i18n
-      >Explorar lo que podemos construir <span aria-hidden="true">↓</span></a
-    >
-  </div>
-  <app-pliegue />
-  <div class="hero-footer">
-    <span i18n>De una buena idea a una solución bien construida.</span>
-    <button
-      type="button"
-      [disabled]="!motion.ready() || motion.systemReduced() || motion.unavailable()"
-      [attr.aria-pressed]="motion.reduced()"
-      (click)="motion.toggle()"
-    >
-      @if (motion.reduced()) {
-        <span i18n>Movimiento desactivado</span>
-      } @else {
-        <span i18n>Desactivar movimiento</span>
+<app-showcase />
+
+<section class="index" id="soluciones" aria-labelledby="index-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker reveal" i18n>Qué podemos construir</p>
+      <div>
+        <h2 id="index-title" class="reveal" i18n>
+          Desde una página profesional hasta la plataforma que ordena tu operación.
+        </h2>
+        <p class="section-lede reveal" i18n>
+          Algunos proyectos habituales. Si lo que necesitás no está en la lista, contanos: partimos
+          de tu problema, no de un catálogo.
+        </p>
+      </div>
+    </div>
+    <div class="index-grid">
+      @for (group of examples; track group.type) {
+        <div class="index-col reveal">
+          <h3>
+            <span>{{ group.index }}</span
+            >{{ group.name }}
+          </h3>
+          <ul>
+            @for (item of group.items; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+          <a routerLink="/contacto" [queryParams]="{ tipo: group.type }"
+            ><span>{{ group.cta }}</span
+            ><app-arrow
+          /></a>
+        </div>
       }
-    </button>
-  </div>
-</section>
-<section class="services" id="servicios">
-  <div class="wrap">
-    <div class="section-heading">
-      <p class="eyebrow" i18n>Qué podemos hacer por tu empresa</p>
-      <h2 i18n>Tu próximo paso.<br />Bien construido.</h2>
-      <p i18n>Desde una herramienta propia hasta una presencia digital que esté a la altura.</p>
-    </div>
-    <div class="service-grid" id="soluciones">
-      <article>
-        <div class="service-symbol symbol-software" aria-hidden="true">
-          <span></span><span></span>
-        </div>
-        <span class="service-number">01</span>
-        <h3 i18n>Software<br />a medida.</h3>
-        <p i18n>Sistemas de gestión, aplicaciones y plataformas empresariales a medida.</p>
-        <a routerLink="/contacto" i18n>Construir mi idea <span aria-hidden="true">↗</span></a>
-      </article>
-      <article>
-        <div class="service-symbol symbol-automation" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
-        <span class="service-number">02</span>
-        <h3 i18n>Automatización,<br />integraciones e IA.</h3>
-        <p i18n>Conectamos herramientas, automatizamos tareas y optimizamos tus procesos.</p>
-        <a routerLink="/contacto" i18n>Mejorar mis procesos <span aria-hidden="true">↗</span></a>
-      </article>
-      <article>
-        <div class="service-symbol symbol-web" aria-hidden="true"><span></span><span></span></div>
-        <span class="service-number">03</span>
-        <h3 i18n>Desarrollo<br />web.</h3>
-        <p i18n>Páginas profesionales, sitios corporativos y soluciones web personalizadas.</p>
-        <a routerLink="/contacto" i18n>Crear mi sitio <span aria-hidden="true">↗</span></a>
-      </article>
     </div>
   </div>
 </section>
-<section class="approach wrap" id="proceso">
-  <p class="eyebrow">Software Engineering Studio</p>
-  <h2 i18n>La tecnología importa.<br /><span>Lo que hace posible, más.</span></h2>
-  <div class="approach-bottom">
-    <p i18n>Escuchamos, definimos un alcance claro y construimos con atención a cada detalle.</p>
-    <span i18n>Criterio técnico.<br />Comunicación directa.<br />Diseño que tiene sentido.</span>
+
+<app-process-steps />
+
+<section class="principles" aria-labelledby="principles-title">
+  <div class="wrap principles-grid">
+    <div class="principles-head">
+      <p class="kicker reveal" i18n>Por qué ALANT</p>
+      <h2 id="principles-title" class="reveal" i18n>
+        Criterio de ingeniería.<br /><span>Cercanía para construir.</span>
+      </h2>
+      <a class="text-cta reveal" routerLink="/estudio"
+        ><span i18n>Conocé el estudio</span><app-arrow
+      /></a>
+    </div>
+    <ul class="principles-list">
+      @for (principle of principles; track principle.title) {
+        <li class="tile reveal">
+          <span class="principle-no">{{ '0' + ($index + 1) }}</span>
+          <h3>{{ principle.title }}</h3>
+          <p>{{ principle.text }}</p>
+        </li>
+      }
+    </ul>
   </div>
 </section>
-<section class="closing" id="contacto">
-  <div class="wrap">
-    <p class="eyebrow" i18n>Empecemos por una conversación</p>
-    <h2 i18n>¿Qué querés<br />hacer posible?</h2>
-    <a class="button dark" routerLink="/contacto" i18n
-      >Contanos tu proyecto <span aria-hidden="true">↗</span></a
-    >
+
+<section class="closing" id="contacto" aria-labelledby="closing-title">
+  <div class="wrap closing-inner">
+    <p class="kicker" i18n>Empecemos por una conversación</p>
+    <h2 id="closing-title" i18n>¿Qué necesitás<br /><span class="measure">construir</span>?</h2>
+    <div class="closing-side">
+      <p class="closing-lede" i18n>
+        Contanos tu idea o el problema que querés resolver. Revisamos tu consulta y coordinamos una
+        primera conversación.
+      </p>
+      <a class="cta-solid ink" routerLink="/contacto"
+        ><span i18n>Hablemos de tu proyecto</span><app-arrow
+      /></a>
+      <ul class="quick" aria-label="Consultas frecuentes" i18n-aria-label>
+        @for (group of examples; track group.type) {
+          <li>
+            <a routerLink="/contacto" [queryParams]="{ tipo: group.type }"
+              >{{ group.need }}<app-arrow
+            /></a>
+          </li>
+        }
+      </ul>
+    </div>
   </div>
 </section>

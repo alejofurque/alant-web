@@ -1,107 +1,130 @@
 :host {
+  --ink: var(--color-graphite);
   display: block;
+  background: var(--color-offwhite);
+  color: var(--ink);
 }
+* {
+  box-sizing: border-box;
+}
+h2,
+h3,
+p,
+ol {
+  margin: 0;
+}
+ol {
+  padding: 0;
+  list-style: none;
+}
+:focus-visible {
+  outline: 2px solid #2f6b45;
+  outline-offset: 4px;
+}
+.contact {
+  padding-block: clamp(56px, 8vw, 120px);
+}
+/* Mobile: form first, then what happens next, then how to prepare. */
 .contact-layout {
   display: grid;
-  grid-template-columns: 0.85fr 1.5fr;
-  gap: 7%;
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: 'form' 'next' 'prepare';
+  gap: 64px;
 }
-.direct-contact {
-  padding: 30px;
-  border: 1px solid var(--color-line);
-  border-radius: 3px;
+@media (min-width: 1000px) {
+  .contact-layout {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-areas: 'next form' 'prepare form';
+    grid-template-rows: auto 1fr;
+    column-gap: clamp(40px, 5vw, 96px);
+    row-gap: 72px;
+    align-items: start;
+  }
 }
-.direct-contact .eyebrow {
-  color: var(--color-mint);
-  margin-bottom: 22px;
+.form {
+  grid-area: form;
 }
-.direct-contact h2 {
-  font-size: 35px;
+.next {
+  grid-area: next;
+}
+.prepare {
+  grid-area: prepare;
+}
+.kicker {
+  color: #4f6164;
+}
+.contact h2 {
+  margin-top: 18px;
+  font-size: clamp(28px, 2.6vw, 38px);
   font-weight: 500;
-  letter-spacing: -0.035em;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
 }
-.email-link {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+.next-steps {
+  margin-top: 28px;
+  border-top: 1px solid var(--ink);
+}
+.next-steps li {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
   padding-block: 20px;
-  color: var(--color-mint);
-  font-size: clamp(14px, 1.25vw, 18px);
-  overflow-wrap: anywhere;
+  border-bottom: 1px solid #11191b1c;
 }
-.email-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 5px;
+.no {
+  padding-top: 4px;
+  color: #4f6164;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
 }
-.email-link app-arrow {
-  margin-left: auto;
+.next-steps h3 {
+  font-size: 18px;
+  font-weight: 550;
+  letter-spacing: -0.02em;
 }
-.direct-contact > p:last-child {
-  font-size: 13px;
-  line-height: 1.8;
-  color: var(--color-muted);
-  border-top: 1px solid var(--color-line);
-  padding-top: 18px;
+.next-steps p {
+  margin-top: 6px;
+  color: #3e4d50;
+  font-size: 15.5px;
+  line-height: 1.55;
 }
-.preparation {
-  margin-top: 40px;
+.questions {
+  margin-top: 24px;
+  counter-reset: q;
 }
-.preparation h2 {
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: -0.035em;
-  margin-bottom: 18px;
-}
-.preparation li {
+.questions li {
   display: flex;
-  gap: 20px;
-  align-items: baseline;
-  padding-block: 17px;
-  border-bottom: 1px solid #c8d2ca;
+  gap: 16px;
+  padding-block: 14px;
+  border-bottom: 1px solid #11191b1c;
+  font-size: 16px;
+  line-height: 1.45;
+  counter-increment: q;
 }
-.preparation li .eyebrow {
-  color: #52685b;
+.questions li::before {
+  content: '0' counter(q);
+  flex: none;
+  width: 24px;
+  padding-top: 3px;
+  color: #4f6164;
+  font-family: var(--font-mono);
+  font-size: 11px;
 }
-.preparation li p {
-  font-size: 14px;
-  line-height: 1.65;
-}
-.preparation .text-link {
-  margin-top: 20px;
-  gap: 12px;
-  font-size: 13px;
+.text-cta {
+  margin-top: 24px;
 }
 .guide-note {
-  font-size: 12px;
-  color: #52685b;
-  line-height: 1.8;
   margin-top: 10px;
+  color: #4f6164;
+  font-size: 13.5px;
+  line-height: 1.6;
 }
-@media (max-width: 1000px) {
-  .contact-layout {
-    gap: 4%;
-    grid-template-columns: 0.8fr 1.3fr;
-  }
-  .direct-contact {
-    padding: 23px;
-  }
-  .email-link {
-    font-size: 14px;
-  }
+.next-steps li,
+.questions li {
+  transition: padding-left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-@media (max-width: 900px) {
-  .contact-layout {
-    grid-template-columns: 1fr;
-    gap: 38px;
-  }
-  .direct-contact {
-    padding: 26px;
-  }
-  .email-link {
-    font-size: 18px;
-  }
-  .preparation {
-    margin-top: 30px;
-  }
+.next-steps li:hover,
+.questions li:hover {
+  padding-left: 8px;
 }

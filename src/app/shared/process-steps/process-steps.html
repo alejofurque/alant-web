@@ -1,0 +1,26 @@
+<section class="process" [id]="sectionId()" aria-labelledby="process-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker reveal" i18n="@@process.kicker">Cómo trabajamos</p>
+      <div>
+        <h2 id="process-title" class="reveal" i18n="@@process.heading">
+          Un proceso claro, de la primera conversación al uso diario.
+        </h2>
+        <p class="section-lede reveal" i18n="@@process.lede">
+          Sabés qué vamos a construir, en qué orden y qué vas a recibir en cada etapa.
+        </p>
+      </div>
+    </div>
+    <div class="process-ruler" aria-hidden="true"><span></span></div>
+    <ol class="steps">
+      @for (step of steps; track step.title) {
+        <li class="reveal">
+          <span class="step-no">{{ '0' + ($index + 1) }}</span>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.text }}</p>
+          <p class="step-out"><span i18n="@@process.result">Resultado</span>{{ step.result }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

@@ -1,0 +1,6 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": { "outDir": "../../out-tsc/brand-scroll", "types": ["@angular/localize"] },
+  "files": ["main.ts", "main.server.ts"],
+  "include": ["*.ts"]
+}
