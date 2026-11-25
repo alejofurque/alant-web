@@ -7,6 +7,98 @@
   },
   "newProjectRoot": "projects",
   "projects": {
+    "product-story": {
+      "projectType": "application",
+      "root": "labs/product-story",
+      "sourceRoot": "labs/product-story",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "labs/product-story/main.ts",
+            "index": "labs/product-story/index.html",
+            "tsConfig": "labs/product-story/tsconfig.json",
+            "outputPath": "dist/product-story",
+            "assets": [
+              {
+                "glob": "*.woff2",
+                "input": "public/fonts",
+                "output": "fonts"
+              }
+            ],
+            "polyfills": ["@angular/localize/init"],
+            "styles": [
+              "labs/product-story/global.css",
+              "labs/product-story/products.css",
+              "labs/product-story/pages.css"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "options": {
+            "buildTarget": "product-story:build:development",
+            "host": "127.0.0.1",
+            "port": 4301
+          }
+        }
+      }
+    },
+    "creative-lab": {
+      "projectType": "application",
+      "root": "labs/creative",
+      "sourceRoot": "labs/creative",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "labs/creative/main.ts",
+            "index": "labs/creative/index.html",
+            "tsConfig": "labs/creative/tsconfig.json",
+            "outputPath": "dist/creative-lab",
+            "assets": [
+              {
+                "glob": "*.woff2",
+                "input": "public/fonts",
+                "output": "fonts"
+              }
+            ],
+            "polyfills": ["@angular/localize/init"],
+            "styles": ["labs/creative/global.css"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "options": {
+            "buildTarget": "creative-lab:build:development",
+            "host": "127.0.0.1",
+            "port": 4300
+          }
+        }
+      }
+    },
     "alant-web": {
       "projectType": "application",
       "schematics": {},
@@ -14,7 +106,10 @@
       "sourceRoot": "src",
       "prefix": "app",
       "i18n": {
-        "sourceLocale": { "code": "es", "subPath": "" },
+        "sourceLocale": {
+          "code": "es",
+          "subPath": ""
+        },
         "locales": {}
       },
       "architect": {
@@ -49,8 +144,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "8kB",
+                  "maximumError": "12kB"
                 }
               ],
               "outputHashing": "all"
@@ -80,7 +175,53 @@
         },
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n",
-          "options": { "format": "xlf2", "outputPath": "src/locale" }
+          "options": {
+            "format": "xlf2",
+            "outputPath": "src/locale"
+          }
+        }
+      }
+    },
+    "brand-scroll": {
+      "sourceRoot": "labs/brand-scroll",
+      "root": "labs/brand-scroll",
+      "projectType": "application",
+      "architect": {
+        "serve": {
+          "options": {
+            "buildTarget": "brand-scroll:build:production",
+            "host": "127.0.0.1",
+            "port": 4304
+          },
+          "builder": "@angular/build:dev-server"
+        },
+        "build": {
+          "defaultConfiguration": "production",
+          "options": {
+            "browser": "labs/brand-scroll/main.ts",
+            "ssr": true,
+            "outputMode": "static",
+            "index": "labs/brand-scroll/index.html",
+            "assets": [
+              {
+                "glob": "*.woff2",
+                "input": "public/fonts",
+                "output": "fonts"
+              }
+            ],
+            "styles": ["labs/brand-scroll/study.css", "labs/brand-scroll/sculpture.css"],
+            "polyfills": ["@angular/localize/init"],
+            "outputPath": "dist/brand-scroll",
+            "server": "labs/brand-scroll/main.server.ts",
+            "tsConfig": "labs/brand-scroll/tsconfig.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "all",
+              "optimization": true
+            }
+          },
+          "builder": "@angular/build:application"
         }
       }
     }

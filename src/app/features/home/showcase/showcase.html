@@ -1,0 +1,120 @@
+<div class="act wrap">
+  <section class="hero" id="inicio" aria-labelledby="hero-title" data-step="0">
+    <p class="hero-eyebrow">
+      <span class="signal" aria-hidden="true"></span
+      ><span i18n>ALANT — Software Engineering Studio</span>
+    </p>
+    <h1 id="hero-title" i18n>
+      <span class="line"><span>Software hecho </span></span>
+      <span class="line"
+        ><span><span class="measure">a medida</span>.</span></span
+      >
+    </h1>
+    <p class="hero-lede" i18n>
+      Diseñamos y desarrollamos sitios web, sistemas de gestión y automatizaciones para empresas que
+      necesitan tecnología confiable, pensada para su forma de trabajar.
+    </p>
+    <a class="cta" routerLink="/contacto"><span i18n>Hablemos de tu proyecto</span><app-arrow /></a>
+    <div class="needs">
+      <p class="needs-label" id="needs-label" i18n>¿Qué necesitás?</p>
+      <ul aria-labelledby="needs-label">
+        @for (service of services; track service.id) {
+          <li>
+            <a routerLink="/" [fragment]="service.id">
+              <span class="needs-index">{{ service.index }}</span>
+              <span class="needs-name">{{ service.need }}</span>
+              <span class="needs-hint">{{ service.hint }}</span>
+              <app-arrow />
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+  </section>
+
+  <div class="rail">
+    <div
+      class="stage"
+      [attr.data-state]="state()"
+      [class.is-paused]="paused()"
+      style="--progress: 0"
+    >
+      <div class="stage-meta" aria-hidden="true">
+        <span class="gauge">
+          @for (step of captions; track step.code) {
+            <span [class.on]="$index <= state()">{{ step.code }}</span>
+          }
+        </span>
+        <span class="stage-caption">{{ captions[state()].label }}</span>
+      </div>
+      <div class="space" aria-hidden="true">
+        <div class="tilt">
+          <div class="assembly">
+            <div class="floor">
+              <span class="floor-grid"></span>
+              <span class="ruler ruler-x"></span>
+              <span class="ruler ruler-y"></span>
+              <span class="floor-label">ALANT · 1:1</span>
+            </div>
+            <app-plane kind="flow" />
+            <app-plane kind="system" />
+            <app-plane kind="web" />
+          </div>
+        </div>
+      </div>
+      <span class="crop crop-tl" aria-hidden="true"></span
+      ><span class="crop crop-tr" aria-hidden="true"></span
+      ><span class="crop crop-bl" aria-hidden="true"></span
+      ><span class="crop crop-br" aria-hidden="true"></span>
+      <div class="stage-foot">
+        <span class="stage-note" i18n>Interfaces conceptuales</span>
+        <app-motion-toggle />
+      </div>
+    </div>
+  </div>
+
+  <div class="services" id="servicios">
+    @for (service of services; track service.id) {
+      <section
+        class="service"
+        [id]="service.id"
+        [attr.aria-labelledby]="service.id + '-title'"
+        [attr.data-step]="$index + 1"
+      >
+        <p class="service-index">
+          <span>{{ service.index }}</span
+          ><span>{{ service.name }}</span>
+        </p>
+        <h2 [id]="service.id + '-title'">{{ service.title }}</h2>
+        <p class="service-lede">{{ service.lede }}</p>
+        <ul class="service-list">
+          @for (item of service.items; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+        <p class="service-ideal"><span i18n>Ideal si</span>{{ service.ideal }}</p>
+        <div class="service-actions">
+          <a
+            class="service-link"
+            routerLink="/contacto"
+            [queryParams]="{ tipo: service.contactType }"
+            ><span>{{ service.cta }}</span
+            ><app-arrow
+          /></a>
+          <a class="service-more" routerLink="/servicios" [fragment]="service.contactType"
+            ><span i18n="@@showcase.more">Ver en detalle</span
+            ><span class="sr-only">: {{ service.name }}</span></a
+          >
+        </div>
+        <!-- Compact layouts only: hidden on desktop, so never rendered there. -->
+        <div class="inline-plane" aria-hidden="true">
+          @defer (on viewport) {
+            <app-plane [kind]="service.plane" />
+          } @placeholder {
+            <div class="plane-slot"></div>
+          }
+        </div>
+      </section>
+    }
+  </div>
+</div>

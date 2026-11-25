@@ -1,0 +1,100 @@
+<span class="edge"></span>
+@switch (kind()) {
+  @case ('web') {
+    <div class="face web">
+      <div class="chrome">
+        <i></i><i></i><i></i>
+        <span class="url">tuempresa.com</span>
+      </div>
+      <div class="site">
+        <div class="site-nav">
+          <b i18n>Tu empresa</b>
+          <span class="nav-items"><i></i><i></i><i></i></span>
+          <span class="pill dark" i18n>Contacto</span>
+        </div>
+        <div class="site-hero">
+          <div class="site-copy">
+            <span class="kicker" i18n>Servicios profesionales</span>
+            <span class="site-title" i18n>Lo que hacés,<br />bien presentado.</span>
+            <span class="lines"><i></i><i></i></span>
+            <span class="pill mint" i18n>Pedir presupuesto</span>
+          </div>
+          <div class="site-media"><span class="sun"></span><span class="ridge"></span></div>
+        </div>
+        <div class="site-cards">
+          <span><b></b><i></i><i></i></span><span><b></b><i></i><i></i></span
+          ><span><b></b><i></i><i></i></span>
+        </div>
+      </div>
+    </div>
+  }
+  @case ('system') {
+    <div class="face system">
+      <div class="sys-side"><b>TE</b><i class="on"></i><i></i><i></i><i></i></div>
+      <div class="sys-main">
+        <div class="sys-head">
+          <span>
+            <span class="kicker" i18n>Operación</span>
+            <span class="sys-title" i18n>Pedidos</span>
+          </span>
+          <span class="pill mint" i18n>+ Nuevo pedido</span>
+        </div>
+        <div class="sys-tabs">
+          <span class="on" i18n>Todos</span><span i18n>Pendientes</span><span i18n>En curso</span
+          ><span i18n>Listos</span>
+        </div>
+        <div class="sys-table">
+          <div class="row head">
+            <span i18n>N.º</span><span i18n>Detalle</span><span i18n>Equipo</span
+            ><span i18n>Estado</span>
+          </div>
+          <div class="row">
+            <span>1048</span><span i18n>Pedido mayorista</span><span class="who">LM</span
+            ><span class="chip new" i18n>Nuevo</span>
+          </div>
+          <div class="row">
+            <span>1047</span><span i18n>Reposición de sucursal</span><span class="who">JP</span
+            ><span class="chip doing" i18n>En preparación</span>
+          </div>
+          <div class="row">
+            <span>1046</span><span i18n>Pedido web</span><span class="who">AR</span
+            ><span class="chip doing" i18n>En preparación</span>
+          </div>
+          <div class="row">
+            <span>1045</span><span i18n>Retiro en depósito</span><span class="who">SC</span
+            ><span class="chip ready" i18n>Listo</span>
+          </div>
+          <div class="row">
+            <span>1044</span><span i18n>Envío a cliente</span><span class="who">LM</span
+            ><span class="chip done" i18n>Entregado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  @case ('flow') {
+    <div class="face flow">
+      <div class="flow-head">
+        <span class="kicker" i18n>Flujo automático · Pedidos entrantes</span>
+        <span class="flow-state"><i></i><ng-container i18n>Activo</ng-container></span>
+      </div>
+      <div class="flow-graph">
+        <svg viewBox="0 0 480 230" preserveAspectRatio="none">
+          <path class="wire" d="M150 42H180M300 42H330M360 70V110H240V150M180 178H150" />
+          <path class="wire dashed" d="M420 70V150" />
+          <circle class="token" cx="0" cy="0" r="5" />
+        </svg>
+        <span class="node n1"><b i18n>Llega un pedido</b><small>WhatsApp · Email</small></span>
+        <span class="node n2"><b i18n>Se leen los datos</b><small i18n>Con IA</small></span>
+        <span class="node n3"><b i18n>Se valida</b><small i18n>Reglas del negocio</small></span>
+        <span class="node n4"><b i18n>Se registra</b><small i18n>Sistema de gestión</small></span>
+        <span class="node n5"
+          ><b i18n>Se avisa al cliente</b><small i18n>Mensaje automático</small></span
+        >
+        <span class="node n6 human"
+          ><b i18n>Revisión humana</b><small i18n>Si algo no coincide</small></span
+        >
+      </div>
+    </div>
+  }
+}

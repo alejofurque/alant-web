@@ -1,0 +1,256 @@
+<header>
+  <a class="brand" href="http://127.0.0.1:4202/" aria-label="ALANT, versión actual"
+    >ALANT<span>.</span></a
+  ><span class="mono" i18n>ESTUDIO DE EXPERIENCIAS / LOCAL</span
+  ><a class="compare" href="http://127.0.0.1:4202/#soluciones" target="_blank" rel="noopener" i18n
+    >Comparar con Iteración 8 ↗</a
+  >
+</header>
+<main>
+  <div class="intro">
+    <div>
+      <p class="mono" i18n>SOFTWARE ENGINEERING STUDIO</p>
+      <h1 i18n>Software bien construido.<br /><em>Operaciones que avanzan.</em></h1>
+    </div>
+    <div class="proposal">
+      <p i18n>
+        Desarrollamos software a medida, conectamos sistemas y automatizamos procesos para que tu
+        empresa trabaje mejor.
+      </p>
+      <a class="cta" href="http://127.0.0.1:4202/contacto" i18n
+        >Hablemos de tu proyecto <span>↗</span></a
+      >
+    </div>
+  </div>
+  <nav class="concepts" aria-label="Conceptos visuales" i18n-aria-label>
+    @for (choice of choices; track choice.id) {
+      <button [attr.aria-pressed]="concept() === choice.id" (click)="select(choice.id)">
+        <small>{{ choice.tag }}</small
+        ><strong>{{ choice.name }}</strong>
+      </button>
+    }
+  </nav>
+  <div class="scene-heading">
+    <p>{{ current.description }}</p>
+    <span class="mono" i18n>PROTOTIPO CONCEPTUAL · NO ES UN CASO REAL</span>
+  </div>
+  <div
+    class="stage"
+    role="img"
+    [attr.aria-label]="current.description + ' ' + current.phases[phase]"
+  >
+    <section class="scene fragmented" [hidden]="concept() !== 'fragmented'" aria-hidden="true">
+      <div class="fragment-caption">
+        <span class="mono">CADA HERRAMIENTA, SU PROPIA INFORMACIÓN</span
+        ><b>Información dispersa.</b>
+      </div>
+      <div class="workspace">
+        <div class="workspace-top">
+          <b>ALANT / Operación</b
+          ><span>Pedidos &nbsp; / &nbsp; Revisión &nbsp; / &nbsp; Actividad</span
+          ><i>Un mismo contexto</i>
+        </div>
+        <div class="workspace-bottom">
+          Un pedido → Validación → Seguimiento <span>Información compartida ✓</span>
+        </div>
+      </div>
+      <svg class="bridges" viewBox="0 0 1000 500" preserveAspectRatio="none">
+        <path d="M180 240 H500 V360 H820" pathLength="1" />
+        <path d="M500 130 V360" pathLength="1" />
+      </svg>
+      <article class="piece piece-one">
+        <div class="window-bar"><span>↗ TIENDA ONLINE</span><i>•••</i></div>
+        <h2>Pedidos</h2>
+        <div class="order">
+          <span class="order-icon">↗</span>
+          <div><b>Solicitud de compra</b><small>Productos y cantidades</small></div>
+        </div>
+        <div class="table-row"><span>Estado</span><b>Recibido</b></div>
+        <div class="table-row"><span>Siguiente paso</span><b>Validar stock</b></div>
+        <span class="loose-tag">Carga independiente</span
+        ><span class="shared-tag">Pedido sincronizado ✓</span>
+      </article>
+      <article class="piece piece-two">
+        <div class="window-bar"><span>▦ GESTIÓN / ERP</span><i>•••</i></div>
+        <h2>Disponibilidad</h2>
+        <div class="inventory">
+          <div><i></i><span>Productos</span></div>
+          <div><i></i><span>Stock</span></div>
+          <div><i></i><span>Reservas</span></div>
+        </div>
+        <div class="table-row"><span>Validación</span><b>Consultar gestión</b></div>
+        <span class="loose-tag">Otra fuente de datos</span
+        ><span class="shared-tag">Disponibilidad compartida ✓</span>
+      </article>
+      <article class="piece piece-three">
+        <div class="window-bar"><span>↔ EQUIPO</span><i>•••</i></div>
+        <h2>Coordinación</h2>
+        <div class="message">¿Ya revisaron el pedido?</div>
+        <div class="message answer">Necesito confirmar el stock.</div>
+        <div class="team-result">
+          <b>Revisión asignada</b><span>Operaciones → Preparar entrega</span>
+        </div>
+        <span class="loose-tag">Seguimiento por mensajes</span
+        ><span class="shared-tag">Responsable y próximo paso ✓</span>
+      </article>
+      <div class="fragment-finish">
+        <span class="mono">SYSTEMS INTEGRATION</span><b>Una operación conectada.</b>
+      </div>
+    </section>
+    <section class="scene blueprint" [hidden]="concept() !== 'blueprint'" aria-hidden="true">
+      <div class="blue-grid"></div>
+      <div class="blue-label">
+        <span class="mono">ARQUITECTURA / REGLAS / INTERFAZ</span><b>De la lógica al producto.</b>
+      </div>
+      <svg class="blue-lines" viewBox="0 0 1000 500" preserveAspectRatio="none">
+        <g fill="none" stroke="currentColor" stroke-width="1.3">
+          <path
+            pathLength="1"
+            d="M85 100H915V425H85Z M260 100V425 M260 175H915 M300 225H875 M300 280H875 M300 335H875 M300 390H875"
+          />
+          <path
+            pathLength="1"
+            d="M60 75H940 M60 65V85 M940 65V85 M950 100V425 M940 100H960 M940 425H960"
+          />
+        </g>
+      </svg>
+      <div class="schema schema-one">
+        <small>01 / ENTRADA</small><b>Pedido</b><span>producto · cantidad · origen</span>
+      </div>
+      <div class="schema schema-two">
+        <small>02 / REGLAS</small><b>Validación</b><span>stock · permisos · revisión</span>
+      </div>
+      <div class="schema schema-three">
+        <small>03 / SALIDA</small><b>Operación</b><span>responsable · estado · registro</span>
+      </div>
+      <div class="product">
+        <aside>
+          <strong>ALANT<span>.</span></strong
+          ><span class="nav-selected">▦ &nbsp; Pedidos</span><span>↔ &nbsp; Integraciones</span
+          ><span>◷ &nbsp; Actividad</span><small>ESPACIO DE TRABAJO</small>
+        </aside>
+        <div class="product-main">
+          <div class="product-toolbar">
+            <div>
+              <small>OPERACIÓN / PEDIDOS</small>
+              <h2>Todo listo para avanzar.</h2>
+            </div>
+            <span class="avatar">OP</span>
+          </div>
+          <div class="product-filters">
+            <b>Por revisar</b><span>En preparación</span><span>Completados</span>
+          </div>
+          <div class="product-table">
+            <div class="table-header">
+              <span>Solicitud</span><span>Responsable</span><span>Próximo paso</span>
+            </div>
+            <div class="product-row">
+              <b>Pedido de compra</b><span>Operaciones</span><em>Validar disponibilidad</em>
+            </div>
+            <div class="product-row">
+              <b>Reposición de productos</b><span>Administración</span><em>Revisar solicitud</em>
+            </div>
+            <div class="product-row">
+              <b>Preparación de entrega</b><span>Logística</span><em>Coordinar despacho</em>
+            </div>
+          </div>
+          <div class="product-bottom">
+            <span class="check">✓</span>
+            <p>
+              Información, responsables y próximos pasos.<br /><b
+                >Una herramienta alrededor de tu operación.</b
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="blue-finish mono">SOFTWARE A MEDIDA / DE LA ARQUITECTURA AL TRABAJO DIARIO</div>
+    </section>
+    <section class="scene depth" [hidden]="concept() !== 'depth'" aria-hidden="true">
+      <div class="depth-heading">
+        <span class="mono">ENGINEERED SYSTEMS</span
+        ><b>Lo que hace posible<br />una buena operación.</b>
+      </div>
+      <div class="depth-world">
+        <div class="plane data-plane">
+          <div class="plane-bar"><b>01 / DATOS</b><span>Fuentes conectadas</span></div>
+          <div class="data-cells">
+            <span>ERP<small>Disponibilidad</small></span
+            ><span>CRM<small>Clientes</small></span
+            ><span>Tienda<small>Pedidos</small></span>
+          </div>
+          <div class="data-path"></div>
+        </div>
+        <div class="plane rules-plane">
+          <div class="plane-bar"><b>02 / REGLAS</b><span>Control de la operación</span></div>
+          <div class="rule-flow">
+            <span>Recibir</span><i>→</i><b>Validar</b><i>→</i><span>Registrar</span>
+          </div>
+          <div class="review">Excepciones → Revisión humana</div>
+        </div>
+        <div class="plane interface-plane">
+          <div class="plane-bar"><b>03 / INTERFAZ</b><span>Tu espacio de trabajo</span></div>
+          <div class="depth-app">
+            <div>
+              <small>GESTIÓN DE PEDIDOS</small>
+              <h2>La operación,<br />a la vista.</h2>
+              <span class="pill">Información conectada ✓</span>
+            </div>
+            <div class="task-list">
+              <span>Pedido recibido <b>✓</b></span
+              ><span>Validación de datos <b>✓</b></span
+              ><span>Revisión humana <b>→</b></span
+              ><span>Próximo paso definido <b>✓</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="depth-legend">
+        <span>01 Datos</span><span>02 Reglas</span><span>03 Interfaz</span>
+      </div>
+    </section>
+  </div>
+  <div class="controls">
+    <div class="transport">
+      <button class="play" (click)="play()" [disabled]="reduced()" i18n>↻ Reproducir</button
+      ><button (click)="pause()" [disabled]="!playing()" i18n>Pausa</button>
+    </div>
+    <div class="states">
+      @for (phaseName of current.phases; track $index) {
+        <button
+          [attr.aria-pressed]="phase === $index"
+          (click)="seek($index === 0 ? 0 : $index === 1 ? 50 : 100)"
+        >
+          <span>0{{ $index + 1 }}</span
+          >{{ phaseName }}
+        </button>
+      }
+    </div>
+    <button
+      class="reduce"
+      role="switch"
+      [attr.aria-checked]="reduced()"
+      [disabled]="systemReduced()"
+      (click)="toggleReduction()"
+      i18n
+    >
+      Movimiento reducido
+    </button>
+  </div>
+  <label class="scrubber"
+    ><span class="mono" i18n>PROGRESO</span
+    ><input
+      type="range"
+      min="0"
+      max="100"
+      [value]="progress()"
+      (input)="input($event)"
+      aria-label="Progreso de la transformación"
+      i18n-aria-label
+    /><output>{{ progress() }}%</output></label
+  >
+  <p class="lab-note" i18n>
+    Laboratorio local. Todos los datos son ilustrativos. Explorá los estados con teclado o reproducí
+    la secuencia; no necesitás hacer scroll para verla completa.
+  </p>
+</main>

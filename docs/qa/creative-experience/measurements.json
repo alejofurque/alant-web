@@ -1,0 +1,159 @@
+{
+  "node": "v24.13.0",
+  "lighthouse": "13.5.0",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+  "settings": {
+    "output": [
+      "json"
+    ],
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "pauseAfterFcpMs": 1000,
+    "pauseAfterLoadMs": 1000,
+    "networkQuietThresholdMs": 1000,
+    "cpuQuietThresholdMs": 1000,
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "auditMode": false,
+    "gatherMode": false,
+    "clearStorageTypes": [
+      "file_systems",
+      "shader_cache",
+      "service_workers",
+      "cache_storage"
+    ],
+    "disableStorageReset": false,
+    "debugNavigation": false,
+    "channel": "cli",
+    "usePassiveGathering": false,
+    "disableFullPageScreenshot": false,
+    "skipAboutBlank": false,
+    "blankPage": "about:blank",
+    "ignoreStatusCode": false,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": null,
+    "skipAudits": null
+  },
+  "results": [
+    {
+      "variant": "main",
+      "run": 1,
+      "date": "2026-10-23T13:12:17.708Z",
+      "performance": 65,
+      "cls": 0,
+      "lcpMs": 5896.438934330859,
+      "tbtMs": 84.5,
+      "fcpMs": 5037.865778609049,
+      "errors": null
+    },
+    {
+      "variant": "iteration8",
+      "run": 1,
+      "date": "2026-10-23T13:12:35.896Z",
+      "performance": 65,
+      "cls": 0,
+      "lcpMs": 6102.799431897536,
+      "tbtMs": 106.5,
+      "fcpMs": 5090.832859914613,
+      "errors": null
+    },
+    {
+      "variant": "fixed",
+      "run": 1,
+      "date": "2026-10-23T13:12:55.025Z",
+      "performance": 56.00000000000001,
+      "cls": 0,
+      "lcpMs": 6718.859378234537,
+      "tbtMs": 284.5,
+      "fcpMs": 5718.299481862114,
+      "errors": null
+    },
+    {
+      "variant": "main",
+      "run": 2,
+      "date": "2026-10-23T13:13:13.252Z",
+      "performance": 65,
+      "cls": 0,
+      "lcpMs": 5885.592627741435,
+      "tbtMs": 86,
+      "fcpMs": 5049.410523117862,
+      "errors": null
+    },
+    {
+      "variant": "iteration8",
+      "run": 2,
+      "date": "2026-10-23T13:13:29.549Z",
+      "performance": 45,
+      "cls": 0.4046672407599363,
+      "lcpMs": 5942.6984300343875,
+      "tbtMs": 150,
+      "fcpMs": 4974.91535836199,
+      "errors": null
+    },
+    {
+      "variant": "fixed",
+      "run": 2,
+      "date": "2026-10-23T13:13:43.898Z",
+      "performance": 66,
+      "cls": 0.00004998681096910542,
+      "lcpMs": 5931.506089227446,
+      "tbtMs": 86.5,
+      "fcpMs": 4948.171741022872,
+      "errors": null
+    },
+    {
+      "variant": "main",
+      "run": 3,
+      "date": "2026-10-23T13:13:57.889Z",
+      "performance": 47,
+      "cls": 0.4046172539489672,
+      "lcpMs": 5912.775825428835,
+      "tbtMs": 65,
+      "fcpMs": 4943.063187857362,
+      "errors": null
+    },
+    {
+      "variant": "iteration8",
+      "run": 3,
+      "date": "2026-10-23T13:14:12.384Z",
+      "performance": 46,
+      "cls": 0.4046172539489672,
+      "lcpMs": 5999.730323609951,
+      "tbtMs": 126,
+      "fcpMs": 4992.8586030082915,
+      "errors": null
+    },
+    {
+      "variant": "fixed",
+      "run": 3,
+      "date": "2026-10-23T13:14:27.517Z",
+      "performance": 65,
+      "cls": 0.00004998681096910542,
+      "lcpMs": 5975.583789006563,
+      "tbtMs": 89.5,
+      "fcpMs": 4990.736490838803,
+      "errors": null
+    }
+  ]
+}

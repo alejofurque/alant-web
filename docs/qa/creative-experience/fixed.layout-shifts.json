@@ -1,0 +1,59 @@
+[
+  {
+    "ts": 50772326952,
+    "cumulative_score": 0,
+    "frame_max_distance": 6.078125,
+    "had_recent_input": true,
+    "impacted_nodes": [
+      {
+        "new_rect": [
+          304,
+          691,
+          81,
+          17
+        ],
+        "node_id": 89,
+        "old_rect": [
+          310,
+          691,
+          75,
+          17
+        ]
+      },
+      {
+        "new_rect": [
+          318,
+          750,
+          54,
+          17
+        ],
+        "node_id": 98,
+        "old_rect": [
+          323,
+          750,
+          48,
+          17
+        ]
+      }
+    ],
+    "is_main_frame": true,
+    "last_input_timestamp": 139.7999999970198,
+    "overall_max_distance": 6.078125,
+    "region_rects": [
+      [
+        304,
+        691,
+        81,
+        17
+      ],
+      [
+        318,
+        750,
+        54,
+        17
+      ]
+    ],
+    "score": 0.00004998681096910542,
+    "weighted_score_delta": 0.00004998681096910542
+  }
+]

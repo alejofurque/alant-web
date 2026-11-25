@@ -201,3 +201,177 @@ app-system-diagram {
     transition: none !important;
   }
 }
+
+/* «A medida» primitives shared by every page: label, section heading, dimension line and CTAs. */
+.wrap {
+  width: min(100% - var(--page-gutter) * 2, 1320px);
+  margin-inline: auto;
+}
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+.kicker::before {
+  content: '';
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 1px;
+  background: currentColor;
+}
+.section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 22px;
+}
+.section-head h2 {
+  max-width: 17em;
+  margin: 0;
+  font-size: clamp(34px, 4.3vw, 66px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  text-wrap: balance;
+}
+/* Doubled class: component resets (p[_ngcontent]) must not remove this spacing. */
+.section-lede.section-lede {
+  max-width: 36em;
+  margin: 24px 0 0;
+  font-size: 17.5px;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+@media (min-width: 900px) {
+  .section-head {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: 40px;
+  }
+  .section-head .kicker {
+    margin-top: 0.9em;
+  }
+}
+.measure {
+  position: relative;
+  white-space: nowrap;
+}
+.measure::after {
+  content: '';
+  position: absolute;
+  left: 0.03em;
+  right: 0.02em;
+  bottom: 0.04em;
+  height: 0.16em;
+  background:
+    linear-gradient(currentColor, currentColor) 0 50% / 100% 2px no-repeat,
+    linear-gradient(currentColor, currentColor) 0 0 / 2px 100% no-repeat,
+    linear-gradient(currentColor, currentColor) 100% 0 / 2px 100% no-repeat;
+}
+.text-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 44px;
+  border-bottom: 1px solid currentColor;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 560;
+  text-decoration: none;
+}
+.cta-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 44px;
+  min-height: 56px;
+  padding: 0 22px 0 24px;
+  border-radius: 4px;
+  background: var(--color-mint);
+  color: var(--color-graphite);
+  font-size: 15px;
+  font-weight: 560;
+  text-decoration: none;
+  transition: background 0.25s;
+}
+.cta-solid:hover {
+  background: #b9f0cd;
+}
+.cta-solid.ink {
+  background: var(--color-graphite);
+  color: var(--color-offwhite);
+}
+.cta-solid.ink:hover {
+  background: #26353a;
+}
+.text-cta app-arrow,
+.cta-solid app-arrow {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.text-cta:hover app-arrow,
+.cta-solid:hover app-arrow {
+  transform: translateX(4px);
+}
+
+/* Scroll-linked entrance for pages that do not load the motion engine. Static where unsupported.
+   Movement only: a scroll-linked fade would leave text at the fold half transparent. */
+@supports (animation-timeline: view()) {
+  .rise {
+    animation: rise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 80%;
+  }
+}
+@keyframes rise {
+  from {
+    translate: 0 40px;
+  }
+}
+
+/* Tile: a compact card that lifts and draws a mint edge on hover. `.on-ink` for dark sections. */
+.tile {
+  position: relative;
+  border: 1px solid #11191b1f;
+  border-radius: 10px;
+  background: #ffffffb3;
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s,
+    background-color 0.3s,
+    box-shadow 0.45s;
+}
+.tile::before {
+  content: '';
+  position: absolute;
+  inset: -1px 12px auto;
+  height: 2px;
+  background: var(--color-mint);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.tile:hover {
+  transform: translateY(-4px);
+  border-color: #11191b47;
+  background-color: #fff;
+  box-shadow: 0 26px 44px -30px #11191b66;
+}
+.tile:hover::before {
+  transform: scaleX(1);
+}
+.tile.on-ink {
+  border-color: #ffffff1a;
+  background: #ffffff06;
+}
+.tile.on-ink:hover {
+  border-color: #97e5b359;
+  background-color: #ffffff0d;
+  box-shadow: 0 26px 44px -30px #000000b3;
+}

@@ -1,4 +1,5 @@
 export const projectTypes: Record<string, string> = {
+  web: 'Sitio o plataforma web',
   software: 'Software a medida',
   integraciones: 'Integración de sistemas',
   automatizacion: 'IA y automatización',

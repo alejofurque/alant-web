@@ -17,6 +17,7 @@ const trimmedLength =
     return size < min || size > max ? { length: true } : null;
   };
 export const PROJECT_TYPES = [
+  { value: 'web', label: $localize`:@@contactForm.web:Sitio o plataforma web` },
   { value: 'software', label: $localize`:@@contactForm.software:Software a medida` },
   { value: 'integraciones', label: $localize`:@@contactForm.integration:Integración de sistemas` },
   { value: 'automatizacion', label: $localize`:@@contactForm.automation:IA y automatización` },

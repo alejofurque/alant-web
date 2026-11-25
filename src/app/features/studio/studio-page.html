@@ -9,95 +9,129 @@
   description="Un estudio boutique de ingeniería de software. Atención directa, decisiones claras y sistemas preparados para mantenerse y evolucionar."
   i18n-description="@@studioPage.intro"
 />
-<section class="section">
-  <div class="container philosophy">
-    <div>
-      <p class="eyebrow" i18n="@@studioPage.position">Nuestra perspectiva</p>
-      <h2 class="section-title" i18n="@@studioPage.philosophy">
-        El software tiene que<br />entender el negocio.
+
+<section class="perspective" aria-labelledby="perspective-title">
+  <div class="wrap perspective-grid">
+    <div class="perspective-text">
+      <p class="kicker rise" i18n="@@studioPage.position">Nuestra perspectiva</p>
+      <h2 id="perspective-title" class="rise" i18n="@@studioPage.philosophyV2">
+        El software tiene que entender el negocio.
       </h2>
-      <p class="body-copy" i18n="@@studioPage.philosophyCopy">
+      <p class="rise" i18n="@@studioPage.philosophyCopy">
         Antes de desarrollar, entendemos cómo trabaja tu empresa y dónde se traba la operación.
       </p>
-      <p class="body-copy" i18n="@@studioPage.philosophyCopy2">
+      <p class="rise" i18n="@@studioPage.philosophyCopy2">
         Trabajás en contacto directo con quien construye la solución. Acordamos el alcance y
         explicamos las decisiones técnicas.
       </p>
     </div>
-    <figure class="principle-board dark">
-      <div class="board-top eyebrow">
-        <span i18n="@@studioPage.boardLabel">Criterio de construcción</span
-        ><span aria-hidden="true">AL / 02</span>
-      </div>
-      <div class="board-context" i18n="@@studioPage.boardContext">Contexto de tu empresa</div>
-      <div class="board-connector" aria-hidden="true"></div>
-      <div class="board-core">
-        <span class="eyebrow" i18n="@@studioPage.boardCoreLabel">Decisiones que conectan</span
-        ><strong i18n="@@studioPage.boardCore">Arquitectura<br />con propósito.</strong>
-      </div>
-      <div class="board-branches" aria-hidden="true"></div>
-      <div class="board-foundations">
-        <span i18n="@@studioPage.boardClarity">Claridad</span
-        ><span i18n="@@studioPage.boardQuality">Calidad</span
-        ><span i18n="@@studioPage.boardEvolution">Evolución</span>
-      </div>
-      <figcaption i18n="@@studioPage.boardCaption">
-        Cada decisión técnica debe poder explicarse en el contexto de la operación.
+    <figure class="blueprint">
+      <svg viewBox="0 0 560 440" aria-hidden="true">
+        <g class="dims">
+          <path d="M40 30H520M40 24V36M520 24V36M18 60V400M12 60H24M12 400H24" />
+          <text x="280" y="20" text-anchor="middle" i18n="@@studioPage.planSurvey">
+            Relevamiento de la operación
+          </text>
+          <text
+            x="10"
+            y="230"
+            text-anchor="middle"
+            transform="rotate(-90 10 230)"
+            i18n="@@studioPage.planScope"
+          >
+            Alcance acordado
+          </text>
+        </g>
+        <path class="outline" d="M40 60H520V320H400V400H40Z" />
+        <path
+          class="walls"
+          d="M220 60V150M220 180V230M370 60V120M370 150V230M40 230H100M130 230H290M320 230H440M470 230H520M250 230V330M250 360V400"
+        />
+        <g class="rooms">
+          <text x="54" y="82" i18n="@@studioPage.planSales">Ventas</text>
+          <text x="234" y="82" i18n="@@studioPage.planAdmin">Administración</text>
+          <text x="384" y="82" i18n="@@studioPage.planStock">Depósito</text>
+          <text x="54" y="384" i18n="@@studioPage.planClients">Clientes</text>
+          <text x="384" y="306" text-anchor="end" i18n="@@studioPage.planDelivery">Reparto</text>
+        </g>
+        <g class="system">
+          <path pathLength="1" d="M130 150V196H290V216" />
+          <path pathLength="1" d="M295 130V216" />
+          <path pathLength="1" d="M445 150V196H330V216" />
+          <path pathLength="1" d="M145 320V290H290V248" />
+          <path pathLength="1" d="M440 280V232H352" />
+        </g>
+        <g class="nodes">
+          <rect x="124" y="144" width="12" height="12" />
+          <rect x="289" y="124" width="12" height="12" />
+          <rect x="439" y="144" width="12" height="12" />
+          <rect x="139" y="314" width="12" height="12" />
+          <rect x="434" y="274" width="12" height="12" />
+        </g>
+        <g class="hub">
+          <rect x="268" y="216" width="84" height="32" rx="3" />
+          <text x="310" y="236" text-anchor="middle" i18n="@@studioPage.planSystem">Sistema</text>
+        </g>
+      </svg>
+      <figcaption i18n="@@studioPage.planCaption">
+        Esquema ilustrativo. Primero entendemos cómo funciona tu empresa; después diseñamos el
+        sistema que encaja en ella.
       </figcaption>
     </figure>
   </div>
 </section>
-<section class="principles-section dark section">
-  <div class="container">
-    <div class="principles-heading">
-      <p class="eyebrow" i18n="@@studioPage.principlesLabel">Cómo tomamos decisiones</p>
-      <h2 class="section-title" i18n="@@studioPage.principlesTitle">
-        Lo que sostiene<br />cada sistema.
+
+<app-process-steps />
+
+<section class="principles" aria-labelledby="principles-title">
+  <div class="wrap principles-grid">
+    <div class="principles-head">
+      <p class="kicker rise" i18n="@@studioPage.principlesLabel">Cómo tomamos decisiones</p>
+      <h2 id="principles-title" class="rise" i18n="@@studioPage.principlesTitleV2">
+        Lo que sostiene cada sistema.
       </h2>
     </div>
-    <div class="principles">
-      <article>
-        <span class="eyebrow">01 /</span>
-        <h3 i18n="@@studioPage.principle1">Una solución propia,<br />no una receta.</h3>
-        <p i18n="@@studioPage.principle1Copy">
-          Diseñamos según tus procesos y sistemas actuales. Acordamos qué construir primero y qué
-          dejar para después.
-        </p>
-      </article>
-      <article>
-        <span class="eyebrow">02 /</span>
-        <h3 i18n="@@studioPage.principle2">Código que se pueda<br />entender y mantener.</h3>
-        <p i18n="@@studioPage.principle2Copy">
-          Arquitectura clara, pruebas y documentación para mantener, integrar y hacer evolucionar el
-          software.
-        </p>
-      </article>
-      <article>
-        <span class="eyebrow">03 /</span>
-        <h3 i18n="@@studioPage.principle3">Comunicación directa.<br />Decisiones compartidas.</h3>
-        <p i18n="@@studioPage.principle3Copy">
-          Revisamos avances con vos. Cada entrega permite probar el uso y ajustar prioridades.
-        </p>
-      </article>
-      <article>
-        <span class="eyebrow">04 /</span>
-        <h3 i18n="@@studioPage.principle4">IA cuando aporta valor.<br />Control donde importa.</h3>
-        <p i18n="@@studioPage.principle4Copy">
-          Definimos qué datos puede usar la IA y qué acciones necesitan aprobación humana.
-        </p>
-      </article>
+    <ul class="principles-list">
+      @for (principle of principles; track principle.title) {
+        <li class="tile rise">
+          <span class="no">{{ '0' + ($index + 1) }}</span>
+          <h3>{{ principle.title }}</h3>
+          <p>{{ principle.text }}</p>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<section class="stance" aria-labelledby="stance-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker rise" i18n="@@studioPage.stanceKicker">Qué podés esperar</p>
+      <div>
+        <h2 id="stance-title" class="rise" i18n="@@studioPage.stanceTitle">
+          Un estudio de ingeniería, no una agencia.
+        </h2>
+      </div>
+    </div>
+    <div class="stance-grid">
+      <div class="rise">
+        <h3 i18n="@@studioPage.stanceYes">Lo que vas a encontrar</h3>
+        <ul class="yes">
+          @for (item of expect; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
+      <div class="rise">
+        <h3 i18n="@@studioPage.stanceNo">Lo que no vas a encontrar</h3>
+        <ul class="no-list">
+          @for (item of avoid; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      </div>
     </div>
   </div>
 </section>
-<app-process />
-<section class="working-note">
-  <div class="container">
-    <p class="eyebrow" i18n="@@studioPage.evolutionLabel">Después de la primera entrega</p>
-    <h2 i18n="@@studioPage.evolutionTitle">El sistema sigue.<br />La ingeniería también.</h2>
-    <p i18n="@@studioPage.evolutionCopy">
-      Acordamos mantenimiento, soporte y siguientes mejoras, con responsabilidades y prioridades
-      claras.
-    </p>
-  </div>
-</section>
+
 <app-consultation-cta />

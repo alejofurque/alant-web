@@ -2,89 +2,127 @@
   code="01"
   label="Servicios"
   i18n-label="@@nav.services"
-  title="De una necesidad real"
-  i18n-title="@@servicesPage.title"
-  accent="a un sistema que funciona."
-  i18n-accent="@@servicesPage.accent"
-  description="Software a medida, integración de sistemas y automatización. Elegí el punto de partida según el problema de tu empresa."
-  i18n-description="@@servicesPage.intro"
->
-</app-page-intro>
-<nav
-  class="service-index container"
-  aria-label="Capacidades de ingeniería"
-  i18n-aria-label="@@servicesPage.index"
->
-  @for (service of services; track service.id) {
-    <a routerLink="/servicios" [fragment]="service.id"
-      ><span class="eyebrow">{{ service.number }}</span
-      ><strong>{{ service.name }}</strong
-      ><app-arrow
-    /></a>
-  }
+  title="Lo que tu empresa necesita,"
+  i18n-title="@@servicesPage.titleV2"
+  accent="construido a medida."
+  i18n-accent="@@servicesPage.accentV2"
+  description="Web, software y automatización. Elegí por dónde empezar."
+  i18n-description="@@servicesPage.introV3"
+/>
+
+<nav class="glance" aria-label="Servicios de ALANT" i18n-aria-label="@@servicesPage.index">
+  <ul class="wrap glance-grid">
+    @for (service of services; track service.id) {
+      <li>
+        <a class="glance-card tile on-ink" routerLink="/servicios" [fragment]="service.id">
+          <span class="glance-top"
+            ><span>{{ service.index }}</span
+            ><span>{{ service.hint }}</span></span
+          >
+          <strong>{{ service.name }}</strong>
+          <span class="glance-value">{{ service.value }}</span>
+          <span class="glance-go" aria-hidden="true"><app-arrow /></span>
+        </a>
+      </li>
+    }
+  </ul>
 </nav>
+
 @for (service of services; track service.id) {
   <section
-    class="service-detail section"
-    [class.dark]="service.id === 'integraciones'"
+    class="svc"
+    [class.ink]="$odd"
     [id]="service.id"
     [attr.aria-labelledby]="service.id + '-title'"
   >
-    <div class="container">
-      <div class="service-heading">
-        <span class="service-number" aria-hidden="true">{{ service.number }}</span>
-        <div>
-          <p class="eyebrow">{{ service.name }}</p>
-          <h2 [id]="service.id + '-title'">{{ service.title }}</h2>
-        </div>
-      </div>
-      <div class="service-body">
-        <div class="service-context">
-          <p class="problem">{{ service.problem }}</p>
-          <p class="eyebrow scope-label" i18n="@@servicesPage.offerLabel">
-            Qué contratás y cómo lo construimos
+    <div class="wrap svc-grid">
+      <div class="svc-text">
+        <p class="svc-index rise">
+          <span>{{ service.index }}</span
+          >{{ service.name }}
+        </p>
+        <h2 class="rise" [id]="service.id + '-title'">{{ service.title }}</h2>
+        <p class="svc-lede rise">{{ service.lede }}</p>
+        <div class="shift rise">
+          <p><span i18n="@@servicesPage.now">Hoy</span>{{ service.now }}</p>
+          <span class="shift-arrow" aria-hidden="true"><app-arrow /></span>
+          <p class="shift-after">
+            <span i18n="@@servicesPage.after">Con ALANT</span>{{ service.after }}
           </p>
-          <p class="body-copy">{{ service.offer }}</p>
-          <div class="scope">
-            <h3 class="eyebrow" i18n="@@servicesPage.scope">Qué podemos construir</h3>
-            <ul>
-              @for (capability of service.capabilities; track capability) {
-                <li>{{ capability }}</li>
-              }
-            </ul>
-            <a routerLink="/contacto" [queryParams]="{ tipo: service.id }" class="text-link"
-              ><span i18n="@@hero.primaryCta">Hablemos de tu proyecto</span><app-arrow
-            /></a>
+        </div>
+        <ul class="chips rise" [attr.aria-label]="service.name">
+          @for (item of service.items; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+        <a
+          class="cta-solid rise"
+          [class.ink]="!$odd"
+          routerLink="/contacto"
+          [queryParams]="{ tipo: service.id }"
+          ><span>{{ service.cta }}</span
+          ><app-arrow
+        /></a>
+      </div>
+      <figure class="plate" aria-hidden="true">
+        <span class="plate-meta"
+          ><span
+            >{{ service.index }}<span class="plate-hint"> / {{ service.hint }}</span></span
+          ><span i18n="@@servicesPage.concept">Interfaz conceptual</span></span
+        >
+        <div class="plate-stage">
+          <div class="plate-plane">
+            @defer (on viewport) {
+              <app-plane [kind]="service.plane" />
+            } @placeholder {
+              <div class="plane-slot"></div>
+            }
           </div>
         </div>
-        <div class="service-preview">
-          <app-solution-preview [kind]="service.id" />
-          <p class="benefit">{{ service.benefit }}</p>
-        </div>
-      </div>
-      <p class="concept-note" i18n="@@servicesPage.illustrative">
-        Ejemplos ilustrativos, no casos de clientes.
-      </p>
+        <span class="plate-ruler"><span>0</span><span>48</span></span>
+      </figure>
     </div>
   </section>
 }
-<section class="section engagement">
-  <div class="container engagement-grid">
-    <div>
-      <p class="eyebrow" i18n="@@servicesPage.startLabel">Un alcance claro desde el comienzo</p>
-      <h2 class="section-title" i18n="@@servicesPage.startTitle">
-        Elegimos el punto<br />de partida con vos.
+
+<section class="extra" aria-labelledby="extra-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker rise" i18n="@@servicesPage.extraKicker">Además</p>
+      <h2 id="extra-title" class="rise" i18n="@@servicesPage.extraTitle">
+        Lo que construimos no termina en la entrega.
       </h2>
     </div>
-    <div>
-      <p class="body-copy" i18n="@@servicesPage.startCopy">
-        Contanos qué necesitás cambiar. Revisamos los sistemas actuales y acordamos prioridades,
-        alcance y una primera entrega que puedas validar.
-      </p>
-      <a routerLink="/estudio" class="text-link"
+    <ul class="extra-grid">
+      @for (item of complementary; track item.title) {
+        <li class="tile on-ink rise">
+          <span class="tile-no">{{ '0' + ($index + 1) }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div class="faq-head">
+      <p class="kicker rise" i18n="@@servicesPage.faqKicker">Preguntas frecuentes</p>
+      <h2 id="faq-title" class="rise" i18n="@@servicesPage.faqTitle">Antes de consultar.</h2>
+      <a class="text-cta rise" routerLink="/estudio"
         ><span i18n="@@servicesPage.method">Conocer nuestra forma de trabajar</span><app-arrow
       /></a>
     </div>
+    <div class="faq-list">
+      @for (item of faq; track item.q) {
+        <details class="rise">
+          <summary>{{ item.q }}<span class="faq-mark" aria-hidden="true"></span></summary>
+          <p>{{ item.a }}</p>
+        </details>
+      }
+    </div>
   </div>
 </section>
+
 <app-consultation-cta />

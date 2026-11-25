@@ -1,0 +1,140 @@
+:host {
+  --ink: var(--color-graphite);
+  --paper: var(--color-offwhite);
+  --mint: var(--color-mint);
+  --hair-light: #ffffff17;
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+h2,
+h3,
+p,
+ol {
+  margin: 0;
+}
+ol {
+  padding: 0;
+  list-style: none;
+}
+section {
+  scroll-margin-top: 92px;
+}
+.process {
+  padding-block: clamp(96px, 12vw, 168px);
+  background: var(--ink);
+  color: var(--paper);
+}
+.process .kicker {
+  color: var(--mint);
+}
+.process .section-lede,
+.steps p {
+  color: #b9c6c3;
+}
+.process :focus-visible {
+  outline-color: var(--mint);
+}
+.process-ruler {
+  position: relative;
+  display: none;
+  height: 22px;
+  margin-top: clamp(64px, 8vw, 104px);
+  border-bottom: 1px solid #ffffff33;
+  background:
+    repeating-linear-gradient(90deg, #ffffff38 0 1px, transparent 1px 12px) 0 100% / 100% 8px
+      no-repeat,
+    repeating-linear-gradient(90deg, #ffffff73 0 1px, transparent 1px 25%) 0 100% / calc(100% + 1px)
+      22px no-repeat;
+}
+.process-ruler span {
+  position: absolute;
+  inset: auto 0 -1px;
+  height: 2px;
+  background: var(--mint);
+  transform-origin: left;
+}
+/* The ruler fills as the four steps are read; full and static where scroll timelines are missing. */
+.process .wrap {
+  timeline-scope: --steps;
+}
+.steps {
+  view-timeline: --steps block;
+}
+.process-ruler span {
+  animation: ruler-fill linear both;
+}
+@supports (animation-timeline: view()) {
+  .process-ruler span {
+    animation-timeline: --steps;
+    animation-range: entry 15% cover 70%;
+  }
+}
+@keyframes ruler-fill {
+  from {
+    transform: scaleX(0);
+  }
+}
+.steps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: 56px;
+}
+.steps li {
+  padding-block: 28px 36px;
+  border-top: 1px solid var(--hair-light);
+}
+.step-no {
+  color: var(--mint);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+}
+.steps h3 {
+  margin-top: 18px;
+  font-size: clamp(28px, 2.5vw, 38px);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+.steps p {
+  margin-top: 14px;
+  max-width: 24em;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.steps .step-out {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid var(--hair-light);
+  color: var(--paper);
+  font-size: 15px;
+}
+.step-out span {
+  margin-right: 10px;
+  color: var(--mint);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+@media (min-width: 700px) {
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 40px;
+  }
+}
+@media (min-width: 1100px) {
+  .process-ruler {
+    display: block;
+  }
+  .steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 0;
+    margin-top: 0;
+  }
+  .steps li {
+    padding-right: clamp(20px, 2.5vw, 40px);
+    border-top: 0;
+  }
+}

@@ -1,0 +1,42 @@
+:host {
+  --ink: var(--color-graphite);
+  --paper: var(--color-offwhite);
+  --mint: var(--color-mint);
+  --hair-dark: #11191b1c;
+  --hair-light: #ffffff17;
+  display: block;
+  background: var(--paper);
+  color: var(--ink);
+}
+* {
+  box-sizing: border-box;
+}
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+}
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+:focus-visible {
+  outline: 2px solid #2f6b45;
+  outline-offset: 4px;
+}
+section {
+  scroll-margin-top: 92px;
+}
+app-arrow {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+a:hover app-arrow {
+  transform: translateX(4px);
+}

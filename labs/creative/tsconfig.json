@@ -1,0 +1,6 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": { "outDir": "../../out-tsc/creative-lab", "types": ["@angular/localize"] },
+  "files": ["main.ts"],
+  "include": ["*.ts"]
+}
