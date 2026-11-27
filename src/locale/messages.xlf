@@ -518,6 +518,14 @@
         <source>Con alcance, etapas y prioridades, antes de escribir código.</source>
       </segment>
     </unit>
+    <unit id="escultura.nota">
+      <notes>
+        <note category="location">src/app/features/home/escultura/escultura.ts:34,36</note>
+      </notes>
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Pieza A</pc> Estudio de forma · 3D</source>
+      </segment>
+    </unit>
     <unit id="2330187036884974648">
       <notes>
         <note category="location">src/app/features/home/home.html:6,7</note>
@@ -899,7 +907,7 @@
     </unit>
     <unit id="2446861459872661978">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.html:19,20</note>
+        <note category="location">src/app/features/home/showcase/showcase.html:21,22</note>
       </notes>
       <segment>
         <source>¿Qué necesitás?</source>
@@ -907,7 +915,7 @@
     </unit>
     <unit id="4176696956362826324">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.html:70,71</note>
+        <note category="location">src/app/features/home/showcase/showcase.html:73,74</note>
       </notes>
       <segment>
         <source>Interfaces conceptuales</source>
@@ -915,7 +923,7 @@
     </unit>
     <unit id="5043134966263440425">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.html:95</note>
+        <note category="location">src/app/features/home/showcase/showcase.html:98</note>
       </notes>
       <segment>
         <source>Ideal si</source>
@@ -923,7 +931,7 @@
     </unit>
     <unit id="showcase.more">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.html:105,106</note>
+        <note category="location">src/app/features/home/showcase/showcase.html:108,109</note>
       </notes>
       <segment>
         <source>Ver en detalle</source>
@@ -931,7 +939,7 @@
     </unit>
     <unit id="showcase.caption0">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:37</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:38</note>
       </notes>
       <segment>
         <source>Tres servicios, un mismo estándar</source>
@@ -939,7 +947,7 @@
     </unit>
     <unit id="showcase.caption1">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:38</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:39</note>
       </notes>
       <segment>
         <source>Desarrollo web</source>
@@ -947,7 +955,7 @@
     </unit>
     <unit id="showcase.caption2">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:39</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:40</note>
       </notes>
       <segment>
         <source>Software a medida</source>
@@ -955,7 +963,7 @@
     </unit>
     <unit id="showcase.caption3">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:40</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:41</note>
       </notes>
       <segment>
         <source>Automatización e IA</source>
@@ -963,7 +971,7 @@
     </unit>
     <unit id="showcase.web.need">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:49</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:50</note>
       </notes>
       <segment>
         <source>Una web profesional</source>
@@ -971,7 +979,7 @@
     </unit>
     <unit id="showcase.web.hint">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:50</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:51</note>
         <note category="location">src/app/features/services/services.data.ts:27</note>
       </notes>
       <segment>
@@ -980,7 +988,7 @@
     </unit>
     <unit id="showcase.web.name">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:51</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:52</note>
         <note category="location">src/app/features/services/services.data.ts:26</note>
       </notes>
       <segment>
@@ -989,7 +997,7 @@
     </unit>
     <unit id="showcase.web.title">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:52</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:53</note>
       </notes>
       <segment>
         <source>Una web a la altura de tu empresa.</source>
@@ -997,7 +1005,7 @@
     </unit>
     <unit id="showcase.web.lede">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:53</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:54</note>
       </notes>
       <segment>
         <source>Sitios corporativos y páginas profesionales que explican con claridad qué hacés, transmiten confianza y facilitan que te contacten. Rápidos, accesibles y preparados para buscadores.</source>
@@ -1005,7 +1013,7 @@
     </unit>
     <unit id="showcase.web.item1">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:55</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:56</note>
         <note category="location">src/app/features/services/services.data.ts:34</note>
       </notes>
       <segment>
@@ -1014,7 +1022,7 @@
     </unit>
     <unit id="showcase.web.item2">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:56</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:57</note>
       </notes>
       <segment>
         <source>Páginas para un servicio o lanzamiento</source>
@@ -1022,7 +1030,7 @@
     </unit>
     <unit id="showcase.web.item3">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:57</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:58</note>
       </notes>
       <segment>
         <source>Formularios, reservas y consultas</source>
@@ -1030,7 +1038,7 @@
     </unit>
     <unit id="showcase.web.item4">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:58</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:59</note>
       </notes>
       <segment>
         <source>Funciones comerciales a medida</source>
@@ -1038,7 +1046,7 @@
     </unit>
     <unit id="showcase.web.ideal">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:60</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:61</note>
       </notes>
       <segment>
         <source>necesitás tu primera web profesional o renovar una que ya no representa a tu empresa.</source>
@@ -1046,7 +1054,7 @@
     </unit>
     <unit id="showcase.web.cta">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:61</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:62</note>
       </notes>
       <segment>
         <source>Quiero una web profesional</source>
@@ -1054,7 +1062,7 @@
     </unit>
     <unit id="showcase.system.need">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:68</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:69</note>
       </notes>
       <segment>
         <source>Un sistema a medida</source>
@@ -1062,7 +1070,7 @@
     </unit>
     <unit id="showcase.system.hint">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:69</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:70</note>
         <note category="location">src/app/features/services/services.data.ts:48</note>
       </notes>
       <segment>
@@ -1071,7 +1079,7 @@
     </unit>
     <unit id="showcase.system.name">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:70</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:71</note>
         <note category="location">src/app/features/services/services.data.ts:47</note>
       </notes>
       <segment>
@@ -1080,7 +1088,7 @@
     </unit>
     <unit id="showcase.system.title">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:71</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:72</note>
       </notes>
       <segment>
         <source>Un sistema propio, pensado para cómo trabajás.</source>
@@ -1088,7 +1096,7 @@
     </unit>
     <unit id="showcase.system.lede">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:72</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:73</note>
       </notes>
       <segment>
         <source>Sistemas de gestión, portales y herramientas internas que reemplazan planillas dispersas, ordenan la información y le dan a tu equipo un solo lugar para trabajar.</source>
@@ -1096,7 +1104,7 @@
     </unit>
     <unit id="showcase.system.item1">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:74</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:75</note>
       </notes>
       <segment>
         <source>Sistemas de gestión</source>
@@ -1104,7 +1112,7 @@
     </unit>
     <unit id="showcase.system.item2">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:75</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:76</note>
       </notes>
       <segment>
         <source>Portales para clientes y proveedores</source>
@@ -1112,7 +1120,7 @@
     </unit>
     <unit id="showcase.system.item3">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:76</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:77</note>
       </notes>
       <segment>
         <source>Herramientas internas con permisos por rol</source>
@@ -1120,7 +1128,7 @@
     </unit>
     <unit id="showcase.system.item4">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:77</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:78</note>
       </notes>
       <segment>
         <source>Paneles de seguimiento y productos digitales</source>
@@ -1128,7 +1136,7 @@
     </unit>
     <unit id="showcase.system.ideal">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:79</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:80</note>
       </notes>
       <segment>
         <source>tu operación ya no entra en planillas o un software genérico te obliga a trabajar a su manera.</source>
@@ -1136,7 +1144,7 @@
     </unit>
     <unit id="showcase.system.cta">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:80</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:81</note>
       </notes>
       <segment>
         <source>Quiero un sistema a medida</source>
@@ -1144,7 +1152,7 @@
     </unit>
     <unit id="showcase.flow.need">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:87</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:88</note>
       </notes>
       <segment>
         <source>Automatizar tareas</source>
@@ -1152,7 +1160,7 @@
     </unit>
     <unit id="showcase.flow.hint">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:88</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:89</note>
         <note category="location">src/app/features/services/services.data.ts:69</note>
       </notes>
       <segment>
@@ -1161,7 +1169,7 @@
     </unit>
     <unit id="showcase.flow.name">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:89</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:90</note>
       </notes>
       <segment>
         <source>Automatización, integraciones e IA</source>
@@ -1169,7 +1177,7 @@
     </unit>
     <unit id="showcase.flow.title">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:90</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:91</note>
       </notes>
       <segment>
         <source>Que las tareas repetitivas se hagan solas.</source>
@@ -1177,7 +1185,7 @@
     </unit>
     <unit id="showcase.flow.lede">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:91</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:92</note>
       </notes>
       <segment>
         <source>Conectamos las herramientas que ya usás —ventas, gestión, pagos, email o WhatsApp— y automatizamos los pasos que hoy se hacen a mano. Sumamos inteligencia artificial cuando aporta un beneficio real, con control humano donde importa.</source>
@@ -1185,7 +1193,7 @@
     </unit>
     <unit id="showcase.flow.item1">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:93</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:94</note>
       </notes>
       <segment>
         <source>Integración entre sistemas y plataformas</source>
@@ -1193,7 +1201,7 @@
     </unit>
     <unit id="showcase.flow.item2">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:94</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:95</note>
       </notes>
       <segment>
         <source>Flujos de pedidos, documentos y mensajes</source>
@@ -1201,7 +1209,7 @@
     </unit>
     <unit id="showcase.flow.item3">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:95</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:96</note>
       </notes>
       <segment>
         <source>Asistentes con IA sobre información autorizada</source>
@@ -1209,7 +1217,7 @@
     </unit>
     <unit id="showcase.flow.item4">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:96</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:97</note>
       </notes>
       <segment>
         <source>Avisos y reportes automáticos</source>
@@ -1217,7 +1225,7 @@
     </unit>
     <unit id="showcase.flow.ideal">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:98</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:99</note>
       </notes>
       <segment>
         <source>tu equipo carga los mismos datos en varios lugares o responde siempre las mismas consultas.</source>
@@ -1225,7 +1233,7 @@
     </unit>
     <unit id="showcase.flow.cta">
       <notes>
-        <note category="location">src/app/features/home/showcase/showcase.ts:99</note>
+        <note category="location">src/app/features/home/showcase/showcase.ts:100</note>
       </notes>
       <segment>
         <source>Quiero automatizar procesos</source>

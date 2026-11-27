@@ -123,6 +123,25 @@ for (const plane of home.querySelectorAll('app-plane')) {
   assert.equal(plane.querySelector('a, button, input'), null);
 }
 assert.match(home.querySelector('.stage-note').textContent, /Interfaces conceptuales/);
+// Escultura 3D del hero: imagen fija prerenderizada, decorativa, y Three.js fuera de la carga inicial.
+const escultura = home.querySelector('.hero app-escultura');
+assert.equal(escultura?.getAttribute('aria-hidden'), 'true');
+assert.equal(escultura.querySelector('img.poster').getAttribute('alt'), '');
+for (const src of [
+  '/escultura/alant-a-600.webp',
+  '/escultura/alant-a-800.webp',
+  '/escultura/alant-a-1200.webp',
+])
+  assert.ok((await stat(resolve(root, `.${src}`))).isFile(), `missing ${src}`);
+const indexHome = await readFile(resolve(root, 'index.html'), 'utf8');
+for (const archivo of await readdir(root)) {
+  if (!/^chunk-.*.js$/.test(archivo)) continue;
+  if ((await readFile(resolve(root, archivo), 'utf8')).includes('WebGLRenderer'))
+    assert.ok(
+      !indexHome.includes(archivo),
+      `Three.js (${archivo}) must not load with the initial HTML`,
+    );
+}
 assert.equal(home.querySelector('app-motion-toggle button').style.visibility, 'hidden');
 assert.match(home.querySelector('h1').textContent, /Software hecho\s+a medida/);
 assert.equal(home.querySelector('.hero .cta').getAttribute('href'), '/contacto');

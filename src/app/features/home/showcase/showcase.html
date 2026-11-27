@@ -1,5 +1,5 @@
-<div class="act wrap">
-  <section class="hero" id="inicio" aria-labelledby="hero-title" data-step="0">
+<section class="hero wrap" id="inicio" aria-labelledby="hero-title" data-step="0">
+  <div class="hero-copy">
     <p class="hero-eyebrow">
       <span class="signal" aria-hidden="true"></span
       ><span i18n>ALANT — Software Engineering Studio</span>
@@ -15,23 +15,26 @@
       necesitan tecnología confiable, pensada para su forma de trabajar.
     </p>
     <a class="cta" routerLink="/contacto"><span i18n>Hablemos de tu proyecto</span><app-arrow /></a>
-    <div class="needs">
-      <p class="needs-label" id="needs-label" i18n>¿Qué necesitás?</p>
-      <ul aria-labelledby="needs-label">
-        @for (service of services; track service.id) {
-          <li>
-            <a routerLink="/" [fragment]="service.id">
-              <span class="needs-index">{{ service.index }}</span>
-              <span class="needs-name">{{ service.need }}</span>
-              <span class="needs-hint">{{ service.hint }}</span>
-              <app-arrow />
-            </a>
-          </li>
-        }
-      </ul>
-    </div>
-  </section>
+  </div>
+  <app-escultura class="hero-art" />
+  <div class="needs">
+    <p class="needs-label" id="needs-label" i18n>¿Qué necesitás?</p>
+    <ul aria-labelledby="needs-label">
+      @for (service of services; track service.id) {
+        <li>
+          <a routerLink="/" [fragment]="service.id">
+            <span class="needs-index">{{ service.index }}</span>
+            <span class="needs-name">{{ service.need }}</span>
+            <span class="needs-hint">{{ service.hint }}</span>
+            <app-arrow />
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
 
+<div class="act wrap">
   <div class="rail">
     <div
       class="stage"

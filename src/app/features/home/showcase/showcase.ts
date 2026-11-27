@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { useMotion } from '../../../core/motion/motion-runtime';
 import { Arrow } from '../../../shared/arrow/arrow';
 import { MotionToggle } from '../../../shared/motion-toggle/motion-toggle';
+import { Escultura } from '../escultura/escultura';
 import { Plane, PlaneKind } from '../../../shared/plane/plane';
 import { mountShowcase } from './showcase.motion';
 
@@ -23,7 +24,7 @@ interface ShowcaseService {
 
 @Component({
   selector: 'app-showcase',
-  imports: [RouterLink, Arrow, MotionToggle, Plane],
+  imports: [RouterLink, Arrow, MotionToggle, Plane, Escultura],
   templateUrl: './showcase.html',
   styleUrls: ['./showcase.css', './showcase-stage.css'],
 })
